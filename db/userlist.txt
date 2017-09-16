@@ -1,0 +1,15 @@
+// user ids to login
+// lines starting with // are ignored 
+// blank lines are ignored
+
+admpw:bateleur
+admpw:birdseye
+
+// author
+fresno461
+
+// General Admission userid
+// This allows ANY userid to work and overrides all other 
+// userids in this file (except admpw ones)
+// If uncommented, will allow ANTHING entered as a valid user id
+// anyth1ng.goez

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Repository Utility Help</title>
+<link href="bootstrap.min.css" rel="stylesheet" media="all" type="text/css" >
+
+</head>
+<body>
+<div class="container">
+<h3>Repository Utility User Guide&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="hidden-print btn btn-primary" href="javascript: this.window.close()"><b>CLOSE</b></a></h3>
+<p>The repository utility is a generalized, easy to use, tree-oriented document repository utility that offers a secure way to collect and share documentation, photos and videos within a selected user community.</p>
+<p>The following are the main sections of this guide:
+<ol>
+  <li><a href="#Overview">Overview</a></li>
+	<li><a href="#Navigation">Navigation</a></li>
+	<li><a href="#Administration">Administration</a></li>
+	<li><a href="#Security">Security</a></li>
+	<li><a href="#Archive">Archive</a></li>
+	<li><a href="#UsageLogs">Usage Logs</a></li>
+	<li><a href="#InstallNotes">Installation Notes</a></li>
+</ol></p>
+<h4 id="Overview">Overview</h4>
+<p>The utility is designed to allow navigation to and display of documents contained in the repository folders.</p>
+<p>It is highly recommended that the files uploaded to the repository be a standard format that most browsers will be able to display directly in the browser.  The file types in this category are most normally PDF (for text documents) and jpeg or png for photos.  Other types of files can be held in the repository but accessing them might require the user to first download and then open up the file in an external program or app.</p>
+<p></p>
+<a href="#">TOP</a>
+
+<h4 id="Navigation">Navigation</h4>
+<p>The system starts with the listing of the 'root' or 'Home Folder'.  The contents of the Home Folder are listed in two sections: 'Folders' and 'Files'.  Also note the 4 buttons titled 'LOGOUT', 'Home Folder', 'Help' and 'Admin'. Each of these will be explained in the following paragraphs. </p>
+<p>Clicking a name in the 'Folders' section will cause that folder's contents to be listed.  After doing so note that a new name is automatically added to the folders listed titled 'Parent Folder'.  Clicking the parent link will navigate back to the previous (i.e. Parent) folder's contents.  Clicking the 'Home Folder' button will always list the 'Home Folder'.</p>
+<p>Files are displayed by clicking the name of a file listed under the 'Files' section of the contents listing.  The display of a file is always done in a new window/tab.  Merely close that window/tab to return to the repository page or, alternatively, merely click the window/tab of the repository page leaving the new page open for easy reference.</p>
+
+<a href="#">TOP</a>
+
+<h4 id="Administration">Administration</h4>
+<p>Administrative functions are very straight forward and consist of managing the users that are to be allowed access, managing the admin password(s), moving folder and files into the archive when appropriate and monitoring the usage logs and performing a periodic cycle of the log when appropriate.</p>
+<p>The administration functions are accessed by clicking the 'Admin' button and supplying the correct password.  Successful entry of the password will result in 4 new buttons being displayed: 'Archive', 'User Summary', 'Log Utility' and 'User Admin'.  The user admin function is further explained in the '<a href="#Security">Security</a>' section and the logging facilities in the '<a href="#UsageLogs">Usage Logs</a>' section.</p>
+<p>In addition to enabling these new functions, the administrative mode also enables several additional capabilities.  These include the availability of buttons to add new folders and files to the repository.  The listing of the folders and files are also provided new function links to archive (or restore), delete or rename associated folders/files.</p>
+<p>In administrative mode, clicking the 'Add Folder' button will prompt for a folder name and create the folder in the currently displayed folder.</p>
+<p>In administrative mode, click the 'Add File' to open an input bar with a 'Browse' button. Select file(s) with a single click, multiple files by doing a 'click/Ctrl-click' on each, and a group of files by doing a 'click/Shift-click'. Once files have been selected, click the 'Upload' button. Success or failure messages will be displayed for each selected when uploading is completed.  All files uploaded will be stored in the currently displayed folder.</p>
+
+<a href="#">TOP</a>
+
+<h4 id="Security">Security</h4>
+<p>Access to the all security is done under the 'Admin' function.  Access this this functionality requires use of a special password.  Refer to the <a href="#Administration">Administration</a> section for further explanation.</p>
+<p>Security is usually provided by giving each repository user a unique user id to use to log in.  This provides the maximum benefit for tracking the use of the repository.</p>
+<p>A second approach is to have a general user id shared amongst a known community of users.  This means, however, that usage tracking for each repository user is lost since individual identification is no longer guaranteed. </p>
+<p>The least secure approach is to allow any user to enter anything for a user id.  This approach completely opens up the repository to all who have the URL by merely entering any character string as a user id.  A special password is provided in the user admin file that allows this mode to be enabled.</p>
+<p>Access to user registration is done by clicking the 'User Admin' button which opens up a new window/tab containing the contents of the user registration file.</p>
+<p>The contents of the user registration file usually consists of a single comment line with the actual user name and any other info needed followed by a single line containing the user id (like their email address) being assigned to that user.</p>
+<p>The password for access to all 'Admin' functions is a single line consisting of the character string 'admpw:' immediately followed (without spaces) by the password to be used.  Multiple admin passwords may, each on its own line, be defined. </p>
+<p>All blank lines contained in this file are ignored.  Also all lines that start with a double slash ('//') are considered comment lines and are also ignored.  It is strongly recommended that comment lines be used for noting special info and conditions.</p>
+<p>Please make sure to 'Submit' the form if any changes are made.  Changes will be lost if this is not done. Once all updates have been completed and submitted, click the 'CLOSE' button to close the window/tab and return to the repository manager page.</p>
+
+<a href="#">TOP</a>
+
+<h4 id="Archive">Archive</h4>
+<p>The archive functionality is provided in administrative mode to allow the repository manager to move a single file or a whole directory out of the main repository view into an archive area accessed by the 'Archive' button.  This moves the folder/file from the 'Home Folder' (or other folders) listing tree and move it into a corresponding folder in the 'Archive' folder tree using the identical folder and file names as the original.</p>
+<p>Once a file (or a folder with multiple files) has been moved into the archive they can be restored by clicking the 'Restore' link when in the Archive.</p>
+<p>Successful archive and restore operations depend on the existence of the original containing 'folder'.  For example, assume a folder named 'Minutes' is defined in the Home Folder and contains a file name 'Committee Meeting'.  To successfully archive the file 'Committee Meeting' a corresponding folder named 'Minutes' must also be defined in the 'Archive' folder.  If the original folder named 'Minutes' is deleted, then the 'Archive' copy of the file 'Committee Meeting' can not restored until it is re-created.</p>
+<p>The same rule applies to archive and restore a folder.  Assume the same folder named 'Minutes' contains a folder named 'Planning' which, in turn, contains a series of files. The folder named 'Planning' (along with all of its contents) can be archived as long as there is a folder named 'Minutes' already in the archive.  If the 'Planning' folder is successfully archived and its 'parent' folder 'Minutes' is then deleted, then the 'Planning' folded can not be restored until it is re-created.</p>
+
+<a href="#">TOP</a>
+
+<h4 id="UsageLogs">Usage Logs</h4>
+<p>The usage log accumulates entries for all actions performed by the repository manager.  Each action is logged with the date and time, user id, action and the repository folder that the action was taken in.</p>
+<p>All logs are listed when the 'Log Utility' button is clicked.  The current active log is listed first, older logs are displayed following in chronological order.</p>
+<p>When the 'Logger Off' button is clicked, the current active log is closed and its name is appended with the current date and time. Further logging is suspended.</p>
+<p>All logging activity is stopped if there is no 'active' log file.  Clicking the 'Logger ON' will create a file a new log file and logging will resume for all activities.</p>
+<p>All log files may be viewed by clicking their associated 'View' link.  Old log files may be deleted by clicking the associated 'Delete' link.</p>
+<p>After a log file has been displayed, a filter may be applied to isolate just those log entries of specific interest - a specific user id, for example.</p>
+<p>Finally, all log files are formatted as field delimit text files suitable for importing into a spreadsheet.  The delimiter character used as a field separator is the semi-colon (';').  The easiest method to get a log file into a spreadsheet is merely click the 'DOWNLOAD FILE' button and import the file.  Alternatively one can do a browser 'Select All' (or highlight of rows), then 'Copy' of the web page, then a 'Paste' into the spreadsheet program followed by deletion of the header lines and any conversion needed.</p>
+<p>Clicking the 'DONE' button will close the log viewer window/tab</p>
+<p>The 'User Summary' button provides a quick summary for the current, active user log file.  The summary provides a list of all users that have used the repository along with the date and time of their last access.</p>
+<a href="#">TOP</a>
+<div  class="hidden-print">
+<h4 id="InstallNotes">Installation Notes (for initial installation use only)</h4>
+<p>Create a NEW folder that is accessible by the web server application. Use the file manager software provided by the web server and establish permissions for the repository root folder and used by all subsequent folders and files.</p>
+<p>Install the index.php file and db folder in the root directory/folder   The name of this folder becomes the name of the repository.</p>
+<p>Make code changes required to define the logo location in the index.php code.</p>
+<p>Update login page organization name and content disclaimer in login include file login.incl.php in db folder.</p>
+<p>Log into the system and the admin function to initialize a new log file and delete all old ones.</p>
+<p>While in the admin function, create a NEW Archive folder.</p>
+<p>Testing: in the Home Folder, create new folder(s) and upload some files.  Move at least one or two to the archive and delete them.  Check to usage log to make sure all activity is being logged. </p>
+<p>If all this works, then it should be good to go.</p>
+
+<a href="#">TOP</a>
+</div>
+</div>  <!-- container -->
+<br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
