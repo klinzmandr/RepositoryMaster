@@ -19,11 +19,8 @@ echo '
 </head><body>';
 
 //echo "<h1>Orgainzation Logo Here</h1>";
+// for example:
 echo '<img src="http://morrobaybirdfestival.net/wp-content/uploads/2016/08/LOGO3.png" border="0" alt="MBBF logo"><br>';
-
-// load array for external resources (if any)
-$GLOBALS['links'][] = '<a href="http://google.com/" target="_blank">Google</a>';
-$GLOBALS['links'][] = '<a href="http://yahoo.com/" target="_blank">Yahoo</a>';
 
 // logout or session reset requested
 if (isset($_REQUEST['logout'])) {
