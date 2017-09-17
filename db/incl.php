@@ -252,13 +252,12 @@ function lister($in) {				// input is the list of the current folder contents
 //echo '<pre>Session '; print_r($_SESSION); echo '</pre>';
 //echo '<pre>Server '; print_r($_SERVER); echo '</pre>';
 	echo '<h3>On-line resources</h3>
-<b>Online Links: (opens in a new window)</b>
-<ul>
-
-<a href="http://google.com/" target="_blank">Google</a><br>
-<a href="http://yahoo.com/" target="_blank">Yahoo</a>
-	</ul>';
-	echo "<h3> $dname Contents:</h3>";
+<b>Online Links: (opens in a new window)</b><ul>';
+  if (count($GLOBALS['links'])) {
+    foreach ($GLOBALS['links'] as $l) { echo $l . '<br>'; }
+    }
+	echo "</ul>
+	<h3> $dname Contents:</h3>";
 	if (preg_match('/\/Archive\//', $_SERVER['REQUEST_URI'])) 
     echo "<div style=\"color: red; \"><b>Archive Mode Active</b></div>";
 	if ($_SESSION['adm'] == "ON") { 	// show add folder & file links

@@ -22,6 +22,10 @@ echo '
 // for example:
 echo '<img src="http://morrobaybirdfestival.net/wp-content/uploads/2016/08/LOGO3.png" border="0" alt="MBBF logo"><br>';
 
+// load array for external resources (if any)
+$GLOBALS['links'][] = '<a href="http://google.com/" target="_blank">Google</a>';
+$GLOBALS['links'][] = '<a href="http://yahoo.com/" target="_blank">Yahoo</a>';
+
 // logout or session reset requested
 if (isset($_REQUEST['logout'])) {
 	logger("Logged out");	
@@ -39,7 +43,7 @@ deller();														// do file upload, rename and or dir delete
 
 $contents = scandir(".");						// scan the current directory
 foreach ($contents as $c) { 
-  if (!preg_match("/^db{1}|^\.|^index\..*|^Archive$/i",$c)) {
+  if (!preg_match("/^db{1}|^\.|^index\..*|^Archive$|.*\.md$/i",$c)) {
     $l[] = $c;                      // create list of dirs and files
     } 
   }
