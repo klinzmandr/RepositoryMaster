@@ -29,19 +29,20 @@ if (!isset($_REQUEST['cont'])) {
   exit;
   }
 
-//$results = `find . -exec touch -d "" \{} \;` ;
-//$results = `find . -exec ls -l {} \;`;
-$results   = `find . -type d -exec cp index.php {} \;`;
+$results   = `find . -type d -exec cp index.php {} \; -print`;
+//echo '<pre>RESULTS '; print_r($results); echo '</pre>';
 
 $currdir = getcwd() . '/';
 $root = rtrim($_SERVER['SCRIPT_FILENAME'], 'updater.php');
 $scr = $_SERVER['SCRIPT_FILENAME'];
-//echo "currdir: $currdir<br>";
 echo "<hr>RESULTS<br>Script running in: $root<br>";
 echo "Current working dir: $currdir<br>";
 echo "Script running: $scr<br><br>";
 // echo '<pre>'; print_r($_SERVER); echo '</pre>';
-echo '<b>Script has recursively copied the local copy of index.php into all the directories in the repository.</b><br>
+echo '<b>Script has recursively copied the local copy of index.php into all listed directories.</b><br>
+<ul><pre>
+'.$results.'
+</pre></ul>
 <h3 style="color: red; ">Completion successful.</h3>';
 
 ?>
