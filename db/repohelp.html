@@ -75,15 +75,33 @@
 <p>The 'User Summary' button provides a quick summary for the current, active user log file.  The summary provides a list of all users that have used the repository along with the date and time of their last access.</p>
 <a href="#">TOP</a>
 <div  class="hidden-print">
-<h4 id="InstallNotes">Installation Notes (for initial installation use only)</h4>
+<h3 id="InstallNotes">Installation Notes (for initial installation use only)</h3>
+<h4>New Repository</h4>
 <p>Create a NEW folder that is accessible by the web server application. Use the file manager software provided by the web server and establish permissions for the repository root folder and used by all subsequent folders and files.</p>
 <p>Install the index.php file and db folder in the root directory/folder   The name of this folder becomes the name of the repository.</p>
-<p>Make code changes required to define the logo location in the index.php code.</p>
+<p>Make code changes required to define the logo location and resource links in the index.php code.</p>
 <p>Update login page organization name and content disclaimer in login include file login.incl.php in db folder.</p>
-<p>Log into the system and the admin function to initialize a new log file and delete all old ones.</p>
-<p>While in the admin function, create a NEW Archive folder.</p>
+<p>Log into the system and the admin function and initialize a new log file.</p>
+<p>While in the admin function, create the 'Archive' folder.</p>
 <p>Testing: in the Home Folder, create new folder(s) and upload some files.  Move at least one or two to the archive and delete them.  Check to usage log to make sure all activity is being logged. </p>
 <p>If all this works, then it should be good to go.</p>
+
+<h4>Update an Existing Repository</h4>
+<ol>
+<li><p>FTP the index.php file and db folder in the root directory/folder and overwrite the existing index file.   The name of this folder becomes the name of the repository.</p></li>
+<li><p>Make a copy of the db/updater.php file and move the copy into the root directory.</p></li>
+<li><p>Make code changes required to define the logo location and resource links in the new index.php code.</p></li>
+<li><p>Update login page organization name and content disclaimer in login include file login.incl.php in db folder.</p></li>
+<li><p>Log into the admin function and 
+<ol>
+<li>initialize a new log file. Move the existing log files into the db folder renaming them without the (dot) prefix.</li>
+<li>update the db/userlist.txt with the contents of the existing (dot)userlist.txt</li>
+<li>create the 'Archive' folder if one does not already exist.</li>
+</ol></p></li>
+<li><p>Review the listing of the root folder and find and click the script file 'updater.php' to copy the root index.php file into all sub-directories in the rest of direcotry structure.  Delete the file when successfully completed.</p></li>
+<li><p>Testing: in the Home Folder, create new folder(s) and upload some files.  Move at least one or two to the archive and delete them.  Check to usage log to make sure all activity is being logged. </p></li>
+<li><p>If all this works, then it should be good to go.</p></li>
+</ol>
 
 <a href="#">TOP</a>
 </div>
