@@ -15,12 +15,12 @@ echo '
 <html>
 <head>
 <meta charset="utf-8" />
-<title>MBBF Board Repository</title>
+<title>PWC Grants Repository</title>
 </head><body>';
 
 //echo "<h1>Orgainzation Logo Here</h1>";
 // for example:
-echo '<img src="http://morrobaybirdfestival.net/wp-content/uploads/2016/08/LOGO3.png" border="0" alt="MBBF logo"><br>';
+echo '<img src="https://library.pacwilica.org/PWC_logo_only.jpg" border="0" alt="MBBF logo"><br>';
 
 // load array for external resources (if any)
 $GLOBALS['links'][] = '<a href="http://google.com/" target="_blank">Google</a>';
