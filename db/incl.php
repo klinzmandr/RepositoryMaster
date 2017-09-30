@@ -220,8 +220,8 @@ if (strlen($msg) > 0) echo "<div class=\"ERR\">$msg</div>";
 function lister($in) {				// input is the list of the current folder contents
 	$root = $_SESSION['root'];
 	$currdir = getcwd() . '/';
-	// set curr URL path
-	$_SESSION['currpath'] = preg_replace("/(^.*\/)(index.*$)/","$1",$_SERVER['REQUEST_URI']);	
+	// get curr URL from server
+	$currpath = preg_replace("/(^.*\/)(index.*$)/","$1",$_SERVER['REQUEST_URI']);	
 	$cwd = explode('/', $currdir);
 	$dcnt = count($cwd) - 2;
 	$dname = $cwd[$dcnt];
@@ -235,6 +235,8 @@ function lister($in) {				// input is the list of the current folder contents
 	echo '<a class="btn btn-success btn-xs" href="'.$lourl.'">LOGOUT</a>&nbsp;&nbsp;';
 	echo '<a class="btn btn-success btn-xs" href="'.$_SESSION['homeuri'].'\">Home Folder</a>&nbsp;&nbsp;';
 	echo "<a class=\"btn btn-primary btn-xs\" href=\"$helppath\" target=\"_blank\">Help</a>&nbsp;&nbsp;";
+
+// show additional buttons if admin mode has been enabled	
 	if ($_SESSION['adm'] == "ON") { 	// show admin buttons
 	  echo "<a class=\"btn btn-danger btn-xs\" href=\"$archpath\">Archive</a>&nbsp;&nbsp;";
 		echo "<a class=\"btn btn-danger btn-xs\" target=\"_blank\" href=\"".$utilurl."?action=list \">User Summary</a>&nbsp;&nbsp;";		
@@ -249,20 +251,23 @@ function lister($in) {				// input is the list of the current folder contents
 //echo '<pre>Session '; print_r($_SESSION); echo '</pre>';
 //echo '<pre>Server '; print_r($_SERVER); echo '</pre>';
 
+// output links to any external sources defined
 	echo '<h3>On-line resources</h3>
 <b>Online Links: (opens in a new window)</b><ul>';
   if (count($GLOBALS['links'])) {
     foreach ($GLOBALS['links'] as $l) { echo $l . '<br>'; }
     }
-	echo "</ul>
-	<h3> $dname Contents:</h3>";
+
+// display name of current directory and admin mode buttons if enabled
+	echo "</ul><h3> $dname Contents:</h3>";
 	if (preg_match('/\/Archive\//', $_SERVER['REQUEST_URI'])) 
     echo "<div style=\"color: red; \"><b>Archive Mode Active</b></div>";
 	if ($_SESSION['adm'] == "ON") { 	// show add folder & file links
 		echo "<a class=\"btn btn-danger btn-xs\" href=\"index.php?addfolder=1\">Add folder</a>";
 		echo "&nbsp;&nbsp;<a class=\"btn btn-danger btn-xs\" href=\"index.php?addfile=1\">Add file</a><br>";
 		}
-		
+
+// list all directories in current folder		
 	echo "<b><u>Folders:</u></b><br><ul>";
 	// echo "currdir: $currdir, root: $root, dname: $dname<br>";
   echo '<div class="row"><div class="col-sm-3">';
@@ -273,7 +278,6 @@ function lister($in) {				// input is the list of the current folder contents
     //echo "NOT root NOR archive<br>";
     echo '<a href="../index.php">Parent Folder</a>';
     }
-
   echo '</div></div>'; 
 	if (count($in) > 0) {
   	foreach ($in as $f) {  
@@ -282,7 +286,7 @@ function lister($in) {				// input is the list of the current folder contents
   			if ($_SESSION['adm'] == 'ON') {
   				$urlf = urlencode($f);			
   				echo "<div class=\"col-sm-3\">";
-  				if (preg_match("/Archive/", $_SESSION['currpath']))  
+  				if (preg_match("/Archive/", $currpath))  
     				echo "<a class=\"confirm\" href=\"index.php?archive=dir&fname=$urlf&restore\">Restore</a>/";
     			else 
     				echo "<a class=\"confirm\" href=\"index.php?archive=dir&fname=$urlf\">Archive</a>/";
@@ -290,13 +294,14 @@ function lister($in) {				// input is the list of the current folder contents
   				<a class=\"confirm\" href=\"index.php?delete=dir&dname=$urlf\">Delete</a>/
   				<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>"; 
   				}
-  			$dnurl = $_SESSION['currpath'] .  "$f";
+  			$dnurl = $currpath .  "$f";
   			// echo "dnurl: $dnurl<br>";
   			echo "<div class=\"col-sm-4\"><a href=\"$dnurl\">$f</a></div></div>"; 
   			}
   		}
     }
 
+// list all the files in the current folder
 	echo "</ul><br><b><u>Files:</u></b><ul>";
 	if ($_SESSION['adm'] == 'ON') {
 		echo "<div class=\"row\">
@@ -319,7 +324,7 @@ function lister($in) {				// input is the list of the current folder contents
 				$newf = urlencode($f);
 				echo "
 				<div class=\"col-sm-3\">";
-				if (preg_match("/Archive/", $_SESSION['currpath'])) 
+				if (preg_match("/Archive/", $currpath)) 
 				  echo "<a class=\"confirm\" href=\"index.php?archive=file&fname=$newf&restore\">Restore</a> / ";
 				else 
 				  echo "<a class=\"confirm\" href=\"index.php?archive=file&fname=$newf\">Archive</a> / ";
@@ -327,7 +332,7 @@ function lister($in) {				// input is the list of the current folder contents
 				<a class=\"confirm\" href=\"index.php?delete=file&fname=$newf\">Delete</a> /
 				<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>";
 				}
-				$fnurl = $_SESSION['currpath'] .  "index.php?dsp=$f";
+				$fnurl = $currpath . "index.php?dsp=$f";
 				//echo "fnurl: $fnurl<br>";
   		  echo "
   			<div class=\"col-sm-5\">
@@ -341,7 +346,7 @@ function lister($in) {				// input is the list of the current folder contents
 // form for admin load rename form and script
 // =========== rename js function and form =================
 	if ($_SESSION['adm'] == 'ON') {
-	echo '		
+	print <<<scriptPart1
 <script>
 function getfld(OName) {
 var inval = OName;
@@ -363,7 +368,8 @@ return false;
 <input type="hidden" id="HF1" name="oldname" value="">
 <input type="hidden" id="HF2" name="newname" value="">
 <input type="hidden" name="rename" value="rename">
-</form>';
+</form>
+scriptPart1;
 	}
 	logger("Listed folder");
 	return;
