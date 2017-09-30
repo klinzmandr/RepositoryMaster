@@ -15,7 +15,7 @@ echo '
 <html>
 <head>
 <meta charset="utf-8" />
-<title>PWC Grants Repository</title>
+<title>PWC Repository</title>
 </head><body>';
 
 //echo "<h1>Orgainzation Logo Here</h1>";
@@ -23,8 +23,10 @@ echo '
 echo '<img src="https://library.pacwilica.org/PWC_logo_only.jpg" border="0" alt="MBBF logo"><br>';
 
 // load array for external resources (if any)
-$GLOBALS['links'][] = '<a href="http://google.com/" target="_blank">Google</a>';
-$GLOBALS['links'][] = '<a href="http://yahoo.com/" target="_blank">Yahoo</a>';
+$GLOBALS['links'][] = '<a href="https://www.pacificwildlifecare.org/" target="_blank">PWC Home Page</a>';
+$GLOBALS['links'][] = '<a href="https://apps.pacwilica.org/mbrquery" target="_blank">PWC Mbr Query</a>';
+$GLOBALS['links'][] = '<a href="https://apps.pacwilica.org/charts" target="_blank">PWC Charts</a>';
+$GLOBALS['links'][] = '<a href="https://www.pacificwildlifecare.org/events/" target="_blank">PWC Event Calendar</a>';
 
 // logout or session reset requested
 if (isset($_REQUEST['logout'])) {

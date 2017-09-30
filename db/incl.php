@@ -8,8 +8,8 @@ function viewer() {
 $file = '';
 if (isset($_REQUEST['dsp'])) { 
   $file = $_REQUEST['dsp'];
-  //$metapath = preg_replace("/(^.*\/)index.*$/","$1",$_SERVER['HTTP_REFERER']) . $file;
-  $metapath = preg_replace("/(^.*)\/index.*$/","$1/$file",$_SERVER['HTTP_REFERER']);
+  $metapath = (preg_replace("/(^.*\/)index.*$/","$1",$_SERVER['HTTP_REFERER'])) . $file;
+  //$metapath = preg_replace("/(^.*)\/index.*$/","$1/$file",$_SERVER['HTTP_REFERER']);
   $rootpath = getcwd() . '/' . $file;
   //echo "rootpath: $rootpath<br>"; echo "metapath: $metapath<br>";
   if (file_exists($rootpath)) {
@@ -28,39 +28,35 @@ if (isset($_REQUEST['dsp'])) {
 //echo '<pre>Server '; print_r($_SERVER); echo '</pre>';
 //echo "End viewer processing<br>";
 }
+
 // anchor confirm script
 $archflag = isset($_SESSION['arch']) ? 'true' : 'false';
 print <<<htmlScript
 
 <script>
-$(document).ready(function() {
+$(document).ready( function() {
   $(".ERR").fadeOut(5000);
+  $(".confirm").click(function() {
+    var r=confirm("This action is irreversable.\\n\\n Confirm action by clicking OK: ");
+    if (r == true) { 
+      return true; }
+    else { 
+      return false;  }
+  	});
+
+  $(".adm").click(function() {
+    var val = prompt("Please enter the Admin password.");
+    if (val.length > 0) {
+    // if confirm dialog is canceled it returns false
+    	$("#AP").val(val);
+    	$("#LIF").submit();
+      return true;
+    	}
+  });
 });
 </script>
 
-<script>
-function anchorconfirm() {
-var r=confirm("This action is irreversable.\\n\\n Confirm delete by clicking OK: ");
-if (r == true) { 
-  return true; }
-else { 
-  return false;  }
-	}
-</script>
-
-<script>
-function adminreq() {
-var val = prompt("Please enter the Admin password.");
-if (val.length > 0) {
-// if confirm dialog is canceled it returns false
-	document.getElementById("AP").value = val;
-	document.forms["LIF"].submit();
-  return true;
-	}
-}
-</script>
-
-<form name="LIF" mode="get">
+<form id="LIF" mode="get">
 <input id="AP" type="hidden" name="apw" value="">
 </form>
 
@@ -232,14 +228,14 @@ function lister($in) {				// input is the list of the current folder contents
 	$_SESSION['currdir'] = $dname;
 	$lourl = (isset($_SESSION['homeuri'])) ? 
     $_SESSION['homeuri'] . "?logout" : "index.php?logout";
-	echo '<a class="btn btn-success btn-xs" href="'.$lourl.'">LOGOUT</a>&nbsp;&nbsp;';
-	echo "<a class=\"btn btn-success btn-xs\" href=\"".$_SESSION['homeuri']."\">Home Folder</a>&nbsp;&nbsp;";
 	$helppath = rtrim($_SESSION['homeuri'],'index.php') . 'db/repohelp.html';
-	echo "<a class=\"btn btn-primary btn-xs\" href=\"$helppath\" target=\"_blank\">Help</a>&nbsp;&nbsp;";
+	$archpath = rtrim($_SESSION['homeuri'],'index.php') . 'Archive';
 	$indexurl = rtrim($_SESSION['homeuri'], '/index.php') . '/db/logutil.php';
 	$utilurl =  rtrim($_SESSION['homeuri'], '/index.php') . '/db/useradmin.php';
+	echo '<a class="btn btn-success btn-xs" href="'.$lourl.'">LOGOUT</a>&nbsp;&nbsp;';
+	echo '<a class="btn btn-success btn-xs" href="'.$_SESSION['homeuri'].'\">Home Folder</a>&nbsp;&nbsp;';
+	echo "<a class=\"btn btn-primary btn-xs\" href=\"$helppath\" target=\"_blank\">Help</a>&nbsp;&nbsp;";
 	if ($_SESSION['adm'] == "ON") { 	// show admin buttons
-	  $archpath = rtrim($_SESSION['homeuri'],'index.php') . 'Archive';
 	  echo "<a class=\"btn btn-danger btn-xs\" href=\"$archpath\">Archive</a>&nbsp;&nbsp;";
 		echo "<a class=\"btn btn-danger btn-xs\" target=\"_blank\" href=\"".$utilurl."?action=list \">User Summary</a>&nbsp;&nbsp;";		
 		echo "<a class=\"btn btn-danger btn-xs\" target=\"_blank\" href=\"$indexurl\">Log Utility</a>&nbsp;&nbsp;";
@@ -247,10 +243,12 @@ function lister($in) {				// input is the list of the current folder contents
 		";
 		}
 	else {
-		echo "<a onclick=\"return adminreq()\" class=\"btn btn-danger btn-xs\" href=\"#\">Admin</a>&nbsp;&nbsp;";
+		echo "<a class=\"adm btn btn-danger btn-xs\" href=\"#\">Admin</a>&nbsp;&nbsp;";
 		}
+
 //echo '<pre>Session '; print_r($_SESSION); echo '</pre>';
 //echo '<pre>Server '; print_r($_SERVER); echo '</pre>';
+
 	echo '<h3>On-line resources</h3>
 <b>Online Links: (opens in a new window)</b><ul>';
   if (count($GLOBALS['links'])) {
@@ -285,14 +283,16 @@ function lister($in) {				// input is the list of the current folder contents
   				$urlf = urlencode($f);			
   				echo "<div class=\"col-sm-3\">";
   				if (preg_match("/Archive/", $_SESSION['currpath']))  
-    				echo "<a onclick=\"return anchorconfirm()\" href=\"index.php?archive=dir&fname=$urlf&restore\">Restore</a>/";
+    				echo "<a class=\"confirm\" href=\"index.php?archive=dir&fname=$urlf&restore\">Restore</a>/";
     			else 
-    				echo "<a onclick=\"return anchorconfirm()\" href=\"index.php?archive=dir&fname=$urlf\">Archive</a>/";
+    				echo "<a class=\"confirm\" href=\"index.php?archive=dir&fname=$urlf\">Archive</a>/";
   				echo "
-  				<a onclick=\"return anchorconfirm()\" href=\"index.php?delete=dir&dname=$urlf\">Delete</a>/
+  				<a class=\"confirm\" href=\"index.php?delete=dir&dname=$urlf\">Delete</a>/
   				<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>"; 
   				}
-  			echo "<div class=\"col-sm-4\"><a href=\"$f\">$f</a></div></div>"; 
+  			$dnurl = $_SESSION['currpath'] .  "$f";
+  			// echo "dnurl: $dnurl<br>";
+  			echo "<div class=\"col-sm-4\"><a href=\"$dnurl\">$f</a></div></div>"; 
   			}
   		}
     }
@@ -309,7 +309,9 @@ function lister($in) {				// input is the list of the current folder contents
 		<div class=\"col-sm-6\"><b><u>Name</u></b></div>
 		<div class=\"col-sm-4\"><b><u>Date Created</u></b></div></div>"; }
 	if (count($in) > 0) {
+	  //echo '<pre>files list '; print_r($in); echo '</pre>';
   	foreach ($in as $f) {
+			//echo '<pre>filename: '; print_r($f); echo '</pre>';
   		if (is_file($f)) {
   			$ft = date('M d,Y H:i:s', filectime($f));
   			echo "<div class=\"row\">";
@@ -318,16 +320,18 @@ function lister($in) {				// input is the list of the current folder contents
 				echo "
 				<div class=\"col-sm-3\">";
 				if (preg_match("/Archive/", $_SESSION['currpath'])) 
-				  echo "<a onclick=\"return anchorconfirm()\" href=\"index.php?archive=file&fname=$newf&restore\">Restore</a> / ";
+				  echo "<a class=\"confirm\" href=\"index.php?archive=file&fname=$newf&restore\">Restore</a> / ";
 				else 
-				  echo "<a onclick=\"return anchorconfirm()\" href=\"index.php?archive=file&fname=$newf\">Archive</a> / ";
+				  echo "<a class=\"confirm\" href=\"index.php?archive=file&fname=$newf\">Archive</a> / ";
 				echo "
-				<a onclick=\"return anchorconfirm()\" href=\"index.php?delete=file&fname=$newf\">Delete</a> /
+				<a class=\"confirm\" href=\"index.php?delete=file&fname=$newf\">Delete</a> /
 				<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>";
 				}
+				$fnurl = $_SESSION['currpath'] .  "index.php?dsp=$f";
+				//echo "fnurl: $fnurl<br>";
   		  echo "
   			<div class=\"col-sm-5\">
-  			<a href=\"index.php?dsp=$f\" target=\"_blank\">$f</a></div>
+  			<a href=\"$fnurl\" target=\"_blank\">$f</a></div>
   			<div class=\"col-sm-4\">$ft</div></div>"; 
   			}
   		}		// end foreach for files
