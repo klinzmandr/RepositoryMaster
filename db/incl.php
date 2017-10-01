@@ -61,41 +61,73 @@ $(document).ready( function() {
 </form>
 
 htmlScript;
-// ============== archiver() =================
-function archiver() {
-  if (isset($_REQUEST['archive'])) {
-		$cwd = getcwd() . '/';
-		//echo "cwd: $cwd<br>";
-		$l = strlen($cwd) - strlen($_SESSION['root']);
-		//echo "l: $l<br>";
-	  $relpath = ''.substr($cwd, -($l));		
-		if ($l <= 0) {
-	     $relpath = '';
-	   }
-		//echo "relpath: $relpath<br>"; 
-    $old = $_SESSION['root'].$relpath.$_REQUEST['fname'];
-		$new = $_SESSION['root'].'Archive/'.$relpath.$_REQUEST['fname'];
-		//echo "old: $old<br>new: $new<br>";
-		
-		if (isset($_REQUEST['restore'])) {
-      $new = preg_replace("/(^.*\/)Archive\/(.*$)/i","$1$2",$old);
-  		//echo "Restore of old: $old<br>to new: $new<br>";
-		  }
 
-		if (rename($old, $new)) {  
-		  echo "<div class=\"ERR\"><h4 style=\"color: red; \">Action Completed</h4></div>";
-		  logger("Renamed $old"); }
-		else {
-		  echo "<div class=\"ERR\"><h4 style=\"color: red; \">Rename request FAILED!<br>
-			New name already exists OR all/part of the path name invalid<br>
-			NOTE: Check that the folder exists in the Archive.</h4></div>";
-			logger("Rename of $old FAILED"); }
+// ============== mover() =====================
+function mover() {
+// do actual move
+  if (isset($_REQUEST['mover'])) {
+    //echo '<pre>REQUEST '; print_r($_REQUEST); echo '</pre>';
+    $newname = $_REQUEST['dest'] . '/' . $_REQUEST['file'];
+    $oldname = getcwd() . '/' . $_REQUEST['file'];
+    //echo "<pre>oldname: $oldname\nnewname: $newname</pre>";
+    if ($newname == $oldname) {
+      echo "<div class=\"ERR\"><h4 style=\"color: red; \"><b>Move request FAILED!</b><br>A file may not be moved into its current folder.</h4></div>";
+      logger(); 
+      }
+    elseif (file_exists($newname)) {
+      logger("File $oldname already exists");
+      echo "<div class=\"ERR\"><h4 style=\"color: red; \">Move failed! Destination file already exists.</h4></div>";
+      }
+    else {
+      if (rename($oldname, $newname)) {
+        logger("Renamed $oldname to $newname");
+        echo "<div class=\"ERR\"><h4 style=\"color: red; \">Move request successful!</h4></div>";
+        } 
+      else {
+        logger("Rename of $oldname FAILED");
+        echo "<div class=\"ERR\"><h4 style=\"color: red; \">Move request NOT successful!</h4></div>";
+        } 
+      }
+    }
 
-  //echo '<pre>Session '; print_r($_SESSION); echo '</pre>';
-  //echo '<pre>Server '; print_r($_SERVER); echo '</pre>';
-	}  
-return;  
-}
+// move requested    
+  if (isset($_REQUEST['move'])) {
+    $file = $_REQUEST['move'];
+    $rootpath = $_SESSION['root'];		
+	  //echo "rootpath: $rootpath<br>";
+    $dirlist = `find $rootpath -type d -print`;
+    $dirlistarray = array();
+    $dirlistarray = preg_split("/\\n/",$dirlist,"-1",1);
+    //echo '<pre>dirlist '; print_r($dirlist); echo '</pre>';
+    //echo '<pre>dirs '; print_r($dirlistarray); echo '</pre>';
+    foreach ($dirlistarray as $d) {
+      if (preg_match("/db|\.git/i",$d)) continue;   // ignore these
+      $finarray[] = $d;
+      }
+    sort($finarray);
+    //echo '<pre>finarray '; print_r($finarray); echo '</pre>';
+    $len = strlen($rootpath);
+    //echo "len: $len<br>";
+    echo 'Select destination folder: 
+    <form action="index.php">
+    <select onchange="javascript: this.form.submit();" name="dest">
+    <option value=""></option>
+    <option value="'.rtrim($rootpath,'/').'">HomeFolder</option>';
+    foreach ($finarray as $d) {
+      $dspname = substr($d, $len);
+      if (!strlen($dspname)) continue;
+      //echo "d: $d, dspname: $dspname<br>";
+      echo '<option value="'.$d.'">'.$dspname.'</option>  '; 
+      }
+    echo '
+    </select>
+    <input type="hidden" name="file" value="'.$file.'">
+    <input type="hidden" name="mover" value="Apply">
+    </form>';
+    }
+  return;
+  }
+
 //=============== deller() ===================
 function deller() {
 	if (isset($_REQUEST['rename'])) {
@@ -121,8 +153,8 @@ function deller() {
 			  logger("Deleted file $fn");
 			  }
 			else {
-			  echo "<div class=\"ERR\"><h4 style=\"color: red; \">Deleted file $fn. FAILED!</h4></div>"; }
-			  logger("Deletion of file $fn FAILED.");
+			  echo "<div class=\"ERR\"><h4 style=\"color: red; \">Deleted file $fn. FAILED!</h4></div>";
+			  logger("Deletion of file $fn FAILED."); }
 			}
 		if ($_REQUEST['delete'] == 'dir') {
 			$dirname = urldecode($_REQUEST['dname']);
@@ -286,10 +318,7 @@ function lister($in) {				// input is the list of the current folder contents
   			if ($_SESSION['adm'] == 'ON') {
   				$urlf = urlencode($f);			
   				echo "<div class=\"col-sm-3\">";
-  				if (preg_match("/Archive/", $currpath))  
-    				echo "<a class=\"confirm\" href=\"index.php?archive=dir&fname=$urlf&restore\">Restore</a>/";
-    			else 
-    				echo "<a class=\"confirm\" href=\"index.php?archive=dir&fname=$urlf\">Archive</a>/";
+    			echo "<a class=\"confirm\" href=\"index.php?move=$urlf\">Move</a>/";
   				echo "
   				<a class=\"confirm\" href=\"index.php?delete=dir&dname=$urlf\">Delete</a>/
   				<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>"; 
@@ -324,10 +353,7 @@ function lister($in) {				// input is the list of the current folder contents
 				$newf = urlencode($f);
 				echo "
 				<div class=\"col-sm-3\">";
-				if (preg_match("/Archive/", $currpath)) 
-				  echo "<a class=\"confirm\" href=\"index.php?archive=file&fname=$newf&restore\">Restore</a> / ";
-				else 
-				  echo "<a class=\"confirm\" href=\"index.php?archive=file&fname=$newf\">Archive</a> / ";
+				echo "<a class=\"confirm\" href=\"index.php?move=$newf\">Move</a> / ";
 				echo "
 				<a class=\"confirm\" href=\"index.php?delete=file&fname=$newf\">Delete</a> /
 				<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>";
@@ -374,7 +400,7 @@ scriptPart1;
 	logger("Listed folder");
 	return;
 	}			// end function 'lister'
-//=========== sechk() =======================================
+// =========== sechk() =======================================
 function sechk($dur) {
 	if (strlen($_REQUEST['uid']) != 0) { 
 		// echo "session id length = 0<br>";
@@ -383,19 +409,26 @@ function sechk($dur) {
 		}
 	$todnow = time();
 	if (isset($_SESSION['tk']) AND ($todnow >= $_SESSION['tk'])) {
+		//echo '<pre>SERVER '; print_r($_SERVER); echo '</pre>';
+		//echo '<pre>SESSION '; print_r($_SESSION); echo '</pre>';
 		unset($_SESSION['tk']);
 		unset($_SESSION['adm']);
 		$msg = "Session has expired for " . $SESSION['uid'];
 		logger($msg);
-		if (strlen($_REQUEST['uid']) == 0) 
-			echo "<h2>Please login</h2>";
+		if (strlen($_REQUEST['uid']) == 0) {
+		  $lourl = $_SESSION['homeuri'];
+		  //echo "lourl: $lourl<br>";
+			echo '<h2 style="color: red; ">Session has expired!</h2>
+			<h3><a href="'.$lourl.'">Please login</a></h3>';
+			exit; }
 		}
 	else {
 		if (isset($_SESSION['tk'])) {			
 			$_SESSION['tk'] = $todnow + $dur;
 			}
 		}
-// admin button clicked
+
+// admin mode request
 	if (isset($_REQUEST['apw'])) {
 		$fp = $_SESSION['root'] . 'db/userlist.txt';
 		$f = file_get_contents($fp);
@@ -412,7 +445,7 @@ function sechk($dur) {
 			}
 		}
 		
-// login requested
+// login request
   $haystack = array();
 	if ($_REQUEST['submit'] == "Login") {
 		$needle = $_REQUEST['uid'];
