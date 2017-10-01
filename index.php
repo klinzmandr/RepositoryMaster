@@ -38,10 +38,9 @@ if (isset($_REQUEST['logout'])) {
 	}
 
 sechk(30*60);												// check and/or set session
-archiver();                         // do archive request
+mover();                            // do move request
 adder();														// do file and/or dir add
 deller();														// do file upload, rename and or dir delete
-// viewer();                           // display the requested file
 
 $contents = scandir(".");						// scan the current directory
 foreach ($contents as $c) { 
