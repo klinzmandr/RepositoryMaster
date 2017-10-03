@@ -1,0 +1,1615 @@
+Date;Time;ExpTime;UserID;Action;Folder
+09/23/2017;14:45:23;;;Log Initiated
+09/23/17;14:45:55;15:15:55;fresno461;Listed folder;Archive
+09/23/17;14:45:57;15:15:57;fresno461;Listed folder;RepositoryMaster
+09/23/17;14:46:00;15:16:00;fresno461;Listed folder;Archive
+09/23/17;14:46:14;15:16:00;fresno461;Logged out;Archive
+09/23/17;14:46:19;;fresno461;Login Successful;
+09/23/17;14:46:19;15:16:19;fresno461;Listed folder;RepositoryMaster
+09/23/17;14:47:04;15:17:04;fresno461;Listed folder;RepositoryMaster
+09/23/17;14:47:06;15:17:06;fresno461;Listed folder;RepositoryMaster
+09/23/17;14:47:38;15:17:06;fresno461;Logged out;RepositoryMaster
+09/29/17;11:38:28;;fresno461;Login Successful;
+09/29/17;11:38:28;12:08:28;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:38:35;12:08:35;fresno461;Admin Mode request failed.;RepositoryMaster
+09/29/17;11:38:35;12:08:35;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:38:46;12:08:46;fresno461;Admin Mode Enabled;RepositoryMaster
+09/29/17;11:38:46;12:08:46;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:40:09;12:10:09;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:40:16;12:10:16;fresno461;Admin Mode Enabled;RepositoryMaster
+09/29/17;11:40:16;12:10:16;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:50:10;12:20:10;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:50:32;12:20:32;fresno461;Listed folder;Archive
+09/29/17;11:50:38;12:20:38;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:50:48;12:20:48;fresno461;Add file requested;RepositoryMaster
+09/29/17;11:50:48;12:20:48;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:51:01;12:21:01;fresno461;File# 1 (Selection_297.png) uploaded successfully;RepositoryMaster
+09/29/17;11:51:01;12:21:01;fresno461;File# 2 (Selection_296.png) uploaded successfully;RepositoryMaster
+09/29/17;11:51:01;12:21:01;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:51:14;12:21:14;fresno461;Deleted file Selection_296.png;RepositoryMaster
+09/29/17;11:51:14;12:21:14;fresno461;Deletion of file Selection_296.png FAILED.;RepositoryMaster
+09/29/17;11:51:14;12:21:14;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:51:18;12:21:18;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/Selection_297.png;RepositoryMaster
+09/29/17;11:51:18;12:21:18;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:51:21;12:21:21;fresno461;Listed folder;Archive
+09/29/17;11:51:30;12:21:30;fresno461;Deleted file Selection_297.png;Archive
+09/29/17;11:51:30;12:21:30;fresno461;Deletion of file Selection_297.png FAILED.;Archive
+09/29/17;11:51:30;12:21:30;fresno461;Listed folder;Archive
+09/29/17;11:53:16;12:23:16;fresno461;Add file requested;Archive
+09/29/17;11:53:16;12:23:16;fresno461;Listed folder;Archive
+09/29/17;11:53:24;12:23:24;fresno461;File# 1 (Selection_293.png) uploaded successfully;Archive
+09/29/17;11:53:24;12:23:24;fresno461;File# 2 (Selection_292.png) uploaded successfully;Archive
+09/29/17;11:53:24;12:23:24;fresno461;Listed folder;Archive
+09/29/17;11:53:28;12:23:28;fresno461;Deleted file Selection_292.png;Archive
+09/29/17;11:53:28;12:23:28;fresno461;Deletion of file Selection_292.png FAILED.;Archive
+09/29/17;11:53:28;12:23:28;fresno461;Listed folder;Archive
+09/29/17;11:57:37;12:27:37;fresno461;Deleted file Selection_293.png;Archive
+09/29/17;11:57:37;12:27:37;fresno461;Deletion of file Selection_293.png FAILED.;Archive
+09/29/17;11:57:37;12:27:37;fresno461;Listed folder;Archive
+09/29/17;11:57:39;12:27:39;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:57:43;12:27:43;fresno461;Add file requested;RepositoryMaster
+09/29/17;11:57:43;12:27:43;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:57:55;12:27:55;fresno461;File# 1 (Selection_293.png) uploaded successfully;RepositoryMaster
+09/29/17;11:57:55;12:27:55;fresno461;File# 2 (Selection_292.png) uploaded successfully;RepositoryMaster
+09/29/17;11:57:55;12:27:55;fresno461;File# 3 (Selection_291.png) uploaded successfully;RepositoryMaster
+09/29/17;11:57:55;12:27:55;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:58:16;12:28:16;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/Selection_291.png;RepositoryMaster
+09/29/17;11:58:16;12:28:16;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:58:20;12:28:20;fresno461;Deleted file Selection_292.png;RepositoryMaster
+09/29/17;11:58:20;12:28:20;fresno461;Deletion of file Selection_292.png FAILED.;RepositoryMaster
+09/29/17;11:58:20;12:28:20;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:58:22;12:28:20;fresno461;Viewed file: Selection_293.png;RepositoryMaster
+09/29/17;11:58:22;12:28:22;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:58:34;12:28:22;fresno461;Viewed file: Selection_293.png;RepositoryMaster
+09/29/17;11:58:34;12:28:34;fresno461;Listed folder;RepositoryMaster
+09/29/17;11:59:27;12:29:27;fresno461;Listed folder;Archive
+09/29/17;11:59:29;12:29:27;fresno461;Viewed file: Selection_291.png;Archive
+09/29/17;11:59:37;12:29:37;fresno461;Add folder requested;Archive
+09/29/17;11:59:37;12:29:37;fresno461;Listed folder;Archive
+09/29/17;11:59:42;12:29:42;fresno461;Created folder: testfolder1;Archive
+09/29/17;11:59:42;12:29:42;fresno461;Listed folder;Archive
+09/29/17;11:59:44;12:29:44;fresno461;Listed folder;testfolder1
+09/29/17;11:59:46;12:29:46;fresno461;Add file requested;testfolder1
+09/29/17;11:59:46;12:29:46;fresno461;Listed folder;testfolder1
+09/29/17;11:59:53;12:29:53;fresno461;File# 1 (Selection_277.png) uploaded successfully;testfolder1
+09/29/17;11:59:53;12:29:53;fresno461;Listed folder;testfolder1
+09/29/17;11:59:56;12:29:53;fresno461;Viewed file: Selection_277.png;testfolder1
+09/29/17;12:00:06;12:30:06;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:00:10;12:30:06;fresno461;Viewed file: Selection_293.png;RepositoryMaster
+09/29/17;12:00:19;12:30:19;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:00:22;12:30:19;fresno461;Viewed file: Selection_293.png;RepositoryMaster
+09/29/17;12:00:36;12:30:36;fresno461;Renamed Selection_293.png to Selectionx_293.png;RepositoryMaster
+09/29/17;12:00:36;12:30:36;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:00:43;12:30:36;fresno461;Viewed file: Selectionx_293.png;RepositoryMaster
+09/29/17;12:00:50;12:30:50;fresno461;Deleted file Selectionx_293.png;RepositoryMaster
+09/29/17;12:00:50;12:30:50;fresno461;Deletion of file Selectionx_293.png FAILED.;RepositoryMaster
+09/29/17;12:00:50;12:30:50;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:00:54;12:30:54;fresno461;Listed folder;Archive
+09/29/17;12:01:00;12:31:00;fresno461;Deleted file Selection_291.png;Archive
+09/29/17;12:01:00;12:31:00;fresno461;Deletion of file Selection_291.png FAILED.;Archive
+09/29/17;12:01:00;12:31:00;fresno461;Listed folder;Archive
+09/29/17;12:01:03;12:31:03;fresno461;Listed folder;Archive
+09/29/17;12:01:10;12:31:10;fresno461;Listed folder;Archive
+09/29/17;12:01:16;12:31:16;fresno461;Listed folder;testfolder1
+09/29/17;12:01:22;12:31:16;fresno461;Viewed file: Selection_277.png;testfolder1
+09/29/17;12:01:38;12:31:38;fresno461;Deleted file Selection_277.png;testfolder1
+09/29/17;12:01:38;12:31:38;fresno461;Deletion of file Selection_277.png FAILED.;testfolder1
+09/29/17;12:01:38;12:31:38;fresno461;Listed folder;testfolder1
+09/29/17;12:01:41;12:31:41;fresno461;Listed folder;Archive
+09/29/17;12:01:45;12:31:45;fresno461;Deleted folder: 'testfolder1' ;Archive
+09/29/17;12:01:45;12:31:45;fresno461;Listed folder;Archive
+09/29/17;12:01:49;12:31:49;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:03:22;12:33:22;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:03:24;12:33:24;fresno461;Add file requested;RepositoryMaster
+09/29/17;12:03:24;12:33:24;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:03:35;12:33:35;fresno461;File# 1 (Selection_293.png) uploaded successfully;RepositoryMaster
+09/29/17;12:03:35;12:33:35;fresno461;File# 2 (Selection_292.png) uploaded successfully;RepositoryMaster
+09/29/17;12:03:35;12:33:35;fresno461;File# 3 (Selection_291.png) uploaded successfully;RepositoryMaster
+09/29/17;12:03:35;12:33:35;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:03:44;12:33:35;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/29/17;12:03:44;12:33:44;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:04:14;12:33:44;fresno461;Viewed file: Selection_292.png;RepositoryMaster
+09/29/17;12:04:14;12:34:14;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:06:18;12:34:14;fresno461;Logged out;RepositoryMaster
+09/29/17;12:06:22;;fresno461;Login Successful;
+09/29/17;12:06:22;12:36:22;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:06:28;12:36:22;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/29/17;12:06:39;12:36:39;fresno461;Admin Mode Enabled;RepositoryMaster
+09/29/17;12:06:39;12:36:39;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:06:59;12:36:59;fresno461;Add file requested;RepositoryMaster
+09/29/17;12:06:59;12:36:59;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:07:07;12:37:07;fresno461;File# 1 (Selection_294.png) uploaded successfully;RepositoryMaster
+09/29/17;12:07:07;12:37:07;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:07:45;12:37:45;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:07:50;12:37:50;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:07:51;12:37:51;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:08:00;12:38:00;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:08:12;12:38:12;fresno461;Listed folder;Archive
+09/29/17;12:08:19;12:38:19;fresno461;Add file requested;Archive
+09/29/17;12:08:19;12:38:19;fresno461;Listed folder;Archive
+09/29/17;12:08:31;12:38:31;fresno461;File# 1 (Selection_295.png) uploaded successfully;Archive
+09/29/17;12:08:31;12:38:31;fresno461;Listed folder;Archive
+09/29/17;12:08:39;12:38:39;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:08:46;12:38:46;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:09:07;12:39:07;fresno461;Add folder requested;RepositoryMaster
+09/29/17;12:09:07;12:39:07;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:09:11;12:39:11;fresno461;Created folder: testfolder1;RepositoryMaster
+09/29/17;12:09:11;12:39:11;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:09:16;12:39:16;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:09:19;12:39:19;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:09:27;12:39:27;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:09:33;12:39:33;fresno461;Listed folder;Archive
+09/29/17;12:09:37;12:39:37;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:09:45;12:39:45;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:09:58;12:39:58;fresno461;Listed folder;testfolder1
+09/29/17;12:10:03;12:40:03;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:10:06;12:40:06;fresno461;Listed folder;testfolder1
+09/29/17;12:10:09;12:40:09;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:10:14;12:40:14;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:10:36;12:40:14;fresno461;Viewed file: Selection_292.png;RepositoryMaster
+09/29/17;12:10:49;12:40:49;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:10:51;12:40:51;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:10:56;12:40:56;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:11:05;12:41:05;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:11:11;12:41:11;fresno461;Listed folder;Archive
+09/29/17;12:11:15;12:41:15;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:11:17;12:41:17;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:11:18;12:41:18;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:11:31;12:41:31;fresno461;Renamed testfolder1 to testfolderx1;RepositoryMaster
+09/29/17;12:11:31;12:41:31;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:11:34;12:41:34;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:11:38;12:41:38;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:11:40;12:41:40;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:11:43;12:41:43;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:11:46;12:41:46;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:11:56;12:41:56;fresno461;Listed folder;Archive
+09/29/17;12:12:06;12:41:56;fresno461;Viewed file: Selection_295.png;Archive
+09/29/17;12:12:26;12:42:26;fresno461;Listed folder;RepositoryMaster
+09/29/17;12:12:43;12:42:43;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:13;;fresno461;Login Successful;
+09/29/17;14:30:13;15:00:13;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:14;15:00:14;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:14;15:00:14;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:14;15:00:14;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:14;15:00:14;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:14;15:00:14;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:41;15:00:41;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:41;15:00:41;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:41;15:00:41;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:41;15:00:41;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:41;15:00:41;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:41;15:00:41;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:43;15:00:43;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:43;15:00:43;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:43;15:00:43;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:43;15:00:43;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:43;15:00:43;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:43;15:00:43;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:45;15:00:43;fresno461;Logged out;RepositoryMaster
+09/29/17;14:30:49;;fresno461;Login Successful;
+09/29/17;14:30:49;15:00:49;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:49;15:00:49;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:49;15:00:49;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:49;15:00:49;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:49;15:00:49;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:30:49;15:00:49;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:33:22;;fresno461;Login Successful;
+09/29/17;14:33:22;15:03:22;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:33:42;15:03:42;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:40:33;15:10:33;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:42:45;15:12:45;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:44:33;15:14:33;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:51:10;;fresno461;Login Successful;
+09/29/17;14:51:10;15:21:10;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:51:23;15:21:23;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:51:32;15:21:23;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/29/17;14:51:42;15:21:23;fresno461;Viewed file: Selection_293.png;RepositoryMaster
+09/29/17;14:52:54;15:22:54;fresno461;Listed folder;RepositoryMaster
+09/29/17;14:53:05;15:22:54;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/29/17;15:02:07;15:32:07;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:02:28;15:32:07;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/29/17;15:02:45;15:32:45;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:03:23;15:32:45;fresno461;Viewed file: Selection_294.png;RepositoryMaster
+09/29/17;15:03:53;15:33:53;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:05:10;15:33:53;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/29/17;15:05:44;15:35:44;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:08:04;15:38:04;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:08:23;15:38:23;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:08:35;15:38:35;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:08:51;15:38:51;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:08:58;15:38:58;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:09:15;15:39:15;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:13:25;15:43:25;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:13:41;15:43:41;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:16:43;15:46:43;fresno461;Admin Mode Enabled;RepositoryMaster
+09/29/17;15:16:43;15:46:43;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:16:46;15:46:46;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:17:19;15:47:19;fresno461;Renamed Selection_291.png to Selection_291x.png;RepositoryMaster
+09/29/17;15:17:19;15:47:19;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:19:33;15:49:33;fresno461;Rename of Selection_291.png FAILED;RepositoryMaster
+09/29/17;15:19:33;15:49:33;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:20:18;15:50:18;fresno461;Renamed Selection_291x.png to Selection_291.png;RepositoryMaster
+09/29/17;15:20:18;15:50:18;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:25:01;15:55:01;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:26:21;15:56:21;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:26:27;15:56:21;fresno461;Viewed file: Selection_292.png;RepositoryMaster
+09/29/17;15:26:32;15:56:21;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/29/17;15:26:38;15:56:21;fresno461;Viewed file: Selection_293.png;RepositoryMaster
+09/29/17;15:27:04;15:57:04;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:27:10;15:57:10;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:28:31;15:58:31;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:28:40;15:58:40;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:30:14;16:00:14;fresno461;Listed folder;Archive
+09/29/17;15:30:24;16:00:14;fresno461;Viewed file: Selection_295.png;Archive
+09/29/17;15:30:32;16:00:14;fresno461;Viewed file: Selection_295.png;Archive
+09/29/17;15:30:46;16:00:46;fresno461;Renamed Selection_295.png to Selectionx_295.png;Archive
+09/29/17;15:30:46;16:00:46;fresno461;Listed folder;Archive
+09/29/17;15:31:05;16:01:05;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:33:12;16:03:12;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:33:52;16:03:52;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:34:40;16:04:40;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:34:47;16:04:47;fresno461;Listed folder;testfolderx1
+09/29/17;15:35:05;16:05:05;fresno461;Add file requested;testfolderx1
+09/29/17;15:35:05;16:05:05;fresno461;Listed folder;testfolderx1
+09/29/17;15:35:18;16:05:18;fresno461;File# 1 (Selection_286.png) uploaded successfully;testfolderx1
+09/29/17;15:35:18;16:05:18;fresno461;Listed folder;testfolderx1
+09/29/17;15:35:25;16:05:18;fresno461;Viewed file: Selection_286.png;testfolderx1
+09/29/17;15:35:39;16:05:39;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:35:47;16:05:39;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/29/17;15:35:51;16:05:39;fresno461;Viewed file: Selection_294.png;RepositoryMaster
+09/29/17;15:38:15;16:08:15;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:38:25;16:08:25;fresno461;Listed folder;testfolderx1
+09/29/17;15:38:31;16:08:25;fresno461;Viewed file: Selection_286.png;testfolderx1
+09/29/17;15:39:39;16:09:39;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:39:55;;fresno461;Login Successful;
+09/29/17;15:39:55;16:09:55;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:39:55;16:09:55;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:39:55;16:09:55;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:39:55;16:09:55;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:39:55;16:09:55;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:39:55;16:09:55;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:52:23;;fresno461;Login Successful;
+09/29/17;15:52:23;16:22:23;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:52:26;16:22:23;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/29/17;15:52:32;16:22:32;fresno461;Listed folder;testfolderx1
+09/29/17;15:52:33;16:22:32;fresno461;Viewed file: Selection_286.png;testfolderx1
+09/29/17;15:52:43;16:22:43;fresno461;Admin Mode Enabled;testfolderx1
+09/29/17;15:52:43;16:22:43;fresno461;Listed folder;testfolderx1
+09/29/17;15:52:53;16:22:53;fresno461;Admin Mode request failed.;testfolderx1
+09/29/17;15:52:53;16:22:53;fresno461;Listed folder;testfolderx1
+09/29/17;15:54:49;16:24:49;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:55:01;16:25:01;fresno461;Listed folder;testfolderx1
+09/29/17;15:55:07;16:25:01;fresno461;Viewed file: Selection_286.png;testfolderx1
+09/29/17;15:55:12;16:25:12;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:55:24;16:25:12;fresno461;Logged out;RepositoryMaster
+09/29/17;15:55:28;;fresno461;Login Successful;
+09/29/17;15:55:28;16:25:28;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:55:34;16:25:34;fresno461;Listed folder;testfolderx1
+09/29/17;15:55:41;16:25:34;fresno461;Viewed file: Selection_286.png;testfolderx1
+09/29/17;15:55:56;16:25:56;fresno461;Admin Mode Enabled;testfolderx1
+09/29/17;15:55:56;16:25:56;fresno461;Listed folder;testfolderx1
+09/29/17;15:56:00;16:26:00;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:56:05;16:26:05;fresno461;Listed folder;testfolderx1
+09/29/17;15:56:48;16:26:05;fresno461;Viewed file: Selection_286.png;testfolderx1
+09/29/17;15:56:53;16:26:05;fresno461;Logged out;testfolderx1
+09/29/17;15:56:57;;fresno461;Login Successful;
+09/29/17;15:56:57;16:26:57;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:57:00;16:27:00;fresno461;Listed folder;testfolderx1
+09/29/17;15:57:13;16:27:13;fresno461;Admin Mode Enabled;testfolderx1
+09/29/17;15:57:13;16:27:13;fresno461;Listed folder;testfolderx1
+09/29/17;15:58:06;16:28:06;fresno461;Listed folder;RepositoryMaster
+09/29/17;15:58:10;16:28:10;fresno461;Listed folder;testfolderx1
+09/29/17;16:00:39;16:30:39;fresno461;Add folder requested;testfolderx1
+09/29/17;16:00:39;16:30:39;fresno461;Listed folder;testfolderx1
+09/29/17;16:00:45;16:30:45;fresno461;Created folder: testfolder2;testfolderx1
+09/29/17;16:00:45;16:30:45;fresno461;Listed folder;testfolderx1
+09/29/17;16:00:47;16:30:47;fresno461;Listed folder;testfolder2
+09/29/17;16:00:51;16:30:51;fresno461;Add file requested;testfolder2
+09/29/17;16:00:51;16:30:51;fresno461;Listed folder;testfolder2
+09/29/17;16:01:07;16:31:07;fresno461;File# 1 (Selection_279.png) uploaded successfully;testfolder2
+09/29/17;16:01:07;16:31:07;fresno461;File# 2 (Selection_278.png) uploaded successfully;testfolder2
+09/29/17;16:01:07;16:31:07;fresno461;File# 3 (Selection_277.png) uploaded successfully;testfolder2
+09/29/17;16:01:07;16:31:07;fresno461;Listed folder;testfolder2
+09/29/17;16:01:12;16:31:07;fresno461;Viewed file: Selection_277.png;testfolder2
+09/29/17;16:01:27;16:31:27;fresno461;Rename of /home/drklinzman/www/dev/RepositoryMaster/testfolderx1/testfolder2/Selection_277.png FAILED;testfolder2
+09/29/17;16:01:27;16:31:27;fresno461;Listed folder;testfolder2
+09/29/17;16:01:34;16:31:27;fresno461;Viewed file: Selection_277.png;testfolder2
+09/29/17;16:01:48;16:31:27;fresno461;Viewed file: Selection_278.png;testfolder2
+09/29/17;16:02:02;16:31:27;fresno461;Viewed file: Selection_277.png;testfolder2
+09/29/17;16:02:37;16:32:37;fresno461;Listed folder;RepositoryMaster
+09/29/17;16:02:41;16:32:41;fresno461;Listed folder;testfolderx1
+09/29/17;16:02:43;16:32:43;fresno461;Listed folder;testfolder2
+09/29/17;16:02:48;16:32:48;fresno461;Listed folder;testfolderx1
+09/29/17;16:02:50;16:32:50;fresno461;Listed folder;RepositoryMaster
+09/29/17;16:03:09;16:33:09;fresno461;Listed folder;RepositoryMaster
+09/29/17;16:03:16;16:33:16;fresno461;Listed folder;testfolderx1
+09/29/17;16:03:19;16:33:19;fresno461;Listed folder;testfolder2
+09/29/17;16:03:23;16:33:19;fresno461;Logged out;testfolder2
+09/29/17;16:03:27;;fresno461;Login Successful;
+09/29/17;16:03:27;16:33:27;fresno461;Listed folder;RepositoryMaster
+09/29/17;16:03:31;16:33:31;fresno461;Listed folder;testfolderx1
+09/29/17;16:03:32;16:33:32;fresno461;Listed folder;testfolder2
+09/29/17;16:03:34;16:33:32;fresno461;Viewed file: Selection_277.png;testfolder2
+09/29/17;16:03:38;16:33:38;fresno461;Listed folder;testfolderx1
+09/29/17;16:03:40;16:33:38;fresno461;Viewed file: Selection_286.png;testfolderx1
+09/29/17;16:03:46;16:33:46;fresno461;Listed folder;RepositoryMaster
+09/29/17;16:09:59;16:39:59;fresno461;Admin Mode Enabled;testfolderx1
+09/29/17;16:09:59;16:39:59;fresno461;Listed folder;testfolderx1
+09/29/17;16:10:03;16:40:03;fresno461;Listed folder;RepositoryMaster
+09/29/17;16:10:21;16:40:21;fresno461;Listed folder;testfolderx1
+09/29/17;16:10:27;16:40:27;fresno461;Listed folder;RepositoryMaster
+09/29/17;16:10:32;16:40:27;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/29/17;16:10:44;16:40:27;fresno461;Logged out;RepositoryMaster
+09/29/17;17:12:31;;fresno461;Login Successful;
+09/29/17;17:12:31;17:42:31;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:12:38;17:42:38;fresno461;Listed folder;testfolderx1
+09/29/17;17:12:41;17:42:38;fresno461;Viewed file: Selection_286.png;testfolderx1
+09/29/17;17:12:46;17:42:46;fresno461;Listed folder;testfolder2
+09/29/17;17:12:47;17:42:46;fresno461;Viewed file: Selection_277.png;testfolder2
+09/29/17;17:12:57;17:42:57;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:12:59;17:42:59;fresno461;Listed folder;testfolderx1
+09/29/17;17:13:04;17:43:04;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:13:13;17:43:13;fresno461;Admin Mode Enabled;RepositoryMaster
+09/29/17;17:13:13;17:43:13;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:13:21;17:43:21;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/testfolderx1;RepositoryMaster
+09/29/17;17:13:21;17:43:21;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:13:24;17:43:24;fresno461;Listed folder;Archive
+09/29/17;17:13:34;17:43:34;fresno461;Listed folder;testfolderx1
+09/29/17;17:13:40;17:43:40;fresno461;Listed folder;testfolder2
+09/29/17;17:13:45;17:43:45;fresno461;Deleted file Selection_277.png;testfolder2
+09/29/17;17:13:45;17:43:45;fresno461;Deletion of file Selection_277.png FAILED.;testfolder2
+09/29/17;17:13:45;17:43:45;fresno461;Listed folder;testfolder2
+09/29/17;17:13:47;17:43:47;fresno461;Deleted file Selection_278.png;testfolder2
+09/29/17;17:13:47;17:43:47;fresno461;Deletion of file Selection_278.png FAILED.;testfolder2
+09/29/17;17:13:47;17:43:47;fresno461;Listed folder;testfolder2
+09/29/17;17:13:48;17:43:48;fresno461;Deleted file Selection_279.png;testfolder2
+09/29/17;17:13:48;17:43:48;fresno461;Deletion of file Selection_279.png FAILED.;testfolder2
+09/29/17;17:13:48;17:43:48;fresno461;Listed folder;testfolder2
+09/29/17;17:13:50;17:43:50;fresno461;Listed folder;testfolderx1
+09/29/17;17:13:54;17:43:54;fresno461;Deleted folder: 'testfolder2' ;testfolderx1
+09/29/17;17:13:54;17:43:54;fresno461;Listed folder;testfolderx1
+09/29/17;17:13:56;17:43:56;fresno461;Listed folder;Archive
+09/29/17;17:13:59;17:43:59;fresno461;Listed folder;Archive
+09/29/17;17:14:03;17:44:03;fresno461;Listed folder;Archive
+09/29/17;17:14:08;17:44:08;fresno461;Listed folder;Archive
+09/29/17;17:14:17;17:44:17;fresno461;Listed folder;Archive
+09/29/17;17:14:21;17:44:21;fresno461;Listed folder;testfolderx1
+09/29/17;17:14:29;17:44:29;fresno461;Deleted file Selection_286.png;testfolderx1
+09/29/17;17:14:29;17:44:29;fresno461;Deletion of file Selection_286.png FAILED.;testfolderx1
+09/29/17;17:14:29;17:44:29;fresno461;Listed folder;testfolderx1
+09/29/17;17:14:32;17:44:32;fresno461;Listed folder;Archive
+09/29/17;17:14:35;17:44:35;fresno461;Deleted folder: 'testfolderx1' ;Archive
+09/29/17;17:14:35;17:44:35;fresno461;Listed folder;Archive
+09/29/17;17:14:40;17:44:40;fresno461;Deleted file Selectionx_295.png;Archive
+09/29/17;17:14:40;17:44:40;fresno461;Deletion of file Selectionx_295.png FAILED.;Archive
+09/29/17;17:14:40;17:44:40;fresno461;Listed folder;Archive
+09/29/17;17:14:54;17:44:40;fresno461;Logged out;Archive
+09/29/17;17:16:37;;fresno461;Login Successful;
+09/29/17;17:16:37;17:46:37;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:16:45;17:46:45;fresno461;Admin Mode Enabled;RepositoryMaster
+09/29/17;17:16:45;17:46:45;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:23:16;;;Admin Mode Enabled;
+09/29/17;17:23:23;;fresno461;Login Successful;
+09/29/17;17:23:23;17:53:23;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:23:27;17:53:27;fresno461;Admin Mode Enabled;RepositoryMaster
+09/29/17;17:23:27;17:53:27;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:24:17;17:54:17;fresno461;Deleted file Selection_291.png;RepositoryMaster
+09/29/17;17:24:17;17:54:17;fresno461;Deletion of file Selection_291.png FAILED.;RepositoryMaster
+09/29/17;17:24:17;17:54:17;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:24:20;17:54:20;fresno461;Deleted file Selection_292.png;RepositoryMaster
+09/29/17;17:24:20;17:54:20;fresno461;Deletion of file Selection_292.png FAILED.;RepositoryMaster
+09/29/17;17:24:20;17:54:20;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:24:21;17:54:21;fresno461;Deleted file Selection_293.png;RepositoryMaster
+09/29/17;17:24:21;17:54:21;fresno461;Deletion of file Selection_293.png FAILED.;RepositoryMaster
+09/29/17;17:24:21;17:54:21;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:24:23;17:54:23;fresno461;Deleted file Selection_294.png;RepositoryMaster
+09/29/17;17:24:23;17:54:23;fresno461;Deletion of file Selection_294.png FAILED.;RepositoryMaster
+09/29/17;17:24:23;17:54:23;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:26:55;17:56:55;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:27:00;17:56:55;fresno461;Logged out;RepositoryMaster
+09/29/17;17:32:04;18:02:04;fresno461;Listed folder;Archive
+09/29/17;17:35:07;18:05:07;fresno461;Listed folder;Archive
+09/29/17;17:35:10;18:05:10;fresno461;Listed folder;Archive
+09/29/17;17:39:40;18:09:40;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:39:43;18:09:43;fresno461;Listed folder;Archive
+09/29/17;17:39:45;18:09:45;fresno461;Listed folder;RepositoryMaster
+09/29/17;17:40:09;18:09:45;fresno461;Logged out;RepositoryMaster
+09/29/17;21:46:35;;fresno461;Login Successful;
+09/29/17;21:46:35;22:16:35;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:46:50;22:16:50;fresno461;Admin Mode Enabled;RepositoryMaster
+09/29/17;21:46:50;22:16:50;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:46:54;22:16:54;fresno461;Add file requested;RepositoryMaster
+09/29/17;21:46:54;22:16:54;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:47:04;22:17:04;fresno461;File# 1 (Selection_293.png) uploaded successfully;RepositoryMaster
+09/29/17;21:47:04;22:17:04;fresno461;File# 2 (Selection_292.png) uploaded successfully;RepositoryMaster
+09/29/17;21:47:04;22:17:04;fresno461;File# 3 (Selection_291.png) uploaded successfully;RepositoryMaster
+09/29/17;21:47:04;22:17:04;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:47:09;22:17:09;fresno461;Add folder requested;RepositoryMaster
+09/29/17;21:47:09;22:17:09;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:47:13;22:17:13;fresno461;Created folder: testfolder1;RepositoryMaster
+09/29/17;21:47:13;22:17:13;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:47:16;22:17:16;fresno461;Listed folder;testfolder1
+09/29/17;21:47:20;22:17:20;fresno461;Add folder requested;testfolder1
+09/29/17;21:47:20;22:17:20;fresno461;Listed folder;testfolder1
+09/29/17;21:47:25;22:17:25;fresno461;Created folder: testfolder2;testfolder1
+09/29/17;21:47:25;22:17:25;fresno461;Listed folder;testfolder1
+09/29/17;21:47:33;22:17:33;fresno461;Add file requested;testfolder1
+09/29/17;21:47:33;22:17:33;fresno461;Listed folder;testfolder1
+09/29/17;21:47:40;22:17:40;fresno461;File# 1 (Selection_288.png) uploaded successfully;testfolder1
+09/29/17;21:47:41;22:17:40;fresno461;Listed folder;testfolder1
+09/29/17;21:47:44;22:17:40;fresno461;Viewed file: Selection_288.png;testfolder1
+09/29/17;21:47:59;22:17:59;fresno461;Listed folder;testfolder2
+09/29/17;21:48:02;22:18:02;fresno461;Listed folder;testfolder1
+09/29/17;21:48:14;22:18:14;fresno461;Listed folder;testfolder2
+09/29/17;21:48:16;22:18:16;fresno461;Listed folder;testfolder1
+09/29/17;21:48:19;22:18:16;fresno461;Viewed file: Selection_288.png;testfolder1
+09/29/17;21:48:30;22:18:30;fresno461;Renamed Selection_288.png to Selection_288x.png;testfolder1
+09/29/17;21:48:30;22:18:30;fresno461;Listed folder;testfolder1
+09/29/17;21:48:36;22:18:36;fresno461;Deleted file Selection_288x.png;testfolder1
+09/29/17;21:48:36;22:18:36;fresno461;Deletion of file Selection_288x.png FAILED.;testfolder1
+09/29/17;21:48:36;22:18:36;fresno461;Listed folder;testfolder1
+09/29/17;21:48:42;22:18:42;fresno461;Deleted folder: 'testfolder2' ;testfolder1
+09/29/17;21:48:42;22:18:42;fresno461;Listed folder;testfolder1
+09/29/17;21:48:44;22:18:44;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:48:50;22:18:50;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/testfolder1;RepositoryMaster
+09/29/17;21:48:50;22:18:50;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:48:53;22:18:53;fresno461;Listed folder;Archive
+09/29/17;21:48:57;22:18:57;fresno461;Deleted folder: 'testfolder1' ;Archive
+09/29/17;21:48:57;22:18:57;fresno461;Listed folder;Archive
+09/29/17;21:49:01;22:19:01;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:49:05;22:19:05;fresno461;Deleted file Selection_291.png;RepositoryMaster
+09/29/17;21:49:05;22:19:05;fresno461;Deletion of file Selection_291.png FAILED.;RepositoryMaster
+09/29/17;21:49:05;22:19:05;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:49:08;22:19:08;fresno461;Deleted file Selection_292.png;RepositoryMaster
+09/29/17;21:49:08;22:19:08;fresno461;Deletion of file Selection_292.png FAILED.;RepositoryMaster
+09/29/17;21:49:08;22:19:08;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:49:10;22:19:10;fresno461;Deleted file Selection_293.png;RepositoryMaster
+09/29/17;21:49:10;22:19:10;fresno461;Deletion of file Selection_293.png FAILED.;RepositoryMaster
+09/29/17;21:49:10;22:19:10;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:55:41;22:25:41;fresno461;Add file requested;RepositoryMaster
+09/29/17;21:55:41;22:25:41;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:55:51;22:25:51;fresno461;File# 1 (Selection_287.png) uploaded successfully;RepositoryMaster
+09/29/17;21:55:51;22:25:51;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:56:00;22:25:51;fresno461;Viewed file: Selection_287.png;RepositoryMaster
+09/29/17;21:56:00;22:26:00;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:56:07;22:26:07;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:56:42;22:26:07;fresno461;Logged out;RepositoryMaster
+09/29/17;21:56:49;;;Logged out;
+09/29/17;21:57:00;;fresno461;Login Successful;
+09/29/17;21:57:00;22:27:00;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:57:05;22:27:05;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:57:19;22:27:19;fresno461;Admin Mode Enabled;RepositoryMaster
+09/29/17;21:57:19;22:27:19;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:57:33;22:27:33;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:57:47;22:27:47;fresno461;Renamed Selection_287.png to Selection_28x7.png;RepositoryMaster
+09/29/17;21:57:47;22:27:47;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:57:54;22:27:54;fresno461;Add folder requested;RepositoryMaster
+09/29/17;21:57:54;22:27:54;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:57:58;22:27:58;fresno461;Created folder: testfolder1;RepositoryMaster
+09/29/17;21:57:58;22:27:58;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:58:03;22:28:03;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:58:07;22:28:07;fresno461;Listed folder;testfolder1
+09/29/17;21:58:16;22:28:16;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:58:24;22:28:24;fresno461;Deleted folder: 'testfolder1' ;RepositoryMaster
+09/29/17;21:58:24;22:28:24;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:58:26;22:28:26;fresno461;Deleted file Selection_28x7.png;RepositoryMaster
+09/29/17;21:58:26;22:28:26;fresno461;Deletion of file Selection_28x7.png FAILED.;RepositoryMaster
+09/29/17;21:58:26;22:28:26;fresno461;Listed folder;RepositoryMaster
+09/29/17;21:58:30;22:28:26;fresno461;Logged out;RepositoryMaster
+09/30/17;14:29:14;;fresno461;Login Successful;
+09/30/17;14:29:15;14:59:14;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:29:25;14:59:25;fresno461;Admin Mode Enabled;RepositoryMaster
+09/30/17;14:29:25;14:59:25;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:41:51;14:42:06;fresno461;Admin Mode Enabled;RepositoryMaster
+09/30/17;14:41:51;14:42:06;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:41:54;14:42:09;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:07;14:42:22;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:33;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;14:42:36;;fresno461;Logged out;RepositoryMaster
+09/30/17;14:42:49;;fresno461;Login Successful;
+09/30/17;14:42:49;14:43:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:49;14:43:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:49;14:43:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:49;14:43:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:49;14:43:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:49;14:43:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:57;14:43:12;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:57;14:43:12;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:57;14:43:12;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:57;14:43:12;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:57;14:43:12;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:42:57;14:43:12;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:43:07;14:43:12;fresno461;Logged out;RepositoryMaster
+09/30/17;14:43:14;;fresno461;Login Successful;
+09/30/17;14:43:14;14:43:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:43:14;14:43:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:43:14;14:43:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:43:14;14:43:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:43:14;14:43:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:43:14;14:43:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:43:55;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;14:44:00;;fresno461;Logged out;RepositoryMaster
+09/30/17;14:44:05;;fresno461;Login Successful;
+09/30/17;14:44:05;14:44:20;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:44:26;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;14:44:29;;fresno461;Logged out;RepositoryMaster
+09/30/17;14:44:33;;fresno461;Login Successful;
+09/30/17;14:44:33;14:44:48;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:44:38;14:44:53;fresno461;Admin Mode Enabled;RepositoryMaster
+09/30/17;14:44:38;14:44:53;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:44:43;14:44:58;fresno461;Add file requested;RepositoryMaster
+09/30/17;14:44:43;14:44:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:44:57;14:45:12;fresno461;File# 1 (Selection_293.png) uploaded successfully;RepositoryMaster
+09/30/17;14:44:57;14:45:12;fresno461;File# 2 (Selection_292.png) uploaded successfully;RepositoryMaster
+09/30/17;14:44:57;14:45:12;fresno461;File# 3 (Selection_291.png) uploaded successfully;RepositoryMaster
+09/30/17;14:44:57;14:45:12;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:45:05;14:45:12;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/30/17;14:45:41;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;14:45:43;;fresno461;Logged out;RepositoryMaster
+09/30/17;14:46:15;;fresno461;Login Successful;
+09/30/17;14:46:15;14:46:30;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:15;14:46:30;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:15;14:46:30;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:15;14:46:30;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:15;14:46:30;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:15;14:46:30;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:23;14:46:30;fresno461;Logged out;RepositoryMaster
+09/30/17;14:46:31;;;Logged out;
+09/30/17;14:46:33;;;Logged out;
+09/30/17;14:46:34;;;Logged out;
+09/30/17;14:46:35;;;Logged out;
+09/30/17;14:46:43;;fresno461;Login Successful;
+09/30/17;14:46:43;14:46:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:43;14:46:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:43;14:46:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:43;14:46:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:43;14:46:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:43;14:46:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:46:48;14:46:58;fresno461;Logged out;RepositoryMaster
+09/30/17;14:48:00;;fresno461;Login Successful;
+09/30/17;14:48:00;14:48:15;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:48:02;14:48:17;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:48:04;14:48:17;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/30/17;14:48:13;14:48:28;fresno461;Admin Mode Enabled;RepositoryMaster
+09/30/17;14:48:13;14:48:28;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:48:17;14:48:32;fresno461;Add folder requested;RepositoryMaster
+09/30/17;14:48:17;14:48:32;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:48:22;14:48:37;fresno461;Created folder: testfolder1;RepositoryMaster
+09/30/17;14:48:22;14:48:37;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:48:30;14:48:45;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:48:33;14:48:48;fresno461;Listed folder;testfolder1
+09/30/17;14:49:06;;fresno461;Session has expired for ;testfolder1
+09/30/17;14:49:11;;fresno461;Logged out;testfolder1
+09/30/17;14:49:16;;fresno461;Login Successful;
+09/30/17;14:49:16;14:49:31;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:49:31;14:49:31;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/30/17;14:49:38;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;14:49:43;;fresno461;Logged out;RepositoryMaster
+09/30/17;14:49:51;;fresno461;Login Successful;
+09/30/17;14:49:51;14:50:06;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:49:51;14:50:06;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:49:51;14:50:06;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:49:51;14:50:06;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:49:51;14:50:06;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:49:51;14:50:06;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:04;14:50:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:04;14:50:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:04;14:50:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:04;14:50:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:04;14:50:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:04;14:50:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:28;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;14:50:42;;fresno461;Login Successful;RepositoryMaster
+09/30/17;14:50:42;14:50:57;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:42;14:50:57;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:42;14:50:57;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:42;14:50:57;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:42;14:50:57;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:42;14:50:57;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:50:50;14:50:57;fresno461;Logged out;RepositoryMaster
+09/30/17;14:50:55;;fresno461;Login Successful;
+09/30/17;14:50:55;14:51:10;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:51:01;14:51:16;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:51:03;14:51:16;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/30/17;14:51:52;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;14:51:58;;fresno461;Logged out;RepositoryMaster
+09/30/17;14:52:13;;;Logged out;
+09/30/17;14:53:47;;fresno461;Login Successful;
+09/30/17;14:53:47;14:54:02;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:56:39;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;14:56:57;;fresno461;Login Successful;RepositoryMaster
+09/30/17;14:56:57;14:57:12;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:57:03;14:57:18;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:57:03;14:57:18;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:57:03;14:57:18;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:57:03;14:57:18;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:57:03;14:57:18;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:57:03;14:57:18;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:57:09;14:57:18;fresno461;Logged out;RepositoryMaster
+09/30/17;14:57:43;;fresno461;Login Successful;
+09/30/17;14:57:43;14:57:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;14:58:13;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;14:58:26;;fresno461;Logged out;RepositoryMaster
+09/30/17;14:58:31;;;Logged out;
+09/30/17;15:00:00;;;Logged out;
+09/30/17;15:00:25;;fresno461;Login Successful;
+09/30/17;15:00:25;15:00:40;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:00:29;15:00:44;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:00:33;15:00:48;fresno461;Listed folder;testfolder1
+09/30/17;15:00:56;;fresno461;Session has expired for ;testfolder1
+09/30/17;15:01:19;;fresno461;Logged out;testfolder1
+09/30/17;15:01:26;;fresno461;Login Successful;
+09/30/17;15:01:26;15:01:41;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:01:42;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:02:23;;fresno461;Login Successful;RepositoryMaster
+09/30/17;15:02:23;15:02:38;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:03:46;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:04:08;;fresno461;Logged out;RepositoryMaster
+09/30/17;15:04:19;;fresno461;Login Successful;
+09/30/17;15:04:19;15:04:34;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:05:31;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:07:49;;fresno461;Login Successful;RepositoryMaster
+09/30/17;15:07:49;15:08:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:07:56;15:08:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:07:56;15:08:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:07:56;15:08:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:07:56;15:08:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:07:56;15:08:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:07:56;15:08:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:08:05;15:08:20;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:08:05;15:08:20;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:08:05;15:08:20;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:08:05;15:08:20;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:08:05;15:08:20;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:08:05;15:08:20;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:08:09;15:08:20;fresno461;Logged out;RepositoryMaster
+09/30/17;15:08:40;;fresno461;Login Successful;
+09/30/17;15:08:40;15:08:55;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:08:46;15:09:01;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:08:51;15:09:06;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:09:18;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:09:32;;fresno461;Logged out;RepositoryMaster
+09/30/17;15:09:41;;;Logged out;
+09/30/17;15:10:28;;fresno461;Login Successful;
+09/30/17;15:10:28;15:10:43;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:10:47;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:11:39;;fresno461;Login Successful;RepositoryMaster
+09/30/17;15:11:39;15:11:54;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:15:22;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:15:28;;fresno461;Logged out;RepositoryMaster
+09/30/17;15:15:41;;;Logged out;
+09/30/17;15:16:20;;fresno461;Login Successful;
+09/30/17;15:16:20;15:16:35;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:16:27;15:16:42;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:17:15;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:17:58;;fresno461;Logged out;RepositoryMaster
+09/30/17;15:18:29;;;Logged out;
+09/30/17;15:18:33;;fresno461;Login Successful;
+09/30/17;15:18:33;15:18:48;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:18:36;15:18:51;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:18:40;15:18:55;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:18:42;15:18:57;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:18:43;15:18:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:18:46;15:18:58;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/30/17;15:18:54;15:19:09;fresno461;Listed folder;testfolder1
+09/30/17;15:18:58;15:19:13;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:19:34;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:19:59;;fresno461;Login Successful;RepositoryMaster
+09/30/17;15:19:59;15:20:14;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:20:13;15:20:28;fresno461;Listed folder;testfolder1
+09/30/17;15:20:16;15:20:31;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:20:39;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:20:56;;fresno461;Login Successful;RepositoryMaster
+09/30/17;15:20:56;15:21:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:21:04;15:21:19;fresno461;Listed folder;testfolder1
+09/30/17;15:21:52;;fresno461;Session has expired for ;testfolder1
+09/30/17;15:23:52;;fresno461;Login Successful;testfolder1
+09/30/17;15:23:52;15:24:07;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:23:55;15:24:10;fresno461;Listed folder;testfolder1
+09/30/17;15:24:05;15:24:20;fresno461;Listed folder;testfolder1
+09/30/17;15:24:11;15:24:26;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:24:35;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:26:53;;fresno461;Login Successful;RepositoryMaster
+09/30/17;15:26:53;15:27:08;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:26:56;15:27:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:26:56;15:27:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:26:56;15:27:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:26:56;15:27:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:26:56;15:27:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:26:56;15:27:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:27:12;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:28:16;;fresno461;Login Successful;RepositoryMaster
+09/30/17;15:28:16;15:28:31;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:28:16;15:28:31;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:28:16;15:28:31;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:28:16;15:28:31;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:28:16;15:28:31;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:28:16;15:28:31;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:28:32;;fresno461;Login Successful;RepositoryMaster
+09/30/17;15:28:32;15:28:47;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:28:40;15:28:55;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:28:45;15:28:55;fresno461;Logged out;RepositoryMaster
+09/30/17;15:28:50;;fresno461;Login Successful;
+09/30/17;15:28:50;15:29:05;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:28:54;15:29:09;fresno461;Listed folder;testfolder1
+09/30/17;15:28:59;15:29:14;fresno461;Admin Mode Enabled;testfolder1
+09/30/17;15:28:59;15:29:14;fresno461;Listed folder;testfolder1
+09/30/17;15:29:02;15:29:17;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:29:07;15:29:22;fresno461;Deleted folder: 'testfolder1' ;RepositoryMaster
+09/30/17;15:29:07;15:29:22;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:29:12;15:29:27;fresno461;Add folder requested;RepositoryMaster
+09/30/17;15:29:12;15:29:27;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:29:15;15:29:30;fresno461;Created folder: testfolder1;RepositoryMaster
+09/30/17;15:29:15;15:29:30;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:29:17;15:29:32;fresno461;Listed folder;testfolder1
+09/30/17;15:29:18;15:29:33;fresno461;Add folder requested;testfolder1
+09/30/17;15:29:18;15:29:33;fresno461;Listed folder;testfolder1
+09/30/17;15:29:22;15:29:37;fresno461;Created folder: testfolder2;testfolder1
+09/30/17;15:29:22;15:29:37;fresno461;Listed folder;testfolder1
+09/30/17;15:29:33;15:29:48;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:29:35;15:29:50;fresno461;Listed folder;testfolder1
+09/30/17;15:30:17;;fresno461;Session has expired for ;testfolder1
+09/30/17;15:32:52;;fresno461;Login Successful;testfolder1
+09/30/17;15:32:52;15:33:07;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:32:54;15:33:09;fresno461;Listed folder;testfolder1
+09/30/17;15:32:56;15:33:11;fresno461;Listed folder;testfolder2
+09/30/17;15:33:25;;fresno461;Session has expired for ;testfolder2
+09/30/17;15:34:51;;fresno461;Login Successful;testfolder2
+09/30/17;15:34:51;15:35:06;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:34:56;15:35:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:35:07;15:35:22;fresno461;Listed folder;testfolder1
+09/30/17;15:35:08;15:35:23;fresno461;Listed folder;testfolder2
+09/30/17;15:35:19;15:35:34;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:35:22;15:35:37;fresno461;Listed folder;testfolder1
+09/30/17;15:35:24;15:35:39;fresno461;Listed folder;testfolder2
+09/30/17;15:35:43;;fresno461;Session has expired for ;testfolder2
+09/30/17;15:37:29;;fresno461;Login Successful;testfolder2
+09/30/17;15:37:29;15:37:44;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:37:32;15:37:47;fresno461;Listed folder;testfolder1
+09/30/17;15:37:33;15:37:48;fresno461;Listed folder;testfolder2
+09/30/17;15:38:09;;fresno461;Session has expired for ;testfolder2
+09/30/17;15:38:24;;fresno461;Login Successful;testfolder2
+09/30/17;15:38:24;15:38:39;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:39:17;;fresno461;Session has expired for ;RepositoryMaster
+09/30/17;15:39:31;;fresno461;Logged out;RepositoryMaster
+09/30/17;15:39:38;;fresno461;Login Successful;
+09/30/17;15:39:38;15:39:53;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:39:40;15:39:55;fresno461;Listed folder;testfolder1
+09/30/17;15:39:43;15:39:58;fresno461;Listed folder;testfolder2
+09/30/17;15:40:45;;fresno461;Session has expired for ;testfolder2
+09/30/17;15:47:47;;fresno461;Login Successful;testfolder2
+09/30/17;15:47:47;15:48:02;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:47:50;15:48:05;fresno461;Listed folder;testfolder1
+09/30/17;15:47:52;15:48:07;fresno461;Listed folder;testfolder2
+09/30/17;15:49:09;;fresno461;Session has expired for ;testfolder2
+09/30/17;15:49:44;;fresno461;Login Successful;testfolder2
+09/30/17;15:49:44;16:19:44;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:49:51;16:19:51;fresno461;Admin Mode Enabled;RepositoryMaster
+09/30/17;15:49:51;16:19:51;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:50:43;15:50:58;fresno461;Listed folder;testfolder1
+09/30/17;15:50:47;15:51:02;fresno461;Listed folder;testfolder2
+09/30/17;15:50:49;15:51:04;fresno461;Listed folder;testfolder1
+09/30/17;15:50:53;15:51:08;fresno461;Deleted folder: 'testfolder2' ;testfolder1
+09/30/17;15:50:53;15:51:08;fresno461;Listed folder;testfolder1
+09/30/17;15:50:54;16:20:54;fresno461;Listed folder;RepositoryMaster
+09/30/17;15:50:57;16:20:57;fresno461;Deleted folder: 'testfolder1' ;RepositoryMaster
+09/30/17;15:50:57;16:20:57;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:12:05;16:42:05;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:12:10;16:42:10;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:12:18;16:42:18;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:13:40;16:43:40;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:13:46;16:43:46;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:13:49;16:43:49;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:14:01;16:44:01;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:14:08;16:44:08;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:14:13;16:44:13;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:18:58;16:48:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:20:07;16:50:07;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:20:14;16:50:14;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:20:29;16:50:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:20:42;16:50:42;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:21:19;16:51:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:23:03;16:53:03;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:23:15;16:53:15;fresno461;Add folder requested;RepositoryMaster
+09/30/17;16:23:15;16:53:15;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:23:19;16:53:19;fresno461;Created folder: testfolder1;RepositoryMaster
+09/30/17;16:23:19;16:53:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:23:27;16:53:27;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:27:34;16:57:34;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:29:14;16:59:14;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:29:26;16:59:26;fresno461;Listed folder;testfolder1
+09/30/17;16:29:28;16:59:28;fresno461;Add folder requested;testfolder1
+09/30/17;16:29:28;16:59:28;fresno461;Listed folder;testfolder1
+09/30/17;16:29:32;16:59:32;fresno461;Created folder: testfolder2;testfolder1
+09/30/17;16:29:32;16:59:32;fresno461;Listed folder;testfolder1
+09/30/17;16:29:42;16:59:42;fresno461;Listed folder;testfolder1
+09/30/17;16:29:54;16:59:54;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:30:02;17:00:02;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:30:24;17:00:24;fresno461;Listed folder;testfolder1
+09/30/17;16:30:47;17:00:47;fresno461;Listed folder;testfolder1
+09/30/17;16:30:59;17:00:59;fresno461;Deleted folder: 'testfolder2' ;testfolder1
+09/30/17;16:30:59;17:00:59;fresno461;Listed folder;testfolder1
+09/30/17;16:31:01;17:01:01;fresno461;Listed folder;testfolder1
+09/30/17;16:31:03;17:01:03;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:31:08;17:01:08;fresno461;Deleted folder: 'testfolder1' ;RepositoryMaster
+09/30/17;16:31:08;17:01:08;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:31:11;17:01:11;fresno461;Add folder requested;RepositoryMaster
+09/30/17;16:31:11;17:01:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:31:15;17:01:15;fresno461;Created folder: testfolder1;RepositoryMaster
+09/30/17;16:31:15;17:01:15;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:31:17;17:01:17;fresno461;Listed folder;testfolder1
+09/30/17;16:31:19;17:01:19;fresno461;Add folder requested;testfolder1
+09/30/17;16:31:19;17:01:19;fresno461;Listed folder;testfolder1
+09/30/17;16:31:25;17:01:25;fresno461;Created folder: testfolder2;testfolder1
+09/30/17;16:31:25;17:01:25;fresno461;Listed folder;testfolder1
+09/30/17;16:31:32;17:01:32;fresno461;Listed folder;testfolder2
+09/30/17;16:31:42;17:01:42;fresno461;Listed folder;testfolder2
+09/30/17;16:32:09;17:02:09;fresno461;Listed folder;testfolder1
+09/30/17;16:32:16;17:02:16;fresno461;Listed folder;testfolder1
+09/30/17;16:32:25;17:02:25;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:32:38;17:02:38;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:33:24;17:03:24;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:33:35;17:03:35;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:33:40;17:03:40;fresno461;Listed folder;testfolder1
+09/30/17;16:33:46;17:03:46;fresno461;Listed folder;testfolder1
+09/30/17;16:35:01;17:05:01;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:35:07;17:05:07;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:35:11;17:05:11;fresno461;Listed folder;testfolder1
+09/30/17;16:35:19;17:05:19;fresno461;Listed folder;testfolder1
+09/30/17;16:35:31;17:05:31;fresno461;Listed folder;testfolder1
+09/30/17;16:35:41;17:05:41;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:35:44;17:05:44;fresno461;Listed folder;testfolder1
+09/30/17;16:35:46;17:05:46;fresno461;Listed folder;testfolder2
+09/30/17;16:35:51;17:05:51;fresno461;Listed folder;testfolder2
+09/30/17;16:36:39;17:06:39;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:36:45;17:06:45;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:37:44;17:07:44;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:37:50;17:07:50;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:38:06;17:08:06;fresno461;Listed folder;testfolder1
+09/30/17;16:38:11;17:08:11;fresno461;Listed folder;testfolder1
+09/30/17;16:39:29;17:09:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:39:35;17:09:35;fresno461;Listed folder;RepositoryMaster
+09/30/17;16:39:43;17:09:43;fresno461;Listed folder;testfolder1
+09/30/17;16:39:49;17:09:49;fresno461;Listed folder;testfolder1
+09/30/17;16:41:37;17:11:37;fresno461;Listed folder;testfolder1
+09/30/17;16:43:52;17:13:52;fresno461;Listed folder;testfolder1
+09/30/17;16:45:37;17:15:37;fresno461;Listed folder;testfolder1
+09/30/17;16:48:06;17:18:06;fresno461;Listed folder;testfolder1
+09/30/17;16:50:47;17:20:47;fresno461;Listed folder;testfolder1
+09/30/17;16:50:52;17:20:52;fresno461;Listed folder;testfolder1
+09/30/17;16:50:57;17:20:57;fresno461;Listed folder;testfolder1
+09/30/17;16:51:24;17:21:24;fresno461;Listed folder;testfolder1
+09/30/17;16:54:09;17:24:09;fresno461;Listed folder;testfolder1
+09/30/17;16:55:44;17:25:44;fresno461;Listed folder;testfolder1
+09/30/17;17:15:08;17:45:08;fresno461;Listed folder;testfolder1
+09/30/17;17:16:29;17:46:29;fresno461;Listed folder;testfolder1
+09/30/17;17:16:43;17:46:43;fresno461;Listed folder;testfolder1
+09/30/17;17:16:56;17:46:56;fresno461;Listed folder;RepositoryMaster
+09/30/17;17:17:04;17:47:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;17:20:44;17:50:44;fresno461;Listed folder;RepositoryMaster
+09/30/17;17:21:44;17:51:44;fresno461;Listed folder;RepositoryMaster
+09/30/17;17:23:43;17:53:43;fresno461;Listed folder;RepositoryMaster
+09/30/17;17:25:27;17:55:27;fresno461;Listed folder;RepositoryMaster
+09/30/17;17:26:16;17:56:16;fresno461;Listed folder;RepositoryMaster
+09/30/17;17:29:24;17:59:24;fresno461;Listed folder;RepositoryMaster
+09/30/17;17:32:13;18:02:13;fresno461;Listed folder;RepositoryMaster
+09/30/17;17:56:33;18:26:33;fresno461;Listed folder;RepositoryMaster
+09/30/17;17:57:27;18:27:27;fresno461;Listed folder;RepositoryMaster
+09/30/17;17:57:35;18:27:35;fresno461;Rename of  FAILED;RepositoryMaster
+09/30/17;17:57:35;18:27:35;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:02:15;18:32:15;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:02:24;18:32:24;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:03:22;18:33:22;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:04:02;18:34:02;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:04:24;18:34:24;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:04:47;18:34:47;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:04:51;18:34:51;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:05:10;18:35:10;fresno461;Listed folder;testfolder1
+09/30/17;18:05:13;18:35:13;fresno461;Listed folder;testfolder2
+09/30/17;18:05:22;18:35:22;fresno461;Listed folder;testfolder2
+09/30/17;18:05:27;18:35:27;fresno461;Listed folder;testfolder2
+09/30/17;18:05:46;18:35:46;fresno461;Listed folder;testfolder1
+09/30/17;18:05:52;18:35:52;fresno461;Listed folder;testfolder1
+09/30/17;18:13:35;18:43:35;fresno461;Listed folder;testfolder1
+09/30/17;18:28:45;18:58:45;fresno461;Listed folder;testfolder1
+09/30/17;18:28:55;18:58:55;fresno461;Listed folder;testfolder1
+09/30/17;18:28:58;18:58:58;fresno461;Listed folder;testfolder1
+09/30/17;18:29:25;18:59:25;fresno461;Add file requested;testfolder1
+09/30/17;18:29:25;18:59:25;fresno461;Listed folder;testfolder1
+09/30/17;18:29:39;18:59:39;fresno461;File# 1 (Selection_293.png) uploaded successfully;testfolder1
+09/30/17;18:29:39;18:59:39;fresno461;File# 2 (Selection_292.png) uploaded successfully;testfolder1
+09/30/17;18:29:39;18:59:39;fresno461;File# 3 (Selection_291.png) uploaded successfully;testfolder1
+09/30/17;18:29:39;18:59:39;fresno461;Listed folder;testfolder1
+09/30/17;18:29:48;18:59:48;fresno461;Listed folder;testfolder1
+09/30/17;18:32:01;19:02:01;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:32:05;19:02:05;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:32:11;19:02:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:32:31;19:02:31;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:32:34;19:02:34;fresno461;Listed folder;testfolder1
+09/30/17;18:32:39;19:02:39;fresno461;Listed folder;testfolder1
+09/30/17;18:33:00;19:03:00;fresno461;Listed folder;testfolder1
+09/30/17;18:33:12;19:03:12;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:33:17;19:03:17;fresno461;Listed folder;testfolder1
+09/30/17;18:33:18;19:03:18;fresno461;Listed folder;testfolder2
+09/30/17;18:33:20;19:03:20;fresno461;Add file requested;testfolder2
+09/30/17;18:33:20;19:03:20;fresno461;Listed folder;testfolder2
+09/30/17;18:33:31;19:03:31;fresno461;File# 1 (Selection_286.png) uploaded successfully;testfolder2
+09/30/17;18:33:31;19:03:31;fresno461;Listed folder;testfolder2
+09/30/17;18:33:35;19:03:35;fresno461;Listed folder;testfolder2
+09/30/17;18:34:28;19:04:28;fresno461;Listed folder;testfolder2
+09/30/17;18:34:33;19:04:33;fresno461;Listed folder;testfolder2
+09/30/17;18:36:45;19:06:45;fresno461;Listed folder;testfolder2
+09/30/17;18:39:40;19:09:40;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:39:44;19:09:44;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:39:58;19:09:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:42:38;19:12:38;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:43:29;19:13:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:43:33;19:13:33;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:44:21;19:14:21;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:44:25;19:14:25;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:44:37;19:14:37;fresno461;Listed folder;RepositoryMaster
+09/30/17;18:44:41;19:14:41;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:08:57;;fresno461;Login Successful;
+09/30/17;20:08:58;20:38:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:08:58;20:38:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:08:58;20:38:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:08:58;20:38:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:08:58;20:38:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:08:58;20:38:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:09:04;20:38:58;fresno461;Logged out;RepositoryMaster
+09/30/17;20:09:19;;fresno461;Login Successful;
+09/30/17;20:09:19;20:39:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:09:30;20:39:30;fresno461;Admin Mode Enabled;RepositoryMaster
+09/30/17;20:09:30;20:39:30;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:25:09;20:55:09;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:25:19;20:55:19;fresno461;Listed folder;testfolder1
+09/30/17;20:25:21;20:55:21;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:25:42;20:55:21;fresno461;Viewed file: Selection_291.png;RepositoryMaster
+09/30/17;20:25:46;20:55:46;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:34:33;21:04:33;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:34:38;21:04:38;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:42:47;21:12:47;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:42:52;21:12:52;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:46:39;21:16:39;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:46:44;21:16:44;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:48:55;21:18:55;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:49:00;21:19:00;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:51:53;21:21:53;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:52:11;21:22:11;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:52:25;21:22:25;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:52:29;21:22:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:52:35;21:22:35;fresno461;Listed folder;RepositoryMaster
+09/30/17;20:52:38;21:22:38;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:00:57;21:30:57;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:01:01;21:31:01;fresno461;Add folder requested;RepositoryMaster
+09/30/17;21:01:01;21:31:01;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:01:07;21:31:07;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:01:14;21:31:14;fresno461;Listed folder;Archive
+09/30/17;21:01:19;21:31:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:01:23;21:31:23;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:01:35;21:31:35;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:02:14;21:32:14;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:02:17;21:32:17;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:02:24;21:32:24;fresno461;Listed folder;Archive
+09/30/17;21:02:34;21:32:34;fresno461;Add file requested;Archive
+09/30/17;21:02:34;21:32:34;fresno461;Listed folder;Archive
+09/30/17;21:02:48;21:32:48;fresno461;File# 1 (Selection_279.png) uploaded successfully;Archive
+09/30/17;21:02:48;21:32:48;fresno461;File# 2 (Selection_278.png) uploaded successfully;Archive
+09/30/17;21:02:48;21:32:48;fresno461;File# 3 (Selection_277.png) uploaded successfully;Archive
+09/30/17;21:02:48;21:32:48;fresno461;Listed folder;Archive
+09/30/17;21:02:53;21:32:53;fresno461;Listed folder;Archive
+09/30/17;21:03:00;21:33:00;fresno461;Listed folder;Archive
+09/30/17;21:03:14;21:33:14;fresno461;Listed folder;Archive
+09/30/17;21:03:31;21:33:31;fresno461;Listed folder;Archive
+09/30/17;21:05:09;21:35:09;fresno461;Deleted file Selection_277.png;Archive
+09/30/17;21:05:09;21:35:09;fresno461;Deletion of file Selection_277.png FAILED.;Archive
+09/30/17;21:05:09;21:35:09;fresno461;Listed folder;Archive
+09/30/17;21:05:13;21:35:13;fresno461;Deleted file Selection_278.png;Archive
+09/30/17;21:05:13;21:35:13;fresno461;Deletion of file Selection_278.png FAILED.;Archive
+09/30/17;21:05:13;21:35:13;fresno461;Listed folder;Archive
+09/30/17;21:05:21;21:35:21;fresno461;Deleted file Selection_279.png;Archive
+09/30/17;21:05:21;21:35:21;fresno461;Deletion of file Selection_279.png FAILED.;Archive
+09/30/17;21:05:21;21:35:21;fresno461;Listed folder;Archive
+09/30/17;21:08:04;21:38:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:08:07;21:38:04;fresno461;Viewed file: updater.php;RepositoryMaster
+09/30/17;21:08:52;21:38:52;fresno461;Listed folder;Archive
+09/30/17;21:08:56;21:38:56;fresno461;Add file requested;Archive
+09/30/17;21:08:56;21:38:56;fresno461;Listed folder;Archive
+09/30/17;21:09:09;21:39:09;fresno461;File# 1 (Screenshot from 2017-05-14 09-51-30.png) uploaded successfully;Archive
+09/30/17;21:09:09;21:39:09;fresno461;File# 2 (Screenshot from 2017-05-14 09-51-19.png) uploaded successfully;Archive
+09/30/17;21:09:09;21:39:09;fresno461;File# 3 (Screenshot from 2017-05-14 09-50-45.png) uploaded successfully;Archive
+09/30/17;21:09:09;21:39:09;fresno461;Listed folder;Archive
+09/30/17;21:09:15;21:39:15;fresno461;Listed folder;Archive
+09/30/17;21:09:35;21:39:35;fresno461;Listed folder;Archive
+09/30/17;21:09:40;21:39:40;fresno461;Add folder requested;Archive
+09/30/17;21:09:40;21:39:40;fresno461;Listed folder;Archive
+09/30/17;21:09:46;21:39:46;fresno461;Created folder: testfolder1;Archive
+09/30/17;21:09:46;21:39:46;fresno461;Listed folder;Archive
+09/30/17;21:09:50;21:39:50;fresno461;Add folder requested;Archive
+09/30/17;21:09:50;21:39:50;fresno461;Listed folder;Archive
+09/30/17;21:09:55;21:39:55;fresno461;Created folder: testfolder2;Archive
+09/30/17;21:09:55;21:39:55;fresno461;Listed folder;Archive
+09/30/17;21:10:01;21:40:01;fresno461;Listed folder;Archive
+09/30/17;21:10:11;21:40:11;fresno461;Listed folder;Archive
+09/30/17;21:15:26;21:45:26;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:15:51;21:45:26;fresno461;Viewed file: updater.php;RepositoryMaster
+09/30/17;21:20:54;21:50:54;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:21:04;21:51:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:22:57;21:52:57;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:25:22;21:55:22;fresno461;Listed folder;Archive
+09/30/17;21:25:27;21:55:27;fresno461;Listed folder;Archive
+09/30/17;21:25:30;21:55:30;fresno461;Listed folder;Archive
+09/30/17;21:26:07;21:56:07;fresno461;Listed folder;Archive
+09/30/17;21:26:11;21:56:11;fresno461;Listed folder;Archive
+09/30/17;21:27:27;21:57:27;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:27:32;21:57:32;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:27:38;21:57:38;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:28:04;21:58:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:28:07;21:58:07;fresno461;Listed folder;testfolder1
+09/30/17;21:28:16;21:58:16;fresno461;Listed folder;testfolder1
+09/30/17;21:28:50;21:58:50;fresno461;Listed folder;testfolder1
+09/30/17;21:32:05;22:02:05;fresno461;Listed folder;testfolder1
+09/30/17;21:32:09;22:02:09;fresno461;Listed folder;testfolder1
+09/30/17;21:33:00;22:03:00;fresno461;Listed folder;testfolder1
+09/30/17;21:33:04;22:03:04;fresno461;Listed folder;testfolder1
+09/30/17;21:33:56;22:03:56;fresno461;Listed folder;testfolder1
+09/30/17;21:33:59;22:03:59;fresno461;Listed folder;testfolder1
+09/30/17;21:34:56;22:04:56;fresno461;Listed folder;testfolder1
+09/30/17;21:34:59;22:04:59;fresno461;Listed folder;testfolder1
+09/30/17;21:35:13;22:05:13;fresno461;Listed folder;testfolder1
+09/30/17;21:35:16;22:05:16;fresno461;Listed folder;testfolder1
+09/30/17;21:35:23;22:05:23;fresno461;Listed folder;testfolder1
+09/30/17;21:35:39;22:05:39;fresno461;Listed folder;testfolder1
+09/30/17;21:35:53;22:05:53;fresno461;Listed folder;testfolder1
+09/30/17;21:36:04;22:06:04;fresno461;Listed folder;testfolder1
+09/30/17;21:36:39;22:06:39;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:36:40;22:06:40;fresno461;Listed folder;testfolder1
+09/30/17;21:36:44;22:06:44;fresno461;Listed folder;testfolder1
+09/30/17;21:36:47;22:06:47;fresno461;Listed folder;testfolder1
+09/30/17;21:36:58;22:06:58;fresno461;Listed folder;testfolder1
+09/30/17;21:37:01;22:07:01;fresno461;Listed folder;testfolder1
+09/30/17;21:39:13;22:09:13;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:39:19;22:09:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:39:22;22:09:22;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:39:29;22:09:29;fresno461;Listed folder;Archive
+09/30/17;21:39:47;22:09:47;fresno461;Listed folder;Archive
+09/30/17;21:39:50;22:09:50;fresno461;Listed folder;Archive
+09/30/17;21:39:55;22:09:55;fresno461;Listed folder;testfolder1
+09/30/17;21:53:16;22:23:16;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:53:42;22:23:42;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:53:50;22:23:50;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/Selection_292.png to /home/drklinzman/www/dev/RepositoryMaster/testfolder1/testfolder2/Selection_292.png;RepositoryMaster
+09/30/17;21:53:50;22:23:50;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:56:04;22:26:04;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:56:07;22:26:07;fresno461;Listed folder;testfolder1
+09/30/17;21:56:12;22:26:07;fresno461;Viewed file: Selection_293.png;testfolder1
+09/30/17;21:56:19;22:26:19;fresno461;Listed folder;testfolder1
+09/30/17;21:56:35;22:26:35;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/testfolder1/Selection_293.png to /home/drklinzman/www/dev/RepositoryMaster/testfolder1/testfolder2/Selection_293.png;testfolder1
+09/30/17;21:56:35;22:26:35;fresno461;Listed folder;testfolder1
+09/30/17;21:58:41;22:28:41;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:58:45;22:28:45;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:58:50;22:28:50;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/Selection_293.png to /home/drklinzman/www/dev/RepositoryMaster//Selection_293.png;RepositoryMaster
+09/30/17;21:58:50;22:28:50;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:58:59;22:28:59;fresno461;Listed folder;RepositoryMaster
+09/30/17;21:59:12;22:29:12;fresno461;Listed folder;testfolder1
+09/30/17;21:59:19;22:29:19;fresno461;Listed folder;testfolder1
+09/30/17;21:59:23;22:29:23;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/testfolder1/Selection_292.png to /home/drklinzman/www/dev/RepositoryMaster//Selection_292.png;testfolder1
+09/30/17;21:59:23;22:29:23;fresno461;Listed folder;testfolder1
+09/30/17;22:02:39;22:32:39;fresno461;Listed folder;testfolder2
+09/30/17;22:02:46;22:32:46;fresno461;Listed folder;testfolder2
+09/30/17;22:02:52;22:32:52;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/testfolder1/testfolder2/Selection_293.png to /home/drklinzman/www/dev/RepositoryMaster//Selection_293.png;testfolder2
+09/30/17;22:02:52;22:32:52;fresno461;Listed folder;testfolder2
+09/30/17;22:05:12;22:35:12;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:05:18;22:35:18;fresno461;Listed folder;testfolder1
+09/30/17;22:05:26;22:35:26;fresno461;Listed folder;testfolder1
+09/30/17;22:05:29;22:35:29;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/testfolder1/Selection_291.png to /home/drklinzman/www/dev/RepositoryMaster/Selection_291.png;testfolder1
+09/30/17;22:05:29;22:35:29;fresno461;Listed folder;testfolder1
+09/30/17;22:05:38;22:35:38;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:05:53;22:35:53;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:05:58;22:35:58;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/testfolder1 to /home/drklinzman/www/dev/RepositoryMaster/Archive/testfolder1/testfolder1;RepositoryMaster
+09/30/17;22:05:58;22:35:58;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:09:08;22:39:08;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:09:16;22:39:16;fresno461;Listed folder;Archive
+09/30/17;22:09:23;22:39:23;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:09:29;22:39:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:09:34;22:39:34;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:09:37;22:39:37;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:09:39;22:39:39;fresno461;Listed folder;Archive
+09/30/17;22:09:42;22:39:42;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:09:51;22:39:51;fresno461;Listed folder;Archive
+09/30/17;22:09:53;22:39:53;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:09:57;22:39:57;fresno461;Add folder requested;RepositoryMaster
+09/30/17;22:09:57;22:39:57;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:10:02;22:40:01;fresno461;Created folder: testfolder1;RepositoryMaster
+09/30/17;22:10:02;22:40:01;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:10:07;22:40:07;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:10:12;22:40:12;fresno461;File /home/drklinzman/www/dev/RepositoryMaster/testfolder1 already exists;RepositoryMaster
+09/30/17;22:10:12;22:40:12;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:10:27;22:40:27;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:10:31;22:40:31;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/testfolder1 to /home/drklinzman/www/dev/RepositoryMaster/Archive/testfolder1/testfolder1/testfolder1;RepositoryMaster
+09/30/17;22:10:31;22:40:31;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:10:34;22:40:34;fresno461;Listed folder;Archive
+09/30/17;22:10:37;22:40:37;fresno461;Listed folder;testfolder1
+09/30/17;22:10:42;22:40:42;fresno461;Listed folder;testfolder1
+09/30/17;22:10:45;22:40:45;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/Archive/testfolder1/testfolder1 to /home/drklinzman/www/dev/RepositoryMaster/testfolder1;testfolder1
+09/30/17;22:10:45;22:40:45;fresno461;Listed folder;testfolder1
+09/30/17;22:10:52;22:40:52;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:11:33;22:41:33;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:11:39;22:41:39;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:11:47;22:41:47;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:12:33;22:42:33;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:12:38;22:42:38;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:14:35;22:44:35;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:14:40;22:44:40;fresno461;Listed folder;Archive
+09/30/17;22:14:51;22:44:51;fresno461;Listed folder;Archive
+09/30/17;22:14:56;22:44:56;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/Archive/testfolder2 to /home/drklinzman/www/dev/RepositoryMaster/Archive/testfolder1/testfolder2;Archive
+09/30/17;22:14:56;22:44:56;fresno461;Listed folder;Archive
+09/30/17;22:14:59;22:44:59;fresno461;Listed folder;testfolder1
+09/30/17;22:15:04;22:45:04;fresno461;Listed folder;testfolder1
+09/30/17;22:15:18;22:45:18;fresno461;Renamed /home/drklinzman/www/dev/RepositoryMaster/Archive/testfolder1/testfolder2 to /home/drklinzman/www/dev/RepositoryMaster/Archive/testfolder2;testfolder1
+09/30/17;22:15:18;22:45:18;fresno461;Listed folder;testfolder1
+09/30/17;22:15:25;22:45:25;fresno461;Listed folder;Archive
+09/30/17;22:18:19;22:48:19;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:18:23;22:48:19;fresno461;Logged out;RepositoryMaster
+09/30/17;22:18:39;;fresno461;Login Successful;
+09/30/17;22:18:39;22:48:39;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:18:48;22:48:39;fresno461;Logged out;RepositoryMaster
+09/30/17;22:18:50;;;Logged out;
+09/30/17;22:21:29;;fresno461;Login Successful;
+09/30/17;22:21:29;22:51:29;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:24:42;22:54:42;fresno461;Admin Mode Enabled;RepositoryMaster
+09/30/17;22:24:42;22:54:42;fresno461;Listed folder;RepositoryMaster
+09/30/17;22:49:20;22:54:42;fresno461;Logged out;RepositoryMaster
+10/01/17;11:21:43;;fresno461;Login Successful;
+10/01/17;11:21:43;11:51:43;fresno461;Listed folder;RepoMan
+10/01/17;11:21:51;11:51:51;fresno461;Listed folder;testfolder1
+10/01/17;11:21:54;11:51:54;fresno461;Listed folder;RepoMan
+10/01/17;11:21:57;11:51:57;fresno461;Listed folder;testfolder1
+10/01/17;11:22:00;11:52:00;fresno461;Listed folder;testfolder2
+10/01/17;11:22:08;11:52:08;fresno461;Admin Mode Enabled;testfolder2
+10/01/17;11:22:08;11:52:08;fresno461;Listed folder;testfolder2
+10/01/17;11:22:17;11:52:17;fresno461;Add file requested;testfolder2
+10/01/17;11:22:17;11:52:17;fresno461;Listed folder;testfolder2
+10/01/17;11:22:22;11:52:22;fresno461;Listed folder;testfolder1
+10/01/17;11:22:27;11:52:27;fresno461;Add file requested;testfolder1
+10/01/17;11:22:27;11:52:27;fresno461;Listed folder;testfolder1
+10/01/17;11:22:49;11:52:49;fresno461;File# 1 (Selection_279.png) uploaded successfully;testfolder1
+10/01/17;11:22:49;11:52:49;fresno461;File# 2 (Selection_278.png) uploaded successfully;testfolder1
+10/01/17;11:22:49;11:52:49;fresno461;File# 3 (Selection_277.png) uploaded successfully;testfolder1
+10/01/17;11:22:49;11:52:49;fresno461;Listed folder;testfolder1
+10/01/17;11:22:55;11:52:49;fresno461;Viewed file: Selection_279.png;testfolder1
+10/01/17;11:23:21;11:53:21;fresno461;Listed folder;testfolder1
+10/01/17;11:23:27;11:53:27;fresno461;Renamed /home/drklinzman/www/dev/RepoMan/testfolder1/Selection_277.png to /home/drklinzman/www/dev/RepoMan/testfolder1/testfolder1/Selection_277.png;testfolder1
+10/01/17;11:23:27;11:53:27;fresno461;Listed folder;testfolder1
+10/01/17;11:23:31;11:53:31;fresno461;Listed folder;testfolder1
+10/01/17;11:23:34;11:53:31;fresno461;Viewed file: Selection_277.png;testfolder1
+10/01/17;11:24:04;11:54:04;fresno461;Listed folder;testfolder1
+10/01/17;11:34:50;12:04:50;fresno461;Listed folder;RepoMan
+10/01/17;11:35:33;12:05:33;fresno461;Listed folder;RepoMan
+10/01/17;11:36:14;12:06:14;fresno461;Listed folder;RepoMan
+10/01/17;11:36:42;12:06:42;fresno461;Listed folder;RepoMan
+10/01/17;11:37:12;12:07:12;fresno461;Listed folder;RepoMan
+10/01/17;11:39:07;12:09:07;fresno461;Listed folder;RepoMan
+10/01/17;11:59:17;12:29:17;fresno461;Listed folder;RepoMan
+10/01/17;12:03:28;12:33:28;fresno461;Listed folder;RepoMan
+10/01/17;12:03:43;12:33:43;fresno461;Listed folder;Archive
+10/01/17;12:03:46;12:33:46;fresno461;Listed folder;RepoMan
+10/01/17;12:03:53;12:33:46;fresno461;Logged out;RepoMan
+10/01/17;12:03:56;;fresno461;Login Successful;
+10/01/17;12:03:56;12:33:56;fresno461;Listed folder;RepoMan
+10/01/17;12:04:03;12:34:03;fresno461;Admin Mode Enabled;RepoMan
+10/01/17;12:04:03;12:34:03;fresno461;Listed folder;RepoMan
+10/01/17;12:07:57;12:37:57;fresno461;Listed folder;RepoMan
+10/01/17;12:13:02;12:43:02;fresno461;Listed folder;RepoMan
+10/01/17;12:26:44;12:56:44;fresno461;Listed folder;RepoMan
+10/01/17;12:26:47;12:56:44;fresno461;Viewed file: Selection_291.png;RepoMan
+10/01/17;12:26:55;12:56:55;fresno461;Listed folder;RepoMan
+10/01/17;12:39:41;13:09:41;fresno461;Listed folder;RepoMan
+10/01/17;12:39:43;13:09:43;fresno461;Listed folder;RepoMan
+10/01/17;12:42:08;13:12:08;fresno461;Listed folder;RepoMan
+10/01/17;12:42:11;13:12:11;fresno461;Listed folder;RepoMan
+10/01/17;12:42:45;13:12:45;fresno461;Listed folder;RepoMan
+10/01/17;12:43:56;13:13:56;fresno461;Listed folder;RepoMan
+10/01/17;12:44:00;13:14:00;fresno461;Listed folder;testfolder1
+10/01/17;12:52:34;13:22:34;fresno461;Listed folder;RepoMan
+10/01/17;12:52:45;13:22:45;fresno461;Listed folder;testfolder1
+10/01/17;12:52:53;13:22:53;fresno461;Listed folder;testfolder1
+10/01/17;12:53:01;13:23:01;fresno461;Listed folder;RepoMan
+10/01/17;12:55:02;13:25:02;fresno461;Listed folder;RepoMan
+10/01/17;12:55:15;13:25:15;fresno461;Listed folder;RepoMan
+10/01/17;12:55:22;13:25:22;fresno461;Listed folder;RepoMan
+10/01/17;12:55:26;13:25:26;fresno461;Listed folder;testfolder1
+10/01/17;12:55:33;13:25:33;fresno461;Listed folder;testfolder2
+10/01/17;12:55:46;13:25:46;fresno461;Listed folder;Archive
+10/01/17;12:55:56;13:25:56;fresno461;Listed folder;testfolder1
+10/01/17;12:56:13;13:26:13;fresno461;Listed folder;RepoMan
+10/01/17;12:56:24;13:26:24;fresno461;Listed folder;RepoMan
+10/01/17;12:56:32;13:26:32;fresno461;Listed folder;testfolder1
+10/01/17;12:56:41;13:26:41;fresno461;Listed folder;testfolder2
+10/01/17;12:56:48;13:26:48;fresno461;Listed folder;Archive
+10/01/17;12:56:56;13:26:56;fresno461;Listed folder;Archive
+10/01/17;12:56:58;13:26:58;fresno461;Listed folder;RepoMan
+10/01/17;12:59:09;13:29:09;fresno461;Listed folder;RepoMan
+10/01/17;12:59:18;13:29:18;fresno461;Listed folder;Archive
+10/01/17;12:59:30;13:29:30;fresno461;Listed folder;testfolder1
+10/01/17;13:10:32;13:40:32;fresno461;Listed folder;RepoMan
+10/01/17;13:10:46;13:40:46;fresno461;Listed folder;RepoMan
+10/01/17;13:10:52;13:40:52;fresno461;Listed folder;RepoMan
+10/01/17;13:10:53;13:40:52;fresno461;Viewed file: Selection_291.png;RepoMan
+10/01/17;14:03:52;;fresno461;Login Successful;
+10/01/17;14:03:52;14:33:52;fresno461;Listed folder;RepoMan
+10/01/17;14:03:52;14:33:52;fresno461;Listed folder;RepoMan
+10/01/17;14:03:52;14:33:52;fresno461;Listed folder;RepoMan
+10/01/17;14:03:52;14:33:52;fresno461;Listed folder;RepoMan
+10/01/17;14:03:52;14:33:52;fresno461;Listed folder;RepoMan
+10/01/17;14:03:52;14:33:52;fresno461;Listed folder;RepoMan
+10/01/17;14:03:57;14:33:52;fresno461;Logged out;RepoMan
+10/01/17;14:04:10;;fresno461;Login Successful;
+10/01/17;14:04:10;14:34:10;fresno461;Listed folder;RepoMan
+10/01/17;14:04:17;14:34:17;fresno461;Admin Mode Enabled;RepoMan
+10/01/17;14:04:17;14:34:17;fresno461;Listed folder;RepoMan
+10/01/17;14:06:06;14:34:17;fresno461;Viewed file: Selection_291.png;RepoMan
+10/01/17;14:09:36;14:34:17;fresno461;Logged out;RepoMan
+10/01/17;14:09:41;;fresno461;Login Successful;
+10/01/17;14:09:41;14:39:41;fresno461;Listed folder;RepoMan
+10/01/17;14:09:46;14:39:41;fresno461;Viewed file: Selection_291.png;RepoMan
+10/01/17;14:12:47;14:42:47;fresno461;Listed folder;RepoMan
+10/01/17;14:12:51;14:42:51;fresno461;Listed folder;RepoMan
+10/01/17;14:12:52;14:42:52;fresno461;Listed folder;RepoMan
+10/01/17;14:12:55;14:42:52;fresno461;Logged out;RepoMan
+10/01/17;14:13:04;;fresno461;Login Successful;
+10/01/17;14:13:04;14:43:04;fresno461;Listed folder;RepoMan
+10/01/17;14:13:18;14:43:18;fresno461;Listed folder;RepoMan
+10/01/17;14:13:33;14:43:33;fresno461;Listed folder;RepoMan
+10/01/17;14:13:38;14:43:33;fresno461;Viewed file: Selection_291.png;RepoMan
+10/01/17;14:14:03;14:44:03;fresno461;Listed folder;RepoMan
+10/01/17;14:14:15;14:44:03;fresno461;Viewed file: updater.php;RepoMan
+10/01/17;14:14:23;14:44:23;fresno461;Listed folder;RepoMan
+10/01/17;14:14:26;14:44:26;fresno461;Listed folder;testfolder1
+10/01/17;14:14:29;14:44:26;fresno461;Viewed file: Selection_278.png;testfolder1
+10/01/17;14:14:40;14:44:40;fresno461;Admin Mode Enabled;testfolder1
+10/01/17;14:14:40;14:44:40;fresno461;Listed folder;testfolder1
+10/01/17;14:18:30;14:48:30;fresno461;Listed folder;RepoMan
+10/01/17;14:18:33;14:48:30;fresno461;Viewed file: updater.php;RepoMan
+10/01/17;14:32:02;15:02:02;fresno461;Listed folder;RepoMan
+10/01/17;14:32:06;15:02:06;fresno461;Listed folder;RepoMan
+10/01/17;14:32:13;15:02:13;fresno461;Listed folder;RepoMan
+10/01/17;14:32:46;15:02:46;fresno461;Listed folder;RepoMan
+10/01/17;14:32:48;15:02:48;fresno461;Listed folder;RepoMan
+10/01/17;14:44:37;15:14:37;fresno461;Listed folder;RepoMan
+10/01/17;14:44:41;15:14:41;fresno461;Copied  to ;RepoMan
+10/01/17;14:44:41;15:14:41;fresno461;Listed folder;RepoMan
+10/01/17;14:44:56;15:14:56;fresno461;File /home/drklinzman/www/dev/RepoMan/Selection_291.png already exists;RepoMan
+10/01/17;14:44:56;15:14:56;fresno461;Renamed Selection_291.png(copy) to Selection_291x.png;RepoMan
+10/01/17;14:44:56;15:14:56;fresno461;Listed folder;RepoMan
+10/01/17;14:45:03;15:15:03;fresno461;Copied  to ;RepoMan
+10/01/17;14:45:03;15:15:03;fresno461;Renamed Selection_291x.png to Selection_291.png;RepoMan
+10/01/17;14:45:03;15:15:03;fresno461;Listed folder;RepoMan
+10/01/17;14:45:17;15:15:17;fresno461;File /home/drklinzman/www/dev/RepoMan/Selection_291.png already exists;RepoMan
+10/01/17;14:45:17;15:15:17;fresno461;Renamed Selection_291.png(copy) to Selection_291.png;RepoMan
+10/01/17;14:45:17;15:15:17;fresno461;Listed folder;RepoMan
+10/01/17;14:45:56;15:15:56;fresno461;Copied  to ;RepoMan
+10/01/17;14:45:56;15:15:56;fresno461;Listed folder;RepoMan
+10/01/17;14:46:12;15:16:12;fresno461;File /home/drklinzman/www/dev/RepoMan/Selection_291.png already exists;RepoMan
+10/01/17;14:46:12;15:16:12;fresno461;Renamed Selection_291.png(copy) to Selection_291.png;RepoMan
+10/01/17;14:46:12;15:16:12;fresno461;Listed folder;RepoMan
+10/01/17;14:58:35;15:28:35;fresno461;Listed folder;RepoMan
+10/01/17;14:58:52;15:28:52;fresno461;Renamed Selection_291.png to Selection_291x.png;RepoMan
+10/01/17;14:58:52;15:28:52;fresno461;Listed folder;RepoMan
+10/01/17;14:58:58;15:28:52;fresno461;Viewed file: Selection_291x.png;RepoMan
+10/01/17;14:58:58;15:28:58;fresno461;Listed folder;RepoMan
+10/01/17;14:59:07;15:29:07;fresno461;Copied  to ;RepoMan
+10/01/17;14:59:07;15:29:07;fresno461;Listed folder;RepoMan
+10/01/17;14:59:15;15:29:15;fresno461;Renamed Selection_291x.png(copy) to Selection_291x.png;RepoMan
+10/01/17;14:59:15;15:29:15;fresno461;Listed folder;RepoMan
+10/01/17;15:12:05;15:42:05;fresno461;Listed folder;RepoMan
+10/01/17;15:12:07;15:42:07;fresno461;Listed folder;RepoMan
+10/01/17;15:12:15;15:42:15;fresno461;Renamed Selection_291x.png to Selection_291cx.png;RepoMan
+10/01/17;15:12:15;15:42:15;fresno461;Listed folder;RepoMan
+10/01/17;15:12:24;15:42:24;fresno461;Rename Selection_291cx.png failed;RepoMan
+10/01/17;15:12:24;15:42:24;fresno461;Listed folder;RepoMan
+10/01/17;15:12:39;15:42:39;fresno461;Renamed Selection_291cx.png to Selection_291.png;RepoMan
+10/01/17;15:12:39;15:42:39;fresno461;Listed folder;RepoMan
+10/01/17;15:12:46;15:42:46;fresno461;Copied  to ;RepoMan
+10/01/17;15:12:46;15:42:46;fresno461;Listed folder;RepoMan
+10/01/17;15:12:55;15:42:55;fresno461;Listed folder;RepoMan
+10/01/17;15:12:58;15:42:58;fresno461;Renamed /home/drklinzman/www/dev/RepoMan/Selection_291.png(copy) to /home/drklinzman/www/dev/RepoMan/Archive/Selection_291.png(copy);RepoMan
+10/01/17;15:12:58;15:42:58;fresno461;Listed folder;RepoMan
+10/01/17;15:13:02;15:43:02;fresno461;Listed folder;Archive
+10/01/17;15:13:07;15:43:07;fresno461;Deleted file Selection_291.png(copy);Archive
+10/01/17;15:13:07;15:43:07;fresno461;Listed folder;Archive
+10/01/17;15:16:22;15:46:22;fresno461;Listed folder;Archive
+10/01/17;15:16:27;15:46:27;fresno461;Listed folder;RepoMan
+10/01/17;15:18:37;15:48:37;fresno461;Listed folder;RepoMan
+10/01/17;15:18:42;15:48:42;fresno461;Listed folder;Archive
+10/01/17;15:18:49;15:48:49;fresno461;Deleted file Screenshot from 2017-05-14 09-50-45.png;Archive
+10/01/17;15:18:49;15:48:49;fresno461;Listed folder;Archive
+10/01/17;15:18:51;15:48:51;fresno461;Deleted file Screenshot from 2017-05-14 09-51-19.png;Archive
+10/01/17;15:18:51;15:48:51;fresno461;Listed folder;Archive
+10/01/17;15:18:52;15:48:52;fresno461;Deleted file Screenshot from 2017-05-14 09-51-30.png;Archive
+10/01/17;15:18:52;15:48:52;fresno461;Listed folder;Archive
+10/01/17;15:18:57;15:48:57;fresno461;Listed folder;testfolder2
+10/01/17;15:19:00;15:49:00;fresno461;Listed folder;Archive
+10/01/17;15:19:02;15:49:02;fresno461;Deleted folder: 'testfolder2' ;Archive
+10/01/17;15:19:02;15:49:02;fresno461;Listed folder;Archive
+10/01/17;15:19:12;15:49:12;fresno461;Listed folder;testfolder1
+10/01/17;15:19:14;15:49:14;fresno461;Deleted file Selection_291.png;testfolder1
+10/01/17;15:19:14;15:49:14;fresno461;Listed folder;testfolder1
+10/01/17;15:19:16;15:49:16;fresno461;Listed folder;Archive
+10/01/17;15:19:20;15:49:20;fresno461;Deleted folder: 'testfolder1' ;Archive
+10/01/17;15:19:20;15:49:20;fresno461;Listed folder;Archive
+10/01/17;15:19:26;15:49:26;fresno461;Listed folder;Archive
+10/01/17;15:19:30;15:49:30;fresno461;Listed folder;RepoMan
+10/01/17;15:19:35;15:49:35;fresno461;Listed folder;testfolder1
+10/01/17;15:19:38;15:49:38;fresno461;Listed folder;testfolder1
+10/01/17;15:19:47;15:49:47;fresno461;Listed folder;testfolder1
+10/01/17;15:19:52;15:49:52;fresno461;Renamed /home/drklinzman/www/dev/RepoMan/testfolder1/testfolder1/Selection_277.png to /home/drklinzman/www/dev/RepoMan/Archive/Selection_277.png;testfolder1
+10/01/17;15:19:52;15:49:52;fresno461;Listed folder;testfolder1
+10/01/17;15:19:56;15:49:56;fresno461;Listed folder;Archive
+10/01/17;15:20:11;15:50:11;fresno461;Listed folder;RepoMan
+10/01/17;15:20:17;15:50:17;fresno461;Listed folder;RepoMan
+10/01/17;15:20:20;15:50:20;fresno461;Renamed /home/drklinzman/www/dev/RepoMan/testfolder1 to /home/drklinzman/www/dev/RepoMan/Archive/testfolder1;RepoMan
+10/01/17;15:20:20;15:50:20;fresno461;Listed folder;RepoMan
+10/01/17;15:20:23;15:50:23;fresno461;Listed folder;Archive
+10/01/17;15:20:28;15:50:28;fresno461;Listed folder;Archive
+10/01/17;15:21:30;15:51:30;fresno461;Listed folder;Archive
+10/01/17;15:22:37;15:52:37;fresno461;Listed folder;Archive
+10/01/17;15:22:43;15:52:43;fresno461;Listed folder;testfolder1
+10/01/17;15:22:54;15:52:54;fresno461;Listed folder;testfolder1
+10/01/17;15:22:56;15:52:56;fresno461;Renamed /home/drklinzman/www/dev/RepoMan/Archive/testfolder1/testfolder1 to /home/drklinzman/www/dev/RepoMan/testfolder1;testfolder1
+10/01/17;15:22:56;15:52:56;fresno461;Listed folder;testfolder1
+10/01/17;15:23:03;15:53:03;fresno461;Listed folder;RepoMan
+10/01/17;15:23:12;15:53:12;fresno461;Listed folder;Archive
+10/01/17;15:23:19;15:53:19;fresno461;Listed folder;RepoMan
+10/01/17;15:23:22;15:53:22;fresno461;Listed folder;Archive
+10/01/17;15:23:31;15:53:31;fresno461;Listed folder;Archive
+10/01/17;15:23:34;15:53:34;fresno461;File /home/drklinzman/www/dev/RepoMan/Archive/testfolder1 already exists;Archive
+10/01/17;15:23:34;15:53:34;fresno461;Listed folder;Archive
+10/01/17;15:23:47;15:53:47;fresno461;Listed folder;Archive
+10/01/17;15:24:08;15:54:08;fresno461;Renamed /home/drklinzman/www/dev/RepoMan/Archive/testfolder1 to /home/drklinzman/www/dev/RepoMan/testfolder1/testfolder1;Archive
+10/01/17;15:24:08;15:54:08;fresno461;Listed folder;Archive
+10/01/17;15:24:12;15:54:12;fresno461;Listed folder;RepoMan
+10/01/17;15:24:14;15:54:14;fresno461;Listed folder;testfolder1
+10/01/17;15:24:29;15:54:29;fresno461;Listed folder;testfolder1
+10/01/17;15:24:33;15:54:33;fresno461;Deleted file Selection_278.png;testfolder1
+10/01/17;15:24:33;15:54:33;fresno461;Listed folder;testfolder1
+10/01/17;15:24:35;15:54:35;fresno461;Deleted file Selection_279.png;testfolder1
+10/01/17;15:24:35;15:54:35;fresno461;Listed folder;testfolder1
+10/01/17;15:24:39;15:54:39;fresno461;Listed folder;testfolder2
+10/01/17;15:24:41;15:54:41;fresno461;Deleted file Selection_292.png;testfolder2
+10/01/17;15:24:41;15:54:41;fresno461;Listed folder;testfolder2
+10/01/17;15:24:43;15:54:43;fresno461;Deleted file Selection_286.png;testfolder2
+10/01/17;15:24:43;15:54:43;fresno461;Listed folder;testfolder2
+10/01/17;15:24:45;15:54:45;fresno461;Listed folder;testfolder1
+10/01/17;15:24:49;15:54:49;fresno461;Deleted folder: 'testfolder2' ;testfolder1
+10/01/17;15:24:49;15:54:49;fresno461;Listed folder;testfolder1
+10/01/17;15:24:54;15:54:54;fresno461;Listed folder;testfolder1
+10/01/17;15:24:57;15:54:57;fresno461;Deleted folder: 'testfolder1' ;testfolder1
+10/01/17;15:24:57;15:54:57;fresno461;Listed folder;testfolder1
+10/01/17;15:24:59;15:54:59;fresno461;Listed folder;Archive
+10/01/17;15:25:04;15:55:04;fresno461;Deleted file Selection_277.png;Archive
+10/01/17;15:25:04;15:55:04;fresno461;Listed folder;Archive
+10/01/17;15:25:06;15:55:06;fresno461;Listed folder;RepoMan
+10/01/17;15:25:09;15:55:09;fresno461;Listed folder;RepoMan
+10/01/17;15:25:12;15:55:12;fresno461;Listed folder;testfolder1
+10/01/17;15:25:17;15:55:17;fresno461;Listed folder;RepoMan
+10/01/17;15:25:19;15:55:19;fresno461;Deleted folder: 'testfolder1' ;RepoMan
+10/01/17;15:25:19;15:55:19;fresno461;Listed folder;RepoMan
+10/01/17;15:25:22;15:55:22;fresno461;Deleted file updater.php;RepoMan
+10/01/17;15:25:22;15:55:22;fresno461;Listed folder;RepoMan
+10/01/17;15:25:24;15:55:24;fresno461;Deleted file Selection_293.png;RepoMan
+10/01/17;15:25:24;15:55:24;fresno461;Listed folder;RepoMan
+10/01/17;15:25:25;15:55:25;fresno461;Deleted file Selection_292.png;RepoMan
+10/01/17;15:25:25;15:55:25;fresno461;Listed folder;RepoMan
+10/01/17;15:25:26;15:55:26;fresno461;Deleted file Selection_291.png;RepoMan
+10/01/17;15:25:26;15:55:26;fresno461;Listed folder;RepoMan
+10/01/17;15:26:58;15:56:58;fresno461;Add folder requested;RepoMan
+10/01/17;15:26:58;15:56:58;fresno461;Listed folder;RepoMan
+10/01/17;15:27:06;15:57:06;fresno461;Created folder: db1;RepoMan
+10/01/17;15:27:06;15:57:06;fresno461;Listed folder;RepoMan
+10/01/17;15:27:14;15:57:14;fresno461;Add folder requested;RepoMan
+10/01/17;15:27:14;15:57:14;fresno461;Listed folder;RepoMan
+10/01/17;15:27:16;15:57:16;fresno461;Add folder: Folder name empty;RepoMan
+10/01/17;15:27:16;15:57:16;fresno461;Listed folder;Archive
+10/01/17;15:27:20;15:57:20;fresno461;Listed folder;Archive
+10/01/17;15:27:23;15:57:23;fresno461;Listed folder;Archive
+10/01/17;15:27:26;15:57:26;fresno461;Listed folder;RepoMan
+10/01/17;15:27:29;15:57:29;fresno461;Add folder requested;RepoMan
+10/01/17;15:27:29;15:57:29;fresno461;Listed folder;RepoMan
+10/01/17;15:27:33;15:57:33;fresno461;Listed folder;RepoMan
+10/01/17;15:27:46;15:57:46;fresno461;Add folder requested;RepoMan
+10/01/17;15:27:46;15:57:46;fresno461;Listed folder;RepoMan
+10/01/17;15:27:51;15:57:51;fresno461;Created folder: dbxxx;RepoMan
+10/01/17;15:27:51;15:57:51;fresno461;Listed folder;RepoMan
+10/01/17;15:27:57;15:57:57;fresno461;Add folder requested;RepoMan
+10/01/17;15:27:57;15:57:57;fresno461;Listed folder;RepoMan
+10/01/17;15:28:03;15:58:03;fresno461;Listed folder;RepoMan
+10/01/17;15:50:47;16:20:47;fresno461;Add folder requested;RepoMan
+10/01/17;15:50:47;16:20:47;fresno461;Listed folder;RepoMan
+10/01/17;15:50:55;16:20:55;fresno461;Add folder failed. Duplicate name;RepoMan
+10/01/17;15:50:55;16:20:55;fresno461;Listed folder;RepoMan
+10/01/17;15:54:02;16:24:02;fresno461;Add folder requested;RepoMan
+10/01/17;15:54:02;16:24:02;fresno461;Listed folder;RepoMan
+10/01/17;15:54:10;16:24:10;fresno461;Add folder failed. Duplicate name;RepoMan
+10/01/17;15:54:10;16:24:10;fresno461;Listed folder;RepoMan
+10/01/17;15:55:54;16:25:54;fresno461;Listed folder;RepoMan
+10/01/17;15:56:10;16:26:10;fresno461;Add folder requested;RepoMan
+10/01/17;15:56:10;16:26:10;fresno461;Listed folder;RepoMan
+10/01/17;15:56:15;16:26:15;fresno461;Add folder failed. Duplicate name;RepoMan
+10/01/17;15:56:15;16:26:15;fresno461;Listed folder;RepoMan
+10/01/17;15:57:10;16:27:10;fresno461;Add folder requested;RepoMan
+10/01/17;15:57:10;16:27:10;fresno461;Listed folder;RepoMan
+10/01/17;15:57:14;16:27:14;fresno461;Created folder: dbxxx;RepoMan
+10/01/17;15:57:14;16:27:14;fresno461;Listed folder;RepoMan
+10/01/17;16:03:43;16:33:43;fresno461;Listed folder;RepoMan
+10/01/17;16:03:45;16:33:45;fresno461;Add folder requested;RepoMan
+10/01/17;16:03:45;16:33:45;fresno461;Listed folder;RepoMan
+10/01/17;16:03:52;16:33:52;fresno461;Add folder failed. Duplicate name;RepoMan
+10/01/17;16:03:52;16:33:52;fresno461;Listed folder;RepoMan
+10/01/17;16:08:06;16:38:06;fresno461;Listed folder;RepoMan
+10/01/17;16:08:09;16:38:09;fresno461;Add folder requested;RepoMan
+10/01/17;16:08:09;16:38:09;fresno461;Listed folder;RepoMan
+10/01/17;16:08:13;16:38:13;fresno461;Created folder: testfolder1;RepoMan
+10/01/17;16:08:13;16:38:13;fresno461;Listed folder;RepoMan
+10/01/17;16:08:22;16:38:22;fresno461;Add folder requested;RepoMan
+10/01/17;16:08:22;16:38:22;fresno461;Listed folder;RepoMan
+10/01/17;16:08:27;16:38:27;fresno461;Add folder failed. Duplicate name;RepoMan
+10/01/17;16:08:27;16:38:27;fresno461;Listed folder;RepoMan
+10/01/17;16:11:03;16:41:03;fresno461;Listed folder;RepoMan
+10/01/17;16:11:04;16:41:04;fresno461;Add folder requested;RepoMan
+10/01/17;16:11:04;16:41:04;fresno461;Listed folder;RepoMan
+10/01/17;16:11:10;16:41:10;fresno461;Created folder: testfolder2;RepoMan
+10/01/17;16:11:10;16:41:10;fresno461;Listed folder;RepoMan
+10/01/17;16:11:18;16:41:18;fresno461;Deleted folder: 'testfolder1' ;RepoMan
+10/01/17;16:11:18;16:41:18;fresno461;Listed folder;RepoMan
+10/01/17;16:11:20;16:41:20;fresno461;Add folder requested;RepoMan
+10/01/17;16:11:20;16:41:20;fresno461;Listed folder;RepoMan
+10/01/17;16:11:30;16:41:30;fresno461;Created folder: xxxdbxxx;RepoMan
+10/01/17;16:11:30;16:41:30;fresno461;Listed folder;RepoMan
+10/01/17;16:11:39;16:41:39;fresno461;Add folder requested;RepoMan
+10/01/17;16:11:39;16:41:39;fresno461;Listed folder;RepoMan
+10/01/17;16:12:00;16:42:00;fresno461;Created folder: xxxdb;RepoMan
+10/01/17;16:12:00;16:42:00;fresno461;Listed folder;RepoMan
+10/01/17;16:12:08;16:42:08;fresno461;Add folder requested;RepoMan
+10/01/17;16:12:08;16:42:08;fresno461;Listed folder;RepoMan
+10/01/17;16:12:13;16:42:13;fresno461;Add folder failed. Duplicate name dbxxx;RepoMan
+10/01/17;16:12:13;16:42:13;fresno461;Listed folder;RepoMan
+10/01/17;16:13:14;16:43:14;fresno461;Listed folder;RepoMan
+10/01/17;16:13:23;16:43:23;fresno461;Add folder requested;RepoMan
+10/01/17;16:13:23;16:43:23;fresno461;Listed folder;RepoMan
+10/01/17;16:13:26;16:43:26;fresno461;Add folder failed. Duplicate name db;RepoMan
+10/01/17;16:13:26;16:43:26;fresno461;Listed folder;RepoMan
+10/01/17;16:14:10;16:44:10;fresno461;Deleted folder: 'db1' ;RepoMan
+10/01/17;16:14:10;16:44:10;fresno461;Listed folder;RepoMan
+10/01/17;16:14:13;16:44:13;fresno461;Deleted folder: 'dbxxx' ;RepoMan
+10/01/17;16:14:13;16:44:13;fresno461;Listed folder;RepoMan
+10/01/17;16:14:16;16:44:16;fresno461;Deleted folder: 'xxxdb' ;RepoMan
+10/01/17;16:14:16;16:44:16;fresno461;Listed folder;RepoMan
+10/01/17;16:14:18;16:44:18;fresno461;Deleted folder: 'xxxdbxxx' ;RepoMan
+10/01/17;16:14:18;16:44:18;fresno461;Listed folder;RepoMan
+10/01/17;16:14:20;16:44:20;fresno461;Deleted folder: 'testfolder2' ;RepoMan
+10/01/17;16:14:20;16:44:20;fresno461;Listed folder;RepoMan
+10/01/17;16:17:32;16:47:32;fresno461;Listed folder;db
+10/01/17;16:17:45;16:47:45;fresno461;Copied  to ;db
+10/01/17;16:17:45;16:47:45;fresno461;Listed folder;db
+10/01/17;16:17:49;16:47:45;fresno461;Viewed file: updater.php(copy);db
+10/01/17;16:18:02;16:48:02;fresno461;Listed folder;db
+10/01/17;16:18:05;16:48:05;fresno461;Renamed /home/drklinzman/www/dev/RepoMan/db/updater.php(copy) to /home/drklinzman/www/dev/RepoMan/updater.php(copy);db
+10/01/17;16:18:05;16:48:05;fresno461;Listed folder;db
+10/01/17;16:18:13;16:48:13;fresno461;Listed folder;RepoMan
+10/01/17;16:18:25;16:48:25;fresno461;Renamed updater.php(copy) to updater.php;RepoMan
+10/01/17;16:18:25;16:48:25;fresno461;Listed folder;RepoMan
+10/01/17;16:18:27;16:48:25;fresno461;Viewed file: updater.php;RepoMan
+10/01/17;16:18:27;16:48:27;fresno461;Listed folder;RepoMan
+10/01/17;16:18:38;16:48:27;fresno461;Viewed file: updater.php;RepoMan
+10/01/17;16:18:56;16:48:56;fresno461;Listed folder;RepoMan
+10/01/17;16:18:59;16:48:56;fresno461;Viewed file: updater.php;RepoMan
+10/01/17;16:19:17;16:49:17;fresno461;Deleted file updater.php;RepoMan
+10/01/17;16:19:17;16:49:17;fresno461;Listed folder;RepoMan
+10/01/17;16:19:25;16:49:17;fresno461;Logged out;RepoMan
+10/02/17;15:13:11;;fresno461;Login Successful;
+10/02/17;15:13:11;15:13:26;fresno461;Listed folder;RepoMan
+10/02/17;15:13:40;;fresno461;Session has expired for ;RepoMan
+10/02/17;15:14:36;;fresno461;Login Successful;RepoMan
+10/02/17;15:14:36;15:14:51;fresno461;Listed folder;RepoMan
+10/02/17;15:14:52;;fresno461;Session has expired for ;RepoMan
+10/02/17;15:16:55;;fresno461;Login Successful;RepoMan
+10/02/17;15:16:55;15:17:10;fresno461;Listed folder;RepoMan
+10/02/17;15:17:17;;fresno461;Session has expired for ;RepoMan
+10/02/17;15:18:34;;fresno461;Login Successful;
+10/02/17;15:18:34;15:18:49;fresno461;Listed folder;RepoMan
+10/02/17;15:18:35;15:18:50;fresno461;Listed folder;RepoMan
+10/02/17;15:18:35;15:18:50;fresno461;Listed folder;RepoMan
+10/02/17;15:18:35;15:18:50;fresno461;Listed folder;RepoMan
+10/02/17;15:18:35;15:18:50;fresno461;Listed folder;RepoMan
+10/02/17;15:18:35;15:18:50;fresno461;Listed folder;RepoMan
+10/02/17;15:18:43;15:18:58;fresno461;Listed folder;RepoMan
+10/02/17;15:18:43;15:18:58;fresno461;Listed folder;RepoMan
+10/02/17;15:18:43;15:18:58;fresno461;Listed folder;RepoMan
+10/02/17;15:18:43;15:18:58;fresno461;Listed folder;RepoMan
+10/02/17;15:18:43;15:18:58;fresno461;Listed folder;RepoMan
+10/02/17;15:18:43;15:18:58;fresno461;Listed folder;RepoMan
+10/02/17;15:18:49;15:19:04;fresno461;Listed folder;RepoMan
+10/02/17;15:18:49;15:19:04;fresno461;Listed folder;RepoMan
+10/02/17;15:18:49;15:19:04;fresno461;Listed folder;RepoMan
+10/02/17;15:18:49;15:19:04;fresno461;Listed folder;RepoMan
+10/02/17;15:18:49;15:19:04;fresno461;Listed folder;RepoMan
+10/02/17;15:18:49;15:19:04;fresno461;Listed folder;RepoMan
+10/02/17;15:19:01;15:19:16;fresno461;Listed folder;RepoMan
+10/02/17;15:19:01;15:19:16;fresno461;Listed folder;RepoMan
+10/02/17;15:19:01;15:19:16;fresno461;Listed folder;RepoMan
+10/02/17;15:19:01;15:19:16;fresno461;Listed folder;RepoMan
+10/02/17;15:19:01;15:19:16;fresno461;Listed folder;RepoMan
+10/02/17;15:19:01;15:19:16;fresno461;Listed folder;RepoMan
+10/02/17;15:19:14;15:19:29;fresno461;Listed folder;RepoMan
+10/02/17;15:19:14;15:19:29;fresno461;Listed folder;RepoMan
+10/02/17;15:19:14;15:19:29;fresno461;Listed folder;RepoMan
+10/02/17;15:19:14;15:19:29;fresno461;Listed folder;RepoMan
+10/02/17;15:19:14;15:19:29;fresno461;Listed folder;RepoMan
+10/02/17;15:19:14;15:19:29;fresno461;Listed folder;RepoMan
+10/02/17;15:19:33;;fresno461;Session has expired for ;RepoMan
+10/02/17;15:20:14;;fresno461;Login Successful;
+10/02/17;15:20:14;15:20:29;fresno461;Listed folder;RepoMan
+10/02/17;15:20:39;;fresno461;Session has expired for ;RepoMan
+10/02/17;15:21:27;;fresno461;Login Successful;
+10/02/17;15:21:27;15:21:42;fresno461;Listed folder;RepoMan
+10/02/17;15:21:34;15:21:49;fresno461;Admin Mode Enabled;RepoMan
+10/02/17;15:21:34;15:21:49;fresno461;Listed folder;RepoMan
+10/02/17;15:21:37;15:21:52;fresno461;Add folder requested;RepoMan
+10/02/17;15:21:37;15:21:52;fresno461;Listed folder;RepoMan
+10/02/17;15:21:41;15:21:56;fresno461;Created folder: testfolder1;RepoMan
+10/02/17;15:21:41;15:21:56;fresno461;Listed folder;RepoMan
+10/02/17;15:21:42;15:21:57;fresno461;Add file requested;RepoMan
+10/02/17;15:21:42;15:21:57;fresno461;Listed folder;RepoMan
+10/02/17;15:21:57;;fresno461;Session has expired for ;RepoMan
+10/02/17;15:22:10;;fresno461;Login Successful;
+10/02/17;15:22:10;15:22:25;fresno461;Listed folder;RepoMan
+10/02/17;15:22:18;15:22:33;fresno461;Admin Mode Enabled;RepoMan
+10/02/17;15:22:18;15:22:33;fresno461;Listed folder;RepoMan
+10/02/17;15:22:20;15:22:35;fresno461;Listed folder;RepoMan
+10/02/17;15:22:22;15:22:37;fresno461;Add file requested;RepoMan
+10/02/17;15:22:22;15:22:37;fresno461;Listed folder;RepoMan
+10/02/17;15:22:31;15:22:46;fresno461;File# 1 (Selection_293.png) uploaded successfully;RepoMan
+10/02/17;15:22:31;15:22:46;fresno461;File# 2 (Selection_292.png) uploaded successfully;RepoMan
+10/02/17;15:22:31;15:22:46;fresno461;File# 3 (Selection_291.png) uploaded successfully;RepoMan
+10/02/17;15:22:31;15:22:46;fresno461;Listed folder;RepoMan
+10/02/17;15:22:34;15:22:49;fresno461;Add folder requested;RepoMan
+10/02/17;15:22:34;15:22:49;fresno461;Listed folder;RepoMan
+10/02/17;15:22:39;15:22:54;fresno461;Add folder failed. Duplicate name testfolder1;RepoMan
+10/02/17;15:22:39;15:22:54;fresno461;Listed folder;RepoMan
+10/02/17;15:22:42;15:22:57;fresno461;Listed folder;RepoMan
+10/02/17;15:22:47;15:23:02;fresno461;Listed folder;testfolder1
+10/02/17;15:23:13;;fresno461;Session has expired for ;testfolder1
+10/02/17;15:23:26;;fresno461;Login Successful;
+10/02/17;15:23:26;15:23:41;fresno461;Listed folder;RepoMan
+10/02/17;15:23:39;15:23:54;fresno461;Viewed file: Selection_291.png;RepoMan
+10/02/17;15:23:46;15:24:01;fresno461;Viewed file: Selection_292.png;RepoMan
+10/02/17;15:24:06;15:24:21;fresno461;Viewed file: Selection_293.png;RepoMan
+10/02/17;15:24:14;15:24:29;fresno461;Listed folder;RepoMan
+10/02/17;15:24:28;15:24:43;fresno461;Listed folder;testfolder1
+10/02/17;15:24:48;;fresno461;Session has expired for ;testfolder1
+10/02/17;15:24:56;;fresno461;Login Successful;
+10/02/17;15:24:56;15:25:11;fresno461;Listed folder;RepoMan
+10/02/17;15:24:59;15:25:14;fresno461;Listed folder;testfolder1
+10/02/17;15:25:19;;fresno461;Session has expired for ;testfolder1
+10/02/17;15:25:29;;fresno461;Login Successful;
+10/02/17;15:25:29;15:25:44;fresno461;Listed folder;RepoMan
+10/02/17;15:25:32;15:25:47;fresno461;Listed folder;testfolder1
+10/02/17;15:25:51;;fresno461;Session has expired for ;testfolder1
+10/02/17;15:27:05;;fresno461;Login Successful;
+10/02/17;15:27:05;15:27:20;fresno461;Listed folder;RepoMan
+10/02/17;15:27:10;15:27:25;fresno461;Admin Mode Enabled;RepoMan
+10/02/17;15:27:10;15:27:25;fresno461;Listed folder;RepoMan
+10/02/17;15:27:15;15:27:30;fresno461;Deleted folder: 'testfolder1' ;RepoMan
+10/02/17;15:27:15;15:27:30;fresno461;Listed folder;RepoMan
+10/02/17;15:27:20;15:27:35;fresno461;Deleted file Selection_291.png;RepoMan
+10/02/17;15:27:20;15:27:35;fresno461;Listed folder;RepoMan
+10/02/17;15:27:21;15:27:36;fresno461;Deleted file Selection_292.png;RepoMan
+10/02/17;15:27:21;15:27:36;fresno461;Listed folder;RepoMan
+10/02/17;15:27:23;15:27:38;fresno461;Deleted file Selection_293.png;RepoMan
+10/02/17;15:27:23;15:27:38;fresno461;Listed folder;RepoMan
+10/02/17;15:28:43;;fresno461;Session has expired for ;RepoMan
+10/02/17;15:30:01;;fresno461;Login Successful;
+10/02/17;15:30:01;15:30:16;fresno461;Listed folder;RepoMan
+10/02/17;15:40:39;;fresno461;Session has expired for ;RepoMan
+10/03/17;16:48:27;;fresno461;Login Successful;
+10/03/17;16:48:27;17:18:27;fresno461;Listed folder;RepoMan

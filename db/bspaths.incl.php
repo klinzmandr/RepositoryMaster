@@ -1,19 +1,11 @@
 <?php
-// establish the paths for the boostrap files
+// establish the paths for the db files
 //echo "include loaded<br>";
 $bscsspath  = 'db/bootstrap.min.css';
 $ficsspath  = 'db/fileinput.min.css';
 $jqpath     = 'db/jquery.js'; 
 $bsjspath   = 'db/bootstrap.min.js';
 $fijspath   = 'db/fileinput.min.js';
-
-// the following code establishes path for the include file
-// echo '<pre> SERVER '; print_r($_SERVER); echo '</pre>';
-$defaultpath = rtrim($_SERVER['SCRIPT_FILENAME'], 'index.php');
-$inclpath = $defaultpath . 'db/incl.php';
-if (isset($_SESSION['root'])) 
-	$inclpath = $_SESSION['root'] . 'db/incl.php';		
-
 
 if (isset($_SESSION['homeuri'])) { // adjust if not root folder
   $bsroot = rtrim($_SESSION['homeuri'], 'index.php');

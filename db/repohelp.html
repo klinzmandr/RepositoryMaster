@@ -31,15 +31,15 @@
 <p>Clicking a name in the 'Folders' section will cause that folder's contents to be listed.  After doing so note that a new name is automatically added to the folders listed titled 'Parent Folder'.  Clicking the parent link will navigate back to the previous (i.e. Parent) folder's contents.  Clicking the 'Home Folder' button will always list the 'Home Folder'.</p>
 <p>Files are displayed by clicking the name of a file listed under the 'Files' section of the contents listing.  The display of a file is always done in a new window/tab.  Merely close that window/tab to return to the repository page or, alternatively, merely click the window/tab of the repository page leaving the new page open for easy reference.</p>
 
+
 <a href="#">TOP</a>
 
 <h4 id="Administration">Administration</h4>
 <p>Administrative functions are very straight forward and consist of managing the users that are to be allowed access, managing the admin password(s), moving folder and files into the archive when appropriate and monitoring the usage logs and performing a periodic cycle of the log when appropriate.</p>
-<p>The administration functions are accessed by clicking the 'Admin' button and supplying the correct password.  Successful entry of the password will result in 4 new buttons being displayed: 'Archive', 'User Summary', 'Log Utility' and 'User Admin'.  The user admin function is further explained in the '<a href="#Security">Security</a>' section and the logging facilities in the '<a href="#UsageLogs">Usage Logs</a>' section.</p>
-<p>In addition to enabling these new functions, the administrative mode also enables several additional capabilities.  These include the availability of buttons to add new folders and files to the repository.  The listing of the folders and files are also provided new function links to archive (or restore), delete or rename associated folders/files.</p>
-<p>In administrative mode, clicking the 'Add Folder' button will prompt for a folder name and create the folder in the currently displayed folder.</p>
-<p>In administrative mode, click the 'Add File' to open an input bar with a 'Browse' button. Select file(s) with a single click, multiple files by doing a 'click/Ctrl-click' on each, and a group of files by doing a 'click/Shift-click'. Once files have been selected, click the 'Upload' button. Success or failure messages will be displayed for each selected when uploading is completed.  All files uploaded will be stored in the currently displayed folder.</p>
-
+<p>The administration functions are accessed by clicking the 'Admin' button and supplying the correct password.  Successful entry of the password will result in 4 new buttons to be displayed: 'Archive', 'User Summary', 'Log Utility' and 'User Admin'.  The user admin function is further explained in the '<a href="#Security">Security</a>' section and the logging facilities in the '<a href="#UsageLogs">Usage Logs</a>' section.</p>
+<p>In addition to enabling these new functions, the administrative mode also enables several additional capabilities to add new folders and files to the repository.</p>
+<p>In administrative mode, clicking the 'Add Folder' button will prompt for a folder name and create the folder in the currently displayed folder. Click the 'Add File' to open an input bar with a 'Browse' button. Select file(s) with a single click, multiple files by doing a 'click/Ctrl-click' on each, and a group of files by doing a 'click/Shift-click' around the group. Once files have been selected, click the 'Upload' button. Success or failure messages will be displayed for each selected when upload processing is completed.  All files uploaded will be stored in the currently displayed folder.</p>
+<p>Finally, when in Admin mode three action links will appear ahead of each file name.  These links allow the associated file/folder to be moved, deleted or renamed after confirmation of the action.  Files/folders can be moved to any existing folder, including the Archive, by selecting the name from the drop down listed provided.  Files/folders can not be retrieved once they have been deleted.</p>
 <a href="#">TOP</a>
 
 <h4 id="Security">Security</h4>
@@ -56,10 +56,9 @@
 <a href="#">TOP</a>
 
 <h4 id="Archive">Archive</h4>
-<p>The archive functionality is provided in administrative mode to allow the repository manager to move a single file or a whole directory out of the main repository view into an archive area accessed by the 'Archive' button.  This moves the folder/file from the 'Home Folder' (or other folders) listing tree and move it into a corresponding folder in the 'Archive' folder tree using the identical folder and file names as the original.</p>
-<p>Once a file (or a folder with multiple files) has been moved into the archive they can be restored by clicking the 'Restore' link when in the Archive.</p>
-<p>Successful archive and restore operations depend on the existence of the original containing 'folder'.  For example, assume a folder named 'Minutes' is defined in the Home Folder and contains a file name 'Committee Meeting'.  To successfully archive the file 'Committee Meeting' a corresponding folder named 'Minutes' must also be defined in the 'Archive' folder.  If the original folder named 'Minutes' is deleted, then the 'Archive' copy of the file 'Committee Meeting' can not restored until it is re-created.</p>
-<p>The same rule applies to archive and restore a folder.  Assume the same folder named 'Minutes' contains a folder named 'Planning' which, in turn, contains a series of files. The folder named 'Planning' (along with all of its contents) can be archived as long as there is a folder named 'Minutes' already in the archive.  If the 'Planning' folder is successfully archived and its 'parent' folder 'Minutes' is then deleted, then the 'Planning' folded can not be restored until it is re-created.</p>
+<p>The archive functionality is provided in Admin mode to allow the repository manager to move a single file or a whole folder into an archive area.  The files/folders in the Archive may only be accessed by using the 'Archive' button in Admin mode.</p>
+<p>Once a file (or a folder with multiple files) has been moved into the archive they can be restored by clicking the associated 'Move' link and selecting a non-Archive location from the drop down list.</p>
+<p>Attempting to copy a file/folder into a destination location that contains a file/folder of the same name will result in an error message and the move will fail.</p>
 
 <a href="#">TOP</a>
 

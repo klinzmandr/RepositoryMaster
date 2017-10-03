@@ -3,10 +3,14 @@
 // blank lines are ignored
 
 admpw:bateleur
+admpw:bateluer
 admpw:birdseye
 
 // author
 fresno461
+
+// repo owner
+birdseye
 
 // General Admission userid
 // This allows ANY userid to work and overrides all other 

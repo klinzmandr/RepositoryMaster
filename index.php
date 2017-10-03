@@ -3,20 +3,36 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 session_start();
 date_default_timezone_set('America/Los_Angeles');
 
-$bspaths = isset($_SESSION['root'])?
-  $_SESSION['root'] . 'db/bspaths.incl.php' : './db/bspaths.incl.php';
-require_once $bspaths;
-require_once $inclpath;
+$tictoc = 30*60;      // duration of login session
 
-viewer();         // output of file to view MUST preceed ANY other output.
+// the following code checks for and displays a file
+if (isset($_REQUEST['dsp'])) {
+  $loggerpath = isset($_SESSION['root'])?
+    $_SESSION['root'] . 'db/logger.incl.php' : './db/logger.incl.php';	
+  require_once $loggerpath;
+  $viewerpath = isset($_SESSION['root'])?
+    $_SESSION['root'] . 'db/viewer.incl.php' : './db/viewer.incl.php';	
+  require_once $viewerpath;
+  $_SESSION['tk'] = time() + $tictoc;   // update session timer
+  viewer();         // output of file to view MUST preceed ANY other output.
+  }
 
 echo '
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
-<title>PWC Repository</title>
-</head><body>';
+<title>RepoMan 3.0</title>';
+$bspaths = isset($_SESSION['root'])?
+  $_SESSION['root'] . 'db/bspaths.incl.php' : './db/bspaths.incl.php';
+require_once $bspaths;
+echo '</head><body>';
+$loggerpath = isset($_SESSION['root'])?
+  $_SESSION['root'] . 'db/logger.incl.php' : './db/logger.incl.php';	
+require_once $loggerpath;
+$inclpath = isset($_SESSION['root'])?
+  $_SESSION['root'] . 'db/incl.php' : './db/incl.php';
+require_once $inclpath;
 
 //echo "<h1>Orgainzation Logo Here</h1>";
 // for example:
@@ -37,14 +53,14 @@ if (isset($_REQUEST['logout'])) {
 	// echo '<pre> session '; print_r($_SESSION); echo '</pre>';
 	}
 
-sechk(30*60);												// check and/or set session
-mover();                            // do move request
-adder();														// do file and/or dir add
-deller();														// do file upload, rename and or dir delete
+sechk($tictoc);											// check and/or set session
+mover();                            // do file/dir move/copy/
+adder();														// do file/dir add/upload
+deller();														// do file/dir rename/delete
 
 $contents = scandir(".");						// scan the current directory
 foreach ($contents as $c) { 
-  if (!preg_match("/^db{1}|^\.|^index\..*|^Archive$|.*\.md$/i",$c)) {
+  if (!preg_match("/^db$|^\.|^index\..*|^Archive$|.*\.md$/i",$c)) {
     $l[] = $c;                      // create list of dirs and files
     } 
   }
