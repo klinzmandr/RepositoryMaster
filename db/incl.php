@@ -2,7 +2,7 @@
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 // anchor confirm script
-$archflag = isset($_SESSION['arch']) ? 'true' : 'false';
+//$archflag = isset($_SESSION['arch']) ? 'true' : 'false';
 print <<<htmlScript
 <script>
 $(document).ready( function() {
@@ -39,7 +39,7 @@ function mover() {
     $file = $_REQUEST['copy'];
     $new = getcwd() . '/' . $file . '(copy)';
     $old = getcwd() . '/' . $file;
-    echo "<pre>old: $old\nnew: $new</pre>";
+    //echo "<pre>old: $old\nnew: $new</pre>";
     if (file_exists($new)) {
       logger("File $old already exists");
       echo "<div class=\"ERR\"><h4 style=\"color: red; \"><b>Copy failed!</b><br>File copy already exists.</h4></div>";
@@ -60,7 +60,7 @@ function mover() {
   if (isset($_REQUEST['mover'])) {
     //echo '<pre>REQUEST '; print_r($_REQUEST); echo '</pre>';
     $newname = $_REQUEST['dest'] . '/' . $_REQUEST['file'];
-    $oldname = getcwd() . '/' . $_REQUEST['file'];
+    $oldname = $_SESSION['currpath'] . $_REQUEST['file'];
     //echo "<pre>oldname: $oldname\nnewname: $newname</pre>";
     if (($newname == $oldname) OR (file_exists($newname))) {
       logger("File $oldname already exists");
@@ -81,9 +81,9 @@ function mover() {
 // move requested    
   if (isset($_REQUEST['move'])) {
     $file = $_REQUEST['move'];
-    $rootpath = $_SESSION['root'];		
+    $rootpath = $_SESSION['homepath'];		
 	  //echo "rootpath: $rootpath<br>";
-    $dirlist = `find $rootpath -type d -print`;
+    $dirlist = `find $rootpath -type d -print`;   // get list of ALL folders
     $dirlistarray = array();
     $dirlistarray = preg_split("/\\n/",$dirlist,"-1",1);
     //echo '<pre>dirlist '; print_r($dirlist); echo '</pre>';
@@ -161,6 +161,7 @@ function deller() {
 			if (count($dircontents) <= 3) { 
 				exec("rm -r $dn",$op,$retval);
 				logger("Deleted folder: $dn ");
+				echo "<div class=\"ERR\"><h4 style=\"color: red; \">Folder $dirname deleted!</h4></div>";
 				return;		
 				} 
 			//echo "Directory $dirname is not empty<br>";
@@ -231,13 +232,11 @@ if (strlen($msg) > 0) echo "<div class=\"ERR\">$msg</div>";
 	if ($_SESSION['addfolder'] == TRUE) {
 	  unset($_SESSION['addfolder']);
 		$folder = ($_REQUEST['folder']);
-		echo "folder: $folder<br>";
 		if (strlen($folder) == 0) {
 			echo "<div class=\"ERR\"><h4 style=\"color: red; \">ERROR: No folder name provided!</h4></div>";
 			logger("Add folder: Folder name empty");	
 			return; 
 			}
-		echo "folder: $folder<br>";
 		if (is_dir($folder)) {
 			echo "<div class=\"ERR\"><h4 style=\"color: red; \">ERROR: Folder name $folder duplicated.</h4></div>";
 			logger("Add folder failed. Duplicate name $folder"); 
@@ -254,30 +253,31 @@ if (strlen($msg) > 0) echo "<div class=\"ERR\">$msg</div>";
 
 //=========== lister() =================	
 function lister($in) {				// input is the list of the current folder contents
-	$root = $_SESSION['root'];
-	$currdir = getcwd() . '/';
+	//$root = $_SESSION['currpath'];
+	//$currdir = getcwd() . '/';
 	// get curr URL from server
-	$currpath = preg_replace("/(^.*\/)(index.*$)/","$1",$_SERVER['REQUEST_URI']);	
-	$cwd = explode('/', $currdir);
+	//$currpath = preg_replace("/(^.*\/)(index.*$)/","$1",$_SERVER['REQUEST_URI']);	
+	$currpath = $_SESSION['currpath'];	
+	$cwd = explode('/', $currpath);
 	$dcnt = count($cwd) - 2;
 	$dname = $cwd[$dcnt];
 	$_SESSION['currdir'] = $dname;
-	$lourl = (isset($_SESSION['homeuri'])) ? 
-    $_SESSION['homeuri'] . "?logout" : "index.php?logout";
-	$helppath = rtrim($_SESSION['homeuri'],'index.php') . 'db/repohelp.html';
-	$archpath = rtrim($_SESSION['homeuri'],'index.php') . 'Archive';
-	$indexurl = rtrim($_SESSION['homeuri'], 'index.php') . 'db/logutil.php';
-	$utilurl =  rtrim($_SESSION['homeuri'], 'index.php') . 'db/useradmin.php';
+	$lourl = $_SESSION['homeuri'] . '?logout';
+	$helppath = $_SESSION['homeuri'] . 'db/repohelp.html';
+	$archpath = $_SESSION['homeuri'] . 'Archive';
+	$indexurl = $_SESSION['homeuri'] . 'db/logutil.php';
+	$utilurl =  $_SESSION['homeuri'] . 'db/useradmin.php';
+	$homeurl = $_SESSION['homeuri'] . 'index.php';
 	echo '<a class="btn btn-success btn-xs" href="'.$lourl.'">LOGOUT</a>&nbsp;&nbsp;';
-	echo '<a class="btn btn-success btn-xs" href="'.$_SESSION['homeuri'].'\">Home Folder</a>&nbsp;&nbsp;';
-	echo "<a class=\"btn btn-primary btn-xs\" href=\"$helppath\" target=\"_blank\">Help</a>&nbsp;&nbsp;";
+	echo '<a class="btn btn-success btn-xs" href="'.$homeurl.'">Home Folder</a>&nbsp;&nbsp;';
+	echo '<a class="btn btn-primary btn-xs" href="'.$helppath.'" target="_blank">Help</a>&nbsp;&nbsp;';
 
 // show additional buttons if admin mode has been enabled	
 	if ($_SESSION['adm'] == "ON") { 	// show admin buttons
 	  echo '<a class="btn btn-danger btn-xs" href="'.$archpath.'">Archive</a>&nbsp;&nbsp;';
 		echo '<a class="btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=list">User Summary</a>&nbsp;&nbsp;';		
 		echo '<a class="btn btn-danger btn-xs" target="_blank" href="'.$indexurl.'">Log Utility</a>&nbsp;&nbsp;';
-		echo '<a class="btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=form \">User Admin</a>&nbsp;&nbsp;'; }
+		echo '<a class="btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=form">User Admin</a>&nbsp;&nbsp;'; }
 	else {
 		echo '<a class="adm btn btn-danger btn-xs" href="#">Admin</a>&nbsp;&nbsp;';	}
 
@@ -287,8 +287,9 @@ function lister($in) {				// input is the list of the current folder contents
 // output links to any external sources defined
 	echo '<h3>On-line resources</h3>
 <b>Online Links: (opens in a new window)</b><ul>';
-  if (count($GLOBALS['links'])) {
-    foreach ($GLOBALS['links'] as $l) { echo $l . '<br>'; }
+global $links;
+  if (count($links)) {
+    foreach ($links as $l) { echo $l . '<br>'; }
     }
 
 // display name of current directory and admin mode buttons if enabled
@@ -304,7 +305,7 @@ function lister($in) {				// input is the list of the current folder contents
 	echo "<b><u>Folders:</u></b><br><ul>";
 	// echo "currdir: $currdir, root: $root, dname: $dname<br>";
   echo '<div class="row"><div class="col-sm-3">';
- 	if (($currdir == $root) OR ($dname == 'Archive')) {
+ 	if (($currpath == $_SESSION['homepath']) OR ($dname == 'Archive')) {
 	  // echo "root OR archive<br>"; 
 	  }
   else {
@@ -324,7 +325,7 @@ function lister($in) {				// input is the list of the current folder contents
   				<a class=\"confirm\" href=\"index.php?delete=dir&dname=$urlf\">Delete</a>/
   				<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>"; 
   				}
-  			$dnurl = $currpath .  "$f";
+  			$dnurl = $_SESSION['curruri'] . "$f/index.php";
   			// echo "dnurl: $dnurl<br>";
   			echo "<div class=\"col-sm-4\"><a href=\"$dnurl\">$f</a></div></div>"; 
   			}
@@ -360,7 +361,7 @@ function lister($in) {				// input is the list of the current folder contents
 				echo "<a class=\"confirm\" href=\"index.php?delete=file&fname=$newf\">Delete/</a>";
 				echo "<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>";
 				}
-				$fnurl = $currpath . "index.php?dsp=$f";
+				$fnurl = $_SESSION['curruri'] . "index.php?dsp=$f";
 				//echo "fnurl: $fnurl<br>";
   		  echo "
   			<div class=\"col-sm-5\">
@@ -404,7 +405,8 @@ scriptPart1;
 	}			// end function 'lister'
 // =========== sechk() =======================================
 function sechk($dur) {
-	if (strlen($_REQUEST['uid']) != 0) { 
+	//if (strlen($_REQUEST['uid']) != 0) { 
+	if (isset($_REQUEST['uid'])) { 
 		// echo "session id length = 0<br>";
 		unset($_SESSION['tk']);
 		unset($_SESSION['adm']);
@@ -416,35 +418,37 @@ function sechk($dur) {
 		unset($_SESSION['tk']);
 		unset($_SESSION['adm']);
 		$msg = "Session has expired for " . $SESSION['uid'];
-		logger($msg);
-		if (strlen($_REQUEST['uid']) == 0) {
-		  $lourl = $_SESSION['homeuri'];
-		  //echo "lourl: $lourl<br>";
-		  session_unset();
-    	session_destroy();
-			echo '<h2 style="color: red; ">Session has expired!</h2>
-			<h3><a href="'.$lourl.'">Please login</a></h3>';
-			exit; }
+	  $lourl = $_SESSION['homeuri'] . 'index.php';
+	  //echo "lourl: $lourl<br>";
+	  session_unset();
+  	session_destroy();
+	  logger($msg);
+		echo '<h2 style="color: red; ">Session has expired!</h2>
+		<h3><a href="'.$lourl.'">Please login</a></h3>';
+		exit; 
 		}
 	else {
 		if (isset($_SESSION['tk'])) {			
-			$_SESSION['tk'] = $todnow + $dur;
+			$_SESSION['tk'] = $todnow + $dur;    // extend timer by duration 
 			}
 		}
 
 // admin mode request
 	if (isset($_REQUEST['apw'])) {
-		$fp = $_SESSION['root'] . 'db/userlist.txt';
+		$fp = $_SESSION['homepath'] . 'db/userlist.txt';
 		$f = file_get_contents($fp);
 		$pw = 'admpw:' . $_REQUEST['apw'];
 //		echo "pw: $pw<br>";
+    $user = $_SESSION['id'];
 		if (preg_match("/$pw/", $f)) {
 			$_SESSION['adm'] = "ON"; 
-			logger("Admin Mode Enabled");
+			echo "<div class=\"ERR\"><h4 style=\"color: red; \">Admin mode enabled</h4></div>";
+			logger("Admin Mode Enabled for $user");
 //			echo "Admin Mode Enabled<br>";
 			}
 		else { 
-			logger("Admin Mode request failed.");
+		  echo "<div class=\"ERR\"><h4 style=\"color: red; \">Admin mode request failed.</h4></div>";
+			logger("Admin Mode request failed for $user");
 			unset($_SESSION['adm']);
 			}
 		}
@@ -452,26 +456,26 @@ function sechk($dur) {
 // login request
   $haystack = array();
 	if ($_REQUEST['submit'] == "Login") {
-		$needle = $_REQUEST['uid'];
 	  unset($_SESSION['id']);
+		$needle = $_REQUEST['uid'];
 		$usrfile = 'db/userlist.txt'; 				
 		if (file_exists($usrfile)) { 
 		  $haystack = file($usrfile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); }
 		else { $haystack[] = $needle; }     // allow anyone if no userfile exists
  
   	if ((in_array($needle, $haystack)) OR (in_array("anyth1ng.goez", $haystack))) {
-  		$_SESSION['id'] = $_REQUEST['uid']; 
-  		logger("Login Successful");
+  		$_SESSION['id'] = $needle; 
+  		logger("Login Successful for $needle");
   		$_SESSION['tk'] = time() + $dur;		// session time in seconds
-  		$_SESSION['root'] = getcwd() . '/';	// set root dir for utility session
-  		$_SESSION['homeuri'] = $_SERVER['REQUEST_URI'];	// set home URL for session
+  		$requri = rtrim($_SERVER['REQUEST_URI'], '/');
+  		preg_match("/(.*)\/.*$/i", $requri, $matches);
+  		$_SESSION['homeuri'] = $matches[1] . '/';   // set home uri for session
+  		$_SESSION['homepath'] = getcwd() . '/';	    // set home path for session
   		}			
 		else { 
-			unset($_SESSION['tk']);
-			unset($_SESSION['root']);
-			unset($_SESSION['id']);
-			$u = $_REQUEST['uid'];
-			logger("Login NOT successful for $u");
+			session_unset();
+    	session_destroy();
+			logger("Login NOT successful for $needle");
 			echo "<div class=\"ERR\"><h4 style=\"color: red; \">Invalid User ID.</h4></div>";
 			}
 		}

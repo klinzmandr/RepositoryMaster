@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 session_start();
-$root = $_SESSION[root] . '/db';
+$root = $_SESSION[homepath] . '/db';
 //echo "root: $root<br>";
 
 echo '
@@ -41,7 +41,9 @@ if ($action == 'list') {
 //	echo "<pre> lastlogin "; print_r($lastlogin); echo '</pre>';
 
 	$ucnt = count($lastlogin);
-	echo "<h2>Last Use Summary&nbsp;&nbsp;&nbsp;<a class=\"btn btn-xs btn-success\" href=\"javascript:self.close();\">CLOSE</a></h2>
+	echo "
+  <div class=\"container\">	
+	<h2>Last Use Summary&nbsp;&nbsp;&nbsp;<a class=\"btn btn-xs btn-success\" href=\"javascript:self.close();\">CLOSE</a></h2>
 	Total unique user ids logged: $ucnt<br>";		
 	if ($ucnt == 0) {
 		echo "No users noted in log file.<br>";
@@ -52,10 +54,11 @@ if ($action == 'list') {
 	echo "<table class=\"table\">";
 	echo "<tr><th>User ID</th><th>Date @ Time</th></tr>";	
 	foreach ($lastlogin as $k) {
-		echo "<tr><td>$k[id]</td><td>$k[date]</td><td>, count: $k[count]</td></tr>";
+		echo "<tr><td width=\"30%\">$k[id]</td><td width=\"30%\">$k[date]</td><td>, count: $k[count]</td></tr>";
 		}
 	echo "</table>";
-	echo "<br><a class=\"btn btn-xs btn-success\" href=\"javascript:self.close();\">CLOSE</a>";
+	echo "<br><a class=\"btn btn-xs btn-success\" href=\"javascript:self.close();\">CLOSE</a>
+	</div>   <!-- container -->";
 	exit(0);
 	}
 
@@ -73,6 +76,7 @@ if ($action == 'form') {
 	if (file_exists('userlist.txt')) $contents = file_get_contents('userlist.txt');
 	}
 	print <<<pagePart1
+<div class="container">
 <h1>User List Maintenance&nbsp;&nbsp;<a class="btn btn-xs btn-success" href="javascript:self.close();">CLOSE</a></h1>
 <p>Apply updates to the following text then submit.</p>
 <p>Lines that begin with double slashes (&apos;//&apos;) as well as blank lines are ignored.</p>
@@ -82,6 +86,7 @@ if ($action == 'form') {
 <input type="hidden" name="action" value="upd"><br>
 <input type="submit" name="submit" value="submit">
 </form>
+</div>  <!-- container -->
 <hr>
 
 <!-- <a href="index.php">Cancel</a> -->

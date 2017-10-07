@@ -3,15 +3,20 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 session_start();
 date_default_timezone_set('America/Los_Angeles');
 
-$tictoc = 30*60;      // duration of login session
+// set duration of login session
+$tictoc = 30*60;
+
+// load current path and uri vars
+$requri = rtrim($_SERVER['REQUEST_URI'], '/');
+preg_match("/(.*)\/.*$/i", $requri, $matches);
+$_SESSION['curruri'] = $matches[1] . '/';
+$_SESSION['currpath'] = getcwd() . '/';
 
 // the following code checks for and displays a file
 if (isset($_REQUEST['dsp'])) {
-  $loggerpath = isset($_SESSION['root'])?
-    $_SESSION['root'] . 'db/logger.incl.php' : './db/logger.incl.php';	
+  $loggerpath = $_SESSION['homepath'] . 'db/logger.incl.php';	
   require_once $loggerpath;
-  $viewerpath = isset($_SESSION['root'])?
-    $_SESSION['root'] . 'db/viewer.incl.php' : './db/viewer.incl.php';	
+  $viewerpath = $_SESSION['homepath'] . 'db/viewer.incl.php';	
   require_once $viewerpath;
   $_SESSION['tk'] = time() + $tictoc;   // update session timer
   viewer();         // output of file to view MUST preceed ANY other output.
@@ -23,34 +28,33 @@ echo '
 <head>
 <meta charset="utf-8" />
 <title>RepoMan 3.0</title>';
-$bspaths = isset($_SESSION['root'])?
-  $_SESSION['root'] . 'db/bspaths.incl.php' : './db/bspaths.incl.php';
+  		
+$bspaths = $_SESSION['homepath'] . 'db/bspaths.incl.php';
 require_once $bspaths;
 echo '</head><body>';
-$loggerpath = isset($_SESSION['root'])?
-  $_SESSION['root'] . 'db/logger.incl.php' : './db/logger.incl.php';	
+$loggerpath = $_SESSION['homepath'] . 'db/logger.incl.php';	
 require_once $loggerpath;
-$inclpath = isset($_SESSION['root'])?
-  $_SESSION['root'] . 'db/incl.php' : './db/incl.php';
+$inclpath = $_SESSION['homepath'] . 'db/incl.php';
 require_once $inclpath;
 
 //echo "<h1>Orgainzation Logo Here</h1>";
 // for example:
-echo '<img src="https://library.pacwilica.org/PWC_logo_only.jpg" border="0" alt="MBBF logo"><br>';
+echo '<img src="https://library.pacwilica.org/PWC_logo_only.jpg" border="0" alt="Logo"><br>';
 
-// load array for external resources (if any)
-$GLOBALS['links'][] = '<a href="https://www.pacificwildlifecare.org/" target="_blank">PWC Home Page</a>';
-$GLOBALS['links'][] = '<a href="https://apps.pacwilica.org/mbrquery" target="_blank">PWC Mbr Query</a>';
-$GLOBALS['links'][] = '<a href="https://apps.pacwilica.org/charts" target="_blank">PWC Charts</a>';
-$GLOBALS['links'][] = '<a href="https://www.pacificwildlifecare.org/events/" target="_blank">PWC Event Calendar</a>';
+// load array of external resources links (if any)
+$links[] = '<a href="https://www.pacificwildlifecare.org/" target="_blank">PWC Home Page</a>';
+$links[] = '<a href="https://apps.pacwilica.org/mbrquery" target="_blank">PWC Mbr Query</a>';
+$links[] = '<a href="https://apps.pacwilica.org/charts" target="_blank">PWC Charts</a>';
+$links[] = '<a href="https://www.pacificwildlifecare.org/events/" target="_blank">PWC Event Calendar</a>';
 
 // logout or session reset requested
 if (isset($_REQUEST['logout'])) {
 	logger("Logged out");	
 	echo "<div class=\"ERR\"><h4 style=\"color: red; \">Logged out.</h4></div>";
+	$louri = $_SESSION['homeuri'] . 'index.php';
 	session_unset();
 	session_destroy();
-	// echo '<pre> session '; print_r($_SESSION); echo '</pre>';
+	echo '<h3><a href="'.$louri.'">Please login</a></h3>';
 	}
 
 sechk($tictoc);											// check and/or set session
@@ -66,14 +70,6 @@ foreach ($contents as $c) {
   }
 echo '<ul>';
 lister($l);			          						// and show them
-
-/*
-echo "<hr>Debug Info: dump of array name and value pairs<br><pre>";
-echo "Parameters: ";print_r($_REQUEST);
-echo "Session: ";print_r($_SESSION);
-echo "Server: ";print_r($_SERVER);
-echo "</pre><hr>";
-*/
 
 echo '</ul></body></html>';
 exit(0);
