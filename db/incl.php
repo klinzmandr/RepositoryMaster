@@ -1,8 +1,6 @@
 <?php
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
-// anchor confirm script
-//$archflag = isset($_SESSION['arch']) ? 'true' : 'false';
 print <<<htmlScript
 <script>
 $(document).ready( function() {
@@ -39,7 +37,6 @@ function mover() {
     $file = $_REQUEST['copy'];
     $new = getcwd() . '/' . $file . '(copy)';
     $old = getcwd() . '/' . $file;
-    //echo "<pre>old: $old\nnew: $new</pre>";
     if (file_exists($new)) {
       logger("File $old already exists");
       echo "<div class=\"ERR\"><h4 style=\"color: red; \"><b>Copy failed!</b><br>File copy already exists.</h4></div>";
@@ -58,10 +55,8 @@ function mover() {
     
 // do actual move
   if (isset($_REQUEST['mover'])) {
-    //echo '<pre>REQUEST '; print_r($_REQUEST); echo '</pre>';
     $newname = $_REQUEST['dest'] . '/' . $_REQUEST['file'];
     $oldname = $_SESSION['currpath'] . $_REQUEST['file'];
-    //echo "<pre>oldname: $oldname\nnewname: $newname</pre>";
     if (($newname == $oldname) OR (file_exists($newname))) {
       logger("File $oldname already exists");
       echo "<div class=\"ERR\"><h4 style=\"color: red; \">Move failed! Destination file already exists.</h4></div>";
@@ -86,16 +81,12 @@ function mover() {
     $dirlist = `find $rootpath -type d -print`;   // get list of ALL folders
     $dirlistarray = array();
     $dirlistarray = preg_split("/\\n/",$dirlist,"-1",1);
-    //echo '<pre>dirlist '; print_r($dirlist); echo '</pre>';
-    //echo '<pre>dirs '; print_r($dirlistarray); echo '</pre>';
     foreach ($dirlistarray as $d) {
       if (preg_match("/db|\.git/i",$d)) continue;   // ignore these
       $finarray[] = $d;
       }
     sort($finarray);
-    //echo '<pre>finarray '; print_r($finarray); echo '</pre>';
     $len = strlen($rootpath);
-    //echo "len: $len<br>";
     echo 'Select destination folder: 
     <form action="index.php">
     <select onchange="javascript: this.form.submit();" name="dest">
@@ -104,7 +95,6 @@ function mover() {
     foreach ($finarray as $d) {
       $dspname = substr($d, $len);
       if (!strlen($dspname)) continue;
-      //echo "d: $d, dspname: $dspname<br>";
       echo '<option value="'.$d.'">'.$dspname.'</option>  '; 
       }
     echo '
@@ -164,7 +154,7 @@ function deller() {
 				echo "<div class=\"ERR\"><h4 style=\"color: red; \">Folder $dirname deleted!</h4></div>";
 				return;		
 				} 
-			//echo "Directory $dirname is not empty<br>";
+			logger("Folder delete failed for $dirname");
 			echo "<div class=\"ERR\"><h4 style=\"color: red; \">Folder $dirname is not empty!</h4></div>"; 
 			}
 		return;
@@ -185,18 +175,6 @@ formPage;
 		logger("Add file requested");
 		return;
 		}
-// add folder form
-	if (isset($_REQUEST['addfolder'])) { 
-		$_SESSION['addfolder'] = TRUE;
-print <<<folderPage
-<form action="index.php" method="post"><b>Enter folder name:</b> 
-<input autofocus size=25 type="text" name="folder" id="folder" />&nbsp;&nbsp;&nbsp;
-<input type="submit" name="submit" value="Submit" />
-</form>
-folderPage;
-		logger("Add folder requested");
-		return;
-		}
 		
 // store uploaded file as same as file name supplied
 	if ($_SESSION['addfile'] == TRUE) {
@@ -204,7 +182,6 @@ folderPage;
 //echo "store and process uploaded files<br>";
 $msg = "";     //initiate the progress message
 if (count($_FILES)) {
-//  echo '<pre> file '; print_r($_FILES); echo '</pre>';
   for ($i = 0; $i<count($_FILES["files"]["name"]); $i++) {
     $filen = $_FILES["files"]["name"][$i];
     if (file_exists($filen)) {
@@ -229,6 +206,20 @@ if (count($_FILES)) {
 } // close of add file
 if (strlen($msg) > 0) echo "<div class=\"ERR\">$msg</div>"; 
 
+// ================== addfolder request ==========================
+	if (isset($_REQUEST['addfolder'])) { 
+		$_SESSION['addfolder'] = TRUE;
+print <<<folderPage
+<form action="index.php" method="post"><b>Enter folder name:</b> 
+<input autofocus size=25 type="text" name="folder" id="folder" />&nbsp;&nbsp;&nbsp;
+<input type="submit" name="submit" value="Submit" />
+</form>
+folderPage;
+		logger("Add folder requested");
+		return;
+		}
+
+// ============== addfolder processed ============================
 	if ($_SESSION['addfolder'] == TRUE) {
 	  unset($_SESSION['addfolder']);
 		$folder = ($_REQUEST['folder']);
@@ -251,12 +242,8 @@ if (strlen($msg) > 0) echo "<div class=\"ERR\">$msg</div>";
 		} // close of add folder
 	}  // close of function
 
-//=========== lister() =================	
+//========================== lister() =========================	
 function lister($in) {				// input is the list of the current folder contents
-	//$root = $_SESSION['currpath'];
-	//$currdir = getcwd() . '/';
-	// get curr URL from server
-	//$currpath = preg_replace("/(^.*\/)(index.*$)/","$1",$_SERVER['REQUEST_URI']);	
 	$currpath = $_SESSION['currpath'];	
 	$cwd = explode('/', $currpath);
 	$dcnt = count($cwd) - 2;
@@ -281,9 +268,6 @@ function lister($in) {				// input is the list of the current folder contents
 	else {
 		echo '<a class="adm btn btn-danger btn-xs" href="#">Admin</a>&nbsp;&nbsp;';	}
 
-//echo '<pre>Session '; print_r($_SESSION); echo '</pre>';
-//echo '<pre>Server '; print_r($_SERVER); echo '</pre>';
-
 // output links to any external sources defined
 	echo '<h3>On-line resources</h3>
 <b>Online Links: (opens in a new window)</b><ul>';
@@ -301,7 +285,7 @@ global $links;
 		echo "&nbsp;&nbsp;<a class=\"btn btn-danger btn-xs\" href=\"index.php?addfile=1\">Add file</a><br>";
 		}
 
-// list all directories in current folder		
+// list all FOLDERS in current folder		
 	echo "<b><u>Folders:</u></b><br><ul>";
 	// echo "currdir: $currdir, root: $root, dname: $dname<br>";
   echo '<div class="row"><div class="col-sm-3">';
@@ -320,7 +304,7 @@ global $links;
   			if ($_SESSION['adm'] == 'ON') {
   				$urlf = urlencode($f);			
   				echo "<div class=\"col-sm-3\">";
-    			echo "<a class=\"confirm\" href=\"index.php?move=$urlf\">Move</a>/";
+    			echo "<a href=\"index.php?move=$urlf\">Move</a>/";
   				echo "
   				<a class=\"confirm\" href=\"index.php?delete=dir&dname=$urlf\">Delete</a>/
   				<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>"; 
@@ -332,7 +316,7 @@ global $links;
   		}
     }
 
-// list all the files in the current folder
+// list all the FILES in the current folder
 	echo "</ul><br><b><u>Files:</u></b><ul>";
 	if ($_SESSION['adm'] == 'ON') {
 		echo "<div class=\"row\">
@@ -345,9 +329,7 @@ global $links;
 		<div class=\"col-sm-6\"><b><u>Name</u></b></div>
 		<div class=\"col-sm-4\"><b><u>Date Created</u></b></div></div>"; }
 	if (count($in) > 0) {
-	  //echo '<pre>files list '; print_r($in); echo '</pre>';
   	foreach ($in as $f) {
-			//echo '<pre>filename: '; print_r($f); echo '</pre>';
   		if (is_file($f)) {
   			$ft = date('M d,Y H:i:s', filectime($f));
   			echo "<div class=\"row\">";
@@ -356,7 +338,7 @@ global $links;
 				echo "
 				<div class=\"col-sm-3\">";
 				echo "
-				<a class=\"confirm\" href=\"index.php?move=$newf\">Move/</a>";
+				<a href=\"index.php?move=$newf\">Move/</a>";
 				echo "<a href=\"index.php?copy=$newf\">Copy/</a>";
 				echo "<a class=\"confirm\" href=\"index.php?delete=file&fname=$newf\">Delete/</a>";
 				echo "<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>";
@@ -405,7 +387,6 @@ scriptPart1;
 	}			// end function 'lister'
 // =========== sechk() =======================================
 function sechk($dur) {
-	//if (strlen($_REQUEST['uid']) != 0) { 
 	if (isset($_REQUEST['uid'])) { 
 		// echo "session id length = 0<br>";
 		unset($_SESSION['tk']);
@@ -413,8 +394,6 @@ function sechk($dur) {
 		}
 	$todnow = time();
 	if (isset($_SESSION['tk']) AND ($todnow >= $_SESSION['tk'])) {
-		//echo '<pre>SERVER '; print_r($_SERVER); echo '</pre>';
-		//echo '<pre>SESSION '; print_r($_SESSION); echo '</pre>';
 		unset($_SESSION['tk']);
 		unset($_SESSION['adm']);
 		$msg = "Session has expired for " . $SESSION['uid'];

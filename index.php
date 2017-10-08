@@ -12,9 +12,16 @@ preg_match("/(.*)\/.*$/i", $requri, $matches);
 $_SESSION['curruri'] = $matches[1] . '/';
 $_SESSION['currpath'] = getcwd() . '/';
 
+// use log writer to check if starting at root dir
+$loggerpath = $_SESSION['homepath'] . 'db/logger.incl.php';
+if (!file_exists($loggerpath)) {
+  echo '<h3 style="color: red; "><br>
+  Failed to initialize repository at its home folder.</h3>';
+  exit;
+  }  	
+
 // the following code checks for and displays a file
 if (isset($_REQUEST['dsp'])) {
-  $loggerpath = $_SESSION['homepath'] . 'db/logger.incl.php';	
   require_once $loggerpath;
   $viewerpath = $_SESSION['homepath'] . 'db/viewer.incl.php';	
   require_once $viewerpath;
@@ -32,7 +39,6 @@ echo '
 $bspaths = $_SESSION['homepath'] . 'db/bspaths.incl.php';
 require_once $bspaths;
 echo '</head><body>';
-$loggerpath = $_SESSION['homepath'] . 'db/logger.incl.php';	
 require_once $loggerpath;
 $inclpath = $_SESSION['homepath'] . 'db/incl.php';
 require_once $inclpath;
