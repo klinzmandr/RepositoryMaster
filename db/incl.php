@@ -1,31 +1,41 @@
 <?php
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
-
+$jsonpath = $_SESSION['homeuri'] . 'db/jsonadmin.php';
 print <<<htmlScript
 <script>
 $(document).ready( function() {
   $(".ERR").fadeOut(5000);
   $(".confirm").click(function() {
     var r=confirm("This action is irreversable.\\n\\n Confirm action by clicking OK: ");
-    if (r == true) { 
-      return true; }
-    else { 
-      return false;  }
+    return r;    // OK = true, Cancel = false
   	});
-
+  	
+// admin req via AJAX
   $(".adm").click(function() {
     var val = prompt("Please enter the Admin password.");
-    if (val.length > 0) {
-    // if confirm dialog is canceled it returns false
-    	$("#AP").val(val);
-    	$("#LIF").submit();
-      return true;
-    	}
+    if (!val) return false;
+    if (val.length == 0) val = "x";
+      $.post("$jsonpath", { name: "admpw", pw: val },
+        function(data, status) {
+          if (data == "OK") {
+            // alert("OK - Data: " + data + ", Status: " + status);
+            $("#reload").submit();
+            } 
+          else { 
+            // alert("FAIL - Data: " + data + ", Status: " + status);
+            alert("Invalid password entered");
+            }
+        });
   });
+  
 });
 </script>
 
-<form id="LIF" mode="get">
+<form method="post"  id="reload">
+<input type='hidden' name='nothing' value=''>
+</form>
+
+<form id="LIF" method="post">
 <input id="AP" type="hidden" name="apw" value="">
 </form>
 
@@ -385,20 +395,18 @@ scriptPart1;
 	logger("Listed folder");
 	return;
 	}			// end function 'lister'
+
 // =========== sechk() =======================================
 function sechk($dur) {
-	if (isset($_REQUEST['uid'])) { 
+	if (isset($_REQUEST['Login'])) {  
 		// echo "session id length = 0<br>";
 		unset($_SESSION['tk']);
 		unset($_SESSION['adm']);
 		}
 	$todnow = time();
 	if (isset($_SESSION['tk']) AND ($todnow >= $_SESSION['tk'])) {
-		unset($_SESSION['tk']);
-		unset($_SESSION['adm']);
 		$msg = "Session has expired for " . $SESSION['uid'];
 	  $lourl = $_SESSION['homeuri'] . 'index.php';
-	  //echo "lourl: $lourl<br>";
 	  session_unset();
   	session_destroy();
 	  logger($msg);
@@ -412,26 +420,6 @@ function sechk($dur) {
 			}
 		}
 
-// admin mode request
-	if (isset($_REQUEST['apw'])) {
-		$fp = $_SESSION['homepath'] . 'db/userlist.txt';
-		$f = file_get_contents($fp);
-		$pw = 'admpw:' . $_REQUEST['apw'];
-//		echo "pw: $pw<br>";
-    $user = $_SESSION['id'];
-		if (preg_match("/$pw/", $f)) {
-			$_SESSION['adm'] = "ON"; 
-			echo "<div class=\"ERR\"><h4 style=\"color: red; \">Admin mode enabled</h4></div>";
-			logger("Admin Mode Enabled for $user");
-//			echo "Admin Mode Enabled<br>";
-			}
-		else { 
-		  echo "<div class=\"ERR\"><h4 style=\"color: red; \">Admin mode request failed.</h4></div>";
-			logger("Admin Mode request failed for $user");
-			unset($_SESSION['adm']);
-			}
-		}
-		
 // login request
   $haystack = array();
 	if ($_REQUEST['submit'] == "Login") {
@@ -444,7 +432,7 @@ function sechk($dur) {
  
   	if ((in_array($needle, $haystack)) OR (in_array("anyth1ng.goez", $haystack))) {
   		$_SESSION['id'] = $needle; 
-  		logger("Login Successful for $needle");
+  		logger("Login Successful: $needle");
   		$_SESSION['tk'] = time() + $dur;		// session time in seconds
   		$requri = rtrim($_SERVER['REQUEST_URI'], '/');
   		preg_match("/(.*)\/.*$/i", $requri, $matches);

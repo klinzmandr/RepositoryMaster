@@ -4,14 +4,17 @@ session_start();
 
 // AJAX server app to set/clear session admin variable
 unset($_SESSION['adm']);
-//$fp = $_SESSION['homepath'] . 'db/userlist.txt';
-$fp = 'userlist.txt';
+$fp = $_SESSION['homepath'] . 'db/userlist.txt';
+$lp = $_SESSION['homepath'] . 'db/logger.incl.php';
+require_once $lp;
+//$fp = 'userlist.txt';
 $f = file_get_contents($fp);
 $pw = 'admpw:' . $_REQUEST['pw'];
 $user = $_SESSION['id'];
 if (preg_match("/$pw/", $f)) {
-	$_SESSION['adm'] = "ON"; 
-	echo "pw: $pw OK";
+	$_SESSION['adm'] = "ON";
+	logger("Admin mode: $user"); 
+	echo "OK";
 	}
 else { 
   echo "FAIL";
