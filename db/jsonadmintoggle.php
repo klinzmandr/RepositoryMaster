@@ -11,7 +11,12 @@ require_once $lp;
 $f = file_get_contents($fp);
 $pw = 'admpw:' . $_REQUEST['pw'];
 $user = $_SESSION['id'];
-if (preg_match("/$pw/", $f)) {
+if ($pw == "admpw:admOff") {
+  unset($_SESION['adm']);
+  logger("Admin mode off: $user");
+  echo "OKOff";
+  }
+elseif (preg_match("/$pw/", $f)) {
 	$_SESSION['adm'] = "ON";
 	logger("Admin mode: $user"); 
 	echo "OK";

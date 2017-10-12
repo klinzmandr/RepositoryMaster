@@ -1,9 +1,13 @@
 <?php
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
-$jsonpath = $_SESSION['homeuri'] . 'db/jsonadmin.php';
+error_reporting(E_ERROR);
+//error_reporting(E_ERROR | E_WARNING | E_PARSE);
+$jsonpath = $_SESSION['homeuri'] . 'db/jsonadmintoggle.php';
+$admode      = isset($_SESSION['adm']) ? 1 : 0;
 print <<<htmlScript
 <script>
+  var admode = $admode;  
 $(document).ready( function() {
+  if (!admode) { $(".admbtn").hide(); }
   $(".ERR").fadeOut(5000);
   $(".confirm").click(function() {
     var r=confirm("This action is irreversable.\\n\\n Confirm action by clicking OK: ");
@@ -11,28 +15,35 @@ $(document).ready( function() {
   	});
   	
 // admin req via AJAX
-  $(".adm").click(function() {
-    var val = prompt("Please enter the Admin password.");
-    if (!val) return false;
-    if (val.length == 0) val = "x";
-      $.post("$jsonpath", { name: "admpw", pw: val },
-        function(data, status) {
-          if (data == "OK") {
-            // alert("OK - Data: " + data + ", Status: " + status);
-            $("#reload").submit();
-            } 
-          else { 
-            // alert("FAIL - Data: " + data + ", Status: " + status);
-            alert("Invalid password entered");
-            }
+  $("#adm").click(function() {
+    var val = "admOff";
+    if (!admode) {
+      var val = prompt("Please enter the Admin password.");
+      if (!val) return false;
+      }
+    $.post("$jsonpath", { name: "admpw", pw: val },
+      function(data, status) {
+        if (data == "OKOff") {
+          // alert("OK - Data: " + data + ", Status: " + status);
+          $(".admbtn").hide();
+          $("#reload").submit();
+          } 
+        else if (data == "OK") {
+          // alert("OK - Data: " + data + ", Status: " + status);
+          $(".admbtn").show();
+          $("#reload").submit();
+          } 
+        else { 
+          // alert("FAIL - Data: " + data + ", Status: " + status);
+          alert("Invalid password entered");
+          }
         });
-  });
-  
+  });  
 });
 </script>
 
-<form method="post"  id="reload">
-<input type='hidden' name='nothing' value=''>
+<form id="reload" method="post">
+<input type="hidden" name="xyz" value="">
 </form>
 
 <form id="LIF" method="post">
@@ -154,22 +165,28 @@ function deller() {
 			  echo "<div class=\"ERR\"><h4 style=\"color: red; \">Deleted file $fn. FAILED!</h4></div>";
 			  logger("Deletion of file $fn FAILED."); }
 			}
+			
 		if ($_REQUEST['delete'] == 'dir') {
 			$dirname = urldecode($_REQUEST['dname']);
-			$dn = "'" .  $dirname . "'";
-			$dircontents = scandir($dirname);
-			if (count($dircontents) <= 3) { 
-				exec("rm -r $dn",$op,$retval);
-				logger("Deleted folder: $dn ");
-				echo "<div class=\"ERR\"><h4 style=\"color: red; \">Folder $dirname deleted!</h4></div>";
+			$dn = $_SESSION['currpath'] .  $dirname;
+			$dircontents = scandir($dn);
+			if (count($dircontents) <= 3) {
+			  unlink($dn . "/index.php");
+			  if (rmdir($dn)) {
+	   			logger("Deleted folder: $dirname");
+  				echo "<div class=\"ERR\"><h4 style=\"color: red; \">Folder deleted: $dirname</h4></div>";
+			   }
+			  else {
+	   			logger("Delete folder FAIL: $dirname ");
+  				echo "<div class=\"ERR\"><h4 style=\"color: red; \">Folder delete FAIL: $dirname</h4></div>";
+			   } 
 				return;		
-				} 
-			logger("Folder delete failed for $dirname");
+				}
+			logger("Delete Failed: folder $dirname not empty");
 			echo "<div class=\"ERR\"><h4 style=\"color: red; \">Folder $dirname is not empty!</h4></div>"; 
 			}
-		return;
+		return;			 
 		}
-	return;
 	}
 //=================== adder() ====================
 function adder() {
@@ -261,7 +278,7 @@ function lister($in) {				// input is the list of the current folder contents
 	$_SESSION['currdir'] = $dname;
 	$lourl = $_SESSION['homeuri'] . '?logout';
 	$helppath = $_SESSION['homeuri'] . 'db/repohelp.html';
-	$archpath = $_SESSION['homeuri'] . 'Archive';
+	$archpath = $_SESSION['homeuri'] . 'Archive/index.php';
 	$indexurl = $_SESSION['homeuri'] . 'db/logutil.php';
 	$utilurl =  $_SESSION['homeuri'] . 'db/useradmin.php';
 	$homeurl = $_SESSION['homeuri'] . 'index.php';
@@ -269,31 +286,37 @@ function lister($in) {				// input is the list of the current folder contents
 	echo '<a class="btn btn-success btn-xs" href="'.$homeurl.'">Home Folder</a>&nbsp;&nbsp;';
 	echo '<a class="btn btn-primary btn-xs" href="'.$helppath.'" target="_blank">Help</a>&nbsp;&nbsp;';
 
+	echo '<a id="adm" class="btn btn-danger btn-xs" href="#">Admin</a>&nbsp;&nbsp;';	
+		
 // show additional buttons if admin mode has been enabled	
-	if ($_SESSION['adm'] == "ON") { 	// show admin buttons
-	  echo '<a class="btn btn-danger btn-xs" href="'.$archpath.'">Archive</a>&nbsp;&nbsp;';
-		echo '<a class="btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=list">User Summary</a>&nbsp;&nbsp;';		
-		echo '<a class="btn btn-danger btn-xs" target="_blank" href="'.$indexurl.'">Log Utility</a>&nbsp;&nbsp;';
-		echo '<a class="btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=form">User Admin</a>&nbsp;&nbsp;'; }
-	else {
-		echo '<a class="adm btn btn-danger btn-xs" href="#">Admin</a>&nbsp;&nbsp;';	}
+  if (is_dir($_SESSION['homepath'].'Archive'))
+    echo '<a class="admbtn btn btn-warning btn-xs" href="'.$archpath.'">Archive</a>&nbsp;&nbsp;';
+
+// show rest of the admin buttons    
+	echo '<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=list">User Summary</a>&nbsp;&nbsp;';		
+	echo '<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$indexurl.'">Log Utility</a>&nbsp;&nbsp;';
+	echo '<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=form">User Admin</a>&nbsp;&nbsp;'; 
 
 // output links to any external sources defined
-	echo '<h3>On-line resources</h3>
-<b>Online Links: (opens in a new window)</b><ul>';
-global $links;
+  global $links;
   if (count($links)) {
-    foreach ($links as $l) { echo $l . '<br>'; }
+  	echo '<h3>On-line resources</h3>
+  <b>Online Links: (opens in a new window)</b><ul>';
+    if (count($links)) {
+      foreach ($links as $l) { echo $l . '<br>'; }
+      }
+    echo '</ul>';
     }
 
 // display name of current directory and admin mode buttons if enabled
-	echo "</ul><h3> $dname Contents:</h3>";
+	echo "<h3> $dname Contents:</h3>";
 	if (preg_match('/\/Archive\//', $_SERVER['REQUEST_URI'])) 
     echo "<div style=\"color: red; \"><b>Archive Mode Active</b></div>";
-	if ($_SESSION['adm'] == "ON") { 	// show add folder & file links
-		echo "<a class=\"btn btn-danger btn-xs\" href=\"index.php?addfolder=1\">Add folder</a>";
-		echo "&nbsp;&nbsp;<a class=\"btn btn-danger btn-xs\" href=\"index.php?addfile=1\">Add file</a><br>";
-		}
+
+echo '<div class="admbtn">';
+	echo "<a class=\"btn btn-danger btn-xs\" href=\"index.php?addfolder=1\">Add folder</a>&nbsp;&nbsp;";
+	echo "<a class=\"btn btn-danger btn-xs\" href=\"index.php?addfile=1\">Add file</a>&nbsp;&nbsp;";
+echo '</div>';
 
 // list all FOLDERS in current folder		
 	echo "<b><u>Folders:</u></b><br><ul>";
@@ -311,54 +334,43 @@ global $links;
   	foreach ($in as $f) {  
   		if (is_dir($f)) {
   			echo '<div class="row">';
-  			if ($_SESSION['adm'] == 'ON') {
   				$urlf = urlencode($f);			
-  				echo "<div class=\"col-sm-3\">";
-    			echo "<a href=\"index.php?move=$urlf\">Move</a>/";
-  				echo "
-  				<a class=\"confirm\" href=\"index.php?delete=dir&dname=$urlf\">Delete</a>/
-  				<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>"; 
-  				}
+  				echo '<div class="admbtn col-sm-3">';
+    			echo '<a href="index.php?move='.$urlf.'">Move/</a>';
+  				echo '<a class="confirm" href="index.php?delete=dir&dname='.$urlf.'">Delete/</a>';
+  				echo '<a href="#" onclick=\'return getfld("'.$f.'")\'>Rename</a></div>'; 
   			$dnurl = $_SESSION['curruri'] . "$f/index.php";
   			// echo "dnurl: $dnurl<br>";
-  			echo "<div class=\"col-sm-4\"><a href=\"$dnurl\">$f</a></div></div>"; 
+  			echo '<div class="col-sm-4"><a href="'.$dnurl.'">'.$f.'</a></div></div>'; 
   			}
   		}
     }
 
 // list all the FILES in the current folder
 	echo "</ul><br><b><u>Files:</u></b><ul>";
-	if ($_SESSION['adm'] == 'ON') {
-		echo "<div class=\"row\">
-		<div class=\"col-sm-3\"><b><u>Actions</u></b></div>
-		<div class=\"col-sm-5\"><b><u>Name</u></b></div>
-		<div class=\"col-sm-4\"><b><u>Date Created</u></b></div>
-		</div>"; }
-	else {
-		echo "<div class=\"row\">
-		<div class=\"col-sm-6\"><b><u>Name</u></b></div>
-		<div class=\"col-sm-4\"><b><u>Date Created</u></b></div></div>"; }
+		echo '<div class="row">
+		<div class="admbtn col-sm-3"><b><u>Actions</u></b></div>
+		<div class="col-sm-5"><b><u>Name</u></b></div>
+		<div class="col-sm-4"><b><u>Date Created</u></b></div>
+		</div>'; 
+
 	if (count($in) > 0) {
   	foreach ($in as $f) {
   		if (is_file($f)) {
   			$ft = date('M d,Y H:i:s', filectime($f));
   			echo "<div class=\"row\">";
-  		if ($_SESSION['adm'] == 'ON') {
 				$newf = urlencode($f);
-				echo "
-				<div class=\"col-sm-3\">";
-				echo "
-				<a href=\"index.php?move=$newf\">Move/</a>";
-				echo "<a href=\"index.php?copy=$newf\">Copy/</a>";
-				echo "<a class=\"confirm\" href=\"index.php?delete=file&fname=$newf\">Delete/</a>";
-				echo "<a href=\"#\" onclick=\"return getfld('$f')\">Rename</a></div>";
-				}
+				echo '
+				<div class="admbtn col-sm-3">';
+				echo '<a href="index.php?move='.$newf.'">Move/</a>';
+				echo '<a href="index.php?copy='.$newf.'">Copy/</a>';
+				echo '<a class="confirm" href="index.php?delete=file&fname='.$newf.'">Delete/</a>';
+				echo '<a href="#" onclick=\'return getfld("'.$f.'")\'>Rename</a></div>';
 				$fnurl = $_SESSION['curruri'] . "index.php?dsp=$f";
 				//echo "fnurl: $fnurl<br>";
-  		  echo "
-  			<div class=\"col-sm-5\">
-  			<a href=\"$fnurl\" target=\"_blank\">$f</a></div>
-  			<div class=\"col-sm-4\">$ft</div></div>"; 
+  		  echo '<div class="col-sm-5">
+  			<a href="'.$fnurl.'" target="_blank">'.$f.'</a></div>
+  			<div class="col-sm-4">'.$ft.'</div></div>'; 
   			}
   		}		// end foreach for files
     }   // end if
@@ -366,8 +378,7 @@ global $links;
 	
 // form for admin load rename form and script
 // =========== rename js function and form =================
-	if ($_SESSION['adm'] == 'ON') {
-	print <<<scriptPart1
+print <<<scriptPart1
 <script>
 function getfld(OName) {
 var inval = OName;
@@ -391,10 +402,9 @@ return false;
 <input type="hidden" name="rename" value="rename">
 </form>
 scriptPart1;
-	}
-	logger("Listed folder");
-	return;
-	}			// end function 'lister'
+logger("Listed folder");
+return;
+}			// end function 'lister'
 
 // =========== sechk() =======================================
 function sechk($dur) {
