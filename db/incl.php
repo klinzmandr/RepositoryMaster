@@ -3,9 +3,10 @@ error_reporting(E_ERROR);
 //error_reporting(E_ERROR | E_WARNING | E_PARSE);
 $jsonpath = $_SESSION['homeuri'] . 'db/jsonadmintoggle.php';
 $admode      = isset($_SESSION['adm']) ? 1 : 0;
+          
 print <<<htmlScript
 <script>
-  var admode = $admode;  
+  var admode = $admode;
 $(document).ready( function() {
   if (!admode) { $(".admbtn").hide(); }
   $(".ERR").fadeOut(5000);
@@ -33,9 +34,10 @@ $(document).ready( function() {
           $(".admbtn").show();
           $("#reload").submit();
           } 
-        else { 
-          // alert("FAIL - Data: " + data + ", Status: " + status);
+        else {
+          //alert("FAIL - Data: " + data + ", Status: " + status);
           alert("Invalid password entered");
+          // $("#reload").submit();
           }
         });
   });  
@@ -282,20 +284,22 @@ function lister($in) {				// input is the list of the current folder contents
 	$indexurl = $_SESSION['homeuri'] . 'db/logutil.php';
 	$utilurl =  $_SESSION['homeuri'] . 'db/useradmin.php';
 	$homeurl = $_SESSION['homeuri'] . 'index.php';
-	echo '<a class="btn btn-success btn-xs" href="'.$lourl.'">LOGOUT</a>&nbsp;&nbsp;';
-	echo '<a class="btn btn-success btn-xs" href="'.$homeurl.'">Home Folder</a>&nbsp;&nbsp;';
-	echo '<a class="btn btn-primary btn-xs" href="'.$helppath.'" target="_blank">Help</a>&nbsp;&nbsp;';
+	echo '
+	<a class="btn btn-success btn-xs" href="'.$lourl.'">LOGOUT</a>&nbsp;&nbsp;
+	<a class="btn btn-success btn-xs" href="'.$homeurl.'">Home Folder</a>&nbsp;&nbsp;
+	<a class="btn btn-primary btn-xs" href="'.$helppath.'" target="_blank">Help</a>&nbsp;&nbsp;';
 
 	echo '<a id="adm" class="btn btn-danger btn-xs" href="#">Admin</a>&nbsp;&nbsp;';	
 		
-// show additional buttons if admin mode has been enabled	
+// show if in Archive folder	
   if (is_dir($_SESSION['homepath'].'Archive'))
     echo '<a class="admbtn btn btn-warning btn-xs" href="'.$archpath.'">Archive</a>&nbsp;&nbsp;';
 
-// show rest of the admin buttons    
-	echo '<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=list">User Summary</a>&nbsp;&nbsp;';		
-	echo '<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$indexurl.'">Log Utility</a>&nbsp;&nbsp;';
-	echo '<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=form">User Admin</a>&nbsp;&nbsp;'; 
+// show admbtn buttons    
+	echo '
+	<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=list">User Summary</a>&nbsp;&nbsp;	
+	<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$indexurl.'">Log Utility</a>&nbsp;&nbsp;
+	<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=form">User Admin</a>&nbsp;&nbsp;'; 
 
 // output links to any external sources defined
   global $links;
@@ -308,15 +312,14 @@ function lister($in) {				// input is the list of the current folder contents
     echo '</ul>';
     }
 
-// display name of current directory and admin mode buttons if enabled
-	echo "<h3> $dname Contents:</h3>";
-	if (preg_match('/\/Archive\//', $_SERVER['REQUEST_URI'])) 
-    echo "<div style=\"color: red; \"><b>Archive Mode Active</b></div>";
-
-echo '<div class="admbtn">';
-	echo "<a class=\"btn btn-danger btn-xs\" href=\"index.php?addfolder=1\">Add folder</a>&nbsp;&nbsp;";
-	echo "<a class=\"btn btn-danger btn-xs\" href=\"index.php?addfile=1\">Add file</a>&nbsp;&nbsp;";
-echo '</div>';
+// display name of current directory and add folder/file buttons if admbtn
+	echo '
+	<h3> '.$dname.' Contents:</h3>
+  <div class="admbtn">
+  <div style="color: red; "><b>Archive Mode Active</b></div>
+  <a class="btn btn-danger btn-xs" href="index.php?addfolder=1">Add folder</a>&nbsp;&nbsp;
+  <a class="btn btn-danger btn-xs" href="index.php?addfile=1">Add file</a>&nbsp;&nbsp;
+  </div>';
 
 // list all FOLDERS in current folder		
 	echo "<b><u>Folders:</u></b><br><ul>";
@@ -335,10 +338,10 @@ echo '</div>';
   		if (is_dir($f)) {
   			echo '<div class="row">';
   				$urlf = urlencode($f);			
-  				echo '<div class="admbtn col-sm-3">';
-    			echo '<a href="index.php?move='.$urlf.'">Move/</a>';
-  				echo '<a class="confirm" href="index.php?delete=dir&dname='.$urlf.'">Delete/</a>';
-  				echo '<a href="#" onclick=\'return getfld("'.$f.'")\'>Rename</a></div>'; 
+  				echo '<div class="admbtn col-sm-3">
+    			<a href="index.php?move='.$urlf.'">Move/</a>
+  				<a class="confirm" href="index.php?delete=dir&dname='.$urlf.'">Delete/</a>
+  				<a href="#" onclick=\'return getfld("'.$f.'")\'>Rename</a></div>'; 
   			$dnurl = $_SESSION['curruri'] . "$f/index.php";
   			// echo "dnurl: $dnurl<br>";
   			echo '<div class="col-sm-4"><a href="'.$dnurl.'">'.$f.'</a></div></div>'; 
@@ -347,28 +350,30 @@ echo '</div>';
     }
 
 // list all the FILES in the current folder
-	echo "</ul><br><b><u>Files:</u></b><ul>";
-		echo '<div class="row">
-		<div class="admbtn col-sm-3"><b><u>Actions</u></b></div>
-		<div class="col-sm-5"><b><u>Name</u></b></div>
-		<div class="col-sm-4"><b><u>Date Created</u></b></div>
-		</div>'; 
+	echo '
+  </ul><br><b><u>Files:</u></b><ul>
+	<div class="row">
+	<div class="admbtn col-sm-3"><b><u>Actions</u></b></div>
+	<div class="col-sm-5"><b><u>Name</u></b></div>
+	<div class="col-sm-4"><b><u>Date Created</u></b></div>
+	</div>'; 
 
 	if (count($in) > 0) {
   	foreach ($in as $f) {
   		if (is_file($f)) {
   			$ft = date('M d,Y H:i:s', filectime($f));
-  			echo "<div class=\"row\">";
 				$newf = urlencode($f);
 				echo '
-				<div class="admbtn col-sm-3">';
-				echo '<a href="index.php?move='.$newf.'">Move/</a>';
-				echo '<a href="index.php?copy='.$newf.'">Copy/</a>';
-				echo '<a class="confirm" href="index.php?delete=file&fname='.$newf.'">Delete/</a>';
-				echo '<a href="#" onclick=\'return getfld("'.$f.'")\'>Rename</a></div>';
+  			<div class="row">
+				<div class="admbtn col-sm-3">
+				<a href="index.php?move='.$newf.'">Move/</a>
+				<a href="index.php?copy='.$newf.'">Copy/</a>
+				<a class="confirm" href="index.php?delete=file&fname='.$newf.'">Delete/</a>
+				<a href="#" onclick=\'return getfld("'.$f.'")\'>Rename</a></div>';
 				$fnurl = $_SESSION['curruri'] . "index.php?dsp=$f";
 				//echo "fnurl: $fnurl<br>";
-  		  echo '<div class="col-sm-5">
+  		  echo '
+  		  <div class="col-sm-5">
   			<a href="'.$fnurl.'" target="_blank">'.$f.'</a></div>
   			<div class="col-sm-4">'.$ft.'</div></div>'; 
   			}

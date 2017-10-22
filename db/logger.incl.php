@@ -4,7 +4,11 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 function logger($status) {
 // no logging if log file does not exist !!!
 	$logpath = $_SESSION['homepath'] . 'db/uselog.txt';
-	if (file_exists($logpath)) { 
+	$info = 0;
+	if (file_exists($logpath)) $perms = fileperms($logpath);
+  $info = $perms & 02;    // check for global write permission
+	if (file_exists($logpath) AND ($info > 0)) { 
+    //echo "fileperm: $info";
 		$TOD = date("m/d/y;H:i:s");
 		if (isset($_SESSION['tk'])) { $sessexp = date("H:i:s", $_SESSION['tk']); }
 		$rcd =  "$TOD;$sessexp;".$_SESSION['id'].";$status;".$_SESSION['currdir']."\n";

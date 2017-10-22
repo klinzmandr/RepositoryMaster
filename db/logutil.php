@@ -54,6 +54,7 @@ if (isset($_REQUEST['loggeron'])) {
 		file_put_contents($logfilename,$hdr);		
 		$initmsg = "$yrmodahms;;;Log Initiated\n";
 		file_put_contents($logfilename,$initmsg, FILE_APPEND);
+		if (!chmod($logfilename, 0666)) echo "File mode error<br>";
 		}
 	}
 	
@@ -67,11 +68,17 @@ if (isset($_REQUEST['logdisplay'])) {
   <input type="submit" name="apply" value="Apply">
   </form>
 filterForm;
+
+// check file permissions and report if write not permitted
+	$perms = fileperms($filetodisplay);
+  $info = $perms & 02;    // check for global write permission
+	
 //	echo "Log display detected<br>";
 	if (file_exists($filetodisplay)) {
 //		echo "Read file and set up display page<br>";		
 		$contents = file($filetodisplay);
 		echo "Log file name: $filetodisplay<br>";		
+    if ($info == 0) echo "File permissions problem.  Logging DISABLED.<br>";
 		echo "<pre>";
 		foreach ($contents as $l) {
 		  if (strlen($filter)) {
