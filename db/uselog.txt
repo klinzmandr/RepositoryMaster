@@ -1,2 +1,2 @@
 Date;Time;ExpTime;UserID;Action;Folder
-10/07/2017;10:57:22;;;Log Initiated
+10/23/2017;12:04:51;;;Log Initiated
