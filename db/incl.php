@@ -62,16 +62,19 @@ function mover() {
     $old = getcwd() . '/' . $file;
     if (file_exists($new)) {
       logger("File $old already exists");
-      echo "<div class=\"ERR\"><h4 style=\"color: red; \"><b>Copy failed!</b><br>File copy already exists.</h4></div>";
+      echo '
+      <div class="ERR"><h4 style="color: red; "><b>Copy failed!</b><br>File copy already exists.</h4></div>';
       }
     else {
       if (copy($old, $new)) {
         logger("Copied $oldname to $newname");
-        echo "<div class=\"ERR\"><h4 style=\"color: red; \">Copy request successful!</h4></div>";
+        echo '
+        <div class="ERR"><h4 style="color: red; ">Copy request successful!</h4></div>';
         }
       else {
         logger("Copy of $oldname FAILED");
-        echo "<div class=\"ERR\"><h4 style=\"color: red; \">Copy request NOT successful!</h4></div>";
+        echo '
+        <div class="ERR"><h4 style="color: red; ">Copy request NOT successful!</h4></div>';
         }
       }
     }
@@ -82,16 +85,19 @@ function mover() {
     $oldname = $_SESSION['currpath'] . $_REQUEST['file'];
     if (($newname == $oldname) OR (file_exists($newname))) {
       logger("File $oldname already exists");
-      echo "<div class=\"ERR\"><h4 style=\"color: red; \">Move failed! Destination file already exists.</h4></div>";
+      echo '
+      <div class="ERR"><h4 style="color: red; ">Move failed! Destination file already exists.</h4></div>';
       }
     else {
       if (rename($oldname, $newname)) {
         logger("Renamed $oldname to $newname");
-        echo "<div class=\"ERR\"><h4 style=\"color: red; \">Move request successful!</h4></div>";
+        echo '
+        <div class="ERR"><h4 style="color: red; ">Move request successful!</h4></div>';
         } 
       else {
         logger("Rename of $oldname FAILED");
-        echo "<div class=\"ERR\"><h4 style=\"color: red; \">Move request NOT successful!</h4></div>";
+        echo '
+        <div class="ERR"><h4 style="color: red; ">Move request NOT successful!</h4></div>';
         } 
       }
     }
@@ -110,7 +116,8 @@ function mover() {
       }
     sort($finarray);
     $len = strlen($rootpath);
-    echo 'Select destination folder: 
+    echo '
+    Select destination folder: 
     <form action="index.php">
     <select onchange="javascript: this.form.submit();" name="dest">
     <option value=""></option>
@@ -135,21 +142,22 @@ function deller() {
 		$old = $_REQUEST['oldname'];
 		$new = $_REQUEST['newname'];
 		if (file_exists($new)) {
-		  echo "<div class=\"ERR\"><h4 style=\"color: red; \">
-  		  Rename request failed. Name already exits</h4></div>";  
+		  echo '
+		  <div class="ERR"><h4 style="color: red; ">
+ 		  Rename request failed. Name already exits</h4></div>';  
   		logger("Rename $old failed"); 
   		}
 		else {
   		if (rename($old, $new)) {
-  		  echo "<div class=\"ERR\"><h4 style=\"color: red; \">
+  		  echo "
+  		  <div class=\"ERR\"><h4 style=\"color: red; \">
   		  Rename request completed.</h4></div>";  
   			logger("Renamed $old to $new"); 
   			}
   		else {
-  		  echo "<div class=\"ERR\"><h4 style=\"color: red; \">
-  		  Rename request FAILED!<br>
-  			New name provided already exists OR path name invalid
-  		  </h4></div>";
+  		  echo '
+  		  <div class="ERR"><h4 style="color: red; ">Rename request FAILED!<br>
+  			New name provided already exists OR path name invalid</h4></div>';
   			logger("Rename of $old FAILED"); 
   			}
   		return;
@@ -160,11 +168,13 @@ function deller() {
 		if ($_REQUEST['delete'] == 'file') {
 			$fn = $_REQUEST['fname'];
 			if (unlink($fn)) { 
-			  echo "<div class=\"ERR\"><h4 style=\"color: red; \">Deleted file $fn.</h4></div>"; 
+			  echo '
+			  <div class="ERR"><h4 style="color: red; ">Deleted file '.$fn.'</h4></div>'; 
 			  logger("Deleted file $fn");
 			  }
 			else {
-			  echo "<div class=\"ERR\"><h4 style=\"color: red; \">Deleted file $fn. FAILED!</h4></div>";
+			  echo '
+			  <div class=\"ERR\"><h4 style=\"color: red; \">Deleted file '.$fn.' FAILED!</h4></div>';
 			  logger("Deletion of file $fn FAILED."); }
 			}
 			
@@ -176,16 +186,19 @@ function deller() {
 			  unlink($dn . "/index.php");
 			  if (rmdir($dn)) {
 	   			logger("Deleted folder: $dirname");
-  				echo "<div class=\"ERR\"><h4 style=\"color: red; \">Folder deleted: $dirname</h4></div>";
+  				echo '
+  				<div class="ERR"><h4 style="color: red; ">Folder deleted: '.$dirname.'</h4></div>';
 			   }
 			  else {
 	   			logger("Delete folder FAIL: $dirname ");
-  				echo "<div class=\"ERR\"><h4 style=\"color: red; \">Folder delete FAIL: $dirname</h4></div>";
+  				echo '
+  				<div class="ERR"><h4 style="color: red; ">Folder delete FAIL: '.$dirname.'</h4></div>';
 			   } 
 				return;		
 				}
 			logger("Delete Failed: folder $dirname not empty");
-			echo "<div class=\"ERR\"><h4 style=\"color: red; \">Folder $dirname is not empty!</h4></div>"; 
+			echo '
+			<div class="ERR"><h4 style="color: red; ">Folder $dirname is not empty!</h4></div>'; 
 			}
 		return;			 
 		}
@@ -253,18 +266,21 @@ folderPage;
 	  unset($_SESSION['addfolder']);
 		$folder = ($_REQUEST['folder']);
 		if (strlen($folder) == 0) {
-			echo "<div class=\"ERR\"><h4 style=\"color: red; \">ERROR: No folder name provided!</h4></div>";
+			echo '
+			<div class="ERR"><h4 style="color: red; ">ERROR: No folder name provided!</h4></div>';
 			logger("Add folder: Folder name empty");	
 			return; 
 			}
 		if (is_dir($folder)) {
-			echo "<div class=\"ERR\"><h4 style=\"color: red; \">ERROR: Folder name $folder duplicated.</h4></div>";
+			echo '
+			<div class="ERR"><h4 style="color: red; ">ERROR: Folder name '.$folder.' duplicated.</h4></div>';
 			logger("Add folder failed. Duplicate name $folder"); 
 			return; 
 			}
 		mkdir($folder);
 		copy("./index.php", $folder . "/index.php");
-		echo "<div class=\"ERR\"><h4 style=\"color: red; \">New folder $folder created.</h4></div>";
+		echo '
+		<div class="ERR"><h4 style="color: red; ">New folder '.$folder.' created.</h4></div>';
 		$logmsg = "Created folder: " . $folder;
 		logger($logmsg);
 		return;
@@ -280,23 +296,22 @@ function lister($in) {				// input is the list of the current folder contents
 	$_SESSION['currdir'] = $dname;
 	$lourl = $_SESSION['homeuri'] . '?logout';
 	$helppath = $_SESSION['homeuri'] . 'db/repohelp.html';
-	$archpath = $_SESSION['homeuri'] . 'Archive/index.php';
+  $archpath = $_SESSION['homeuri'] . 'Archive/index.php';
 	$indexurl = $_SESSION['homeuri'] . 'db/logutil.php';
 	$utilurl =  $_SESSION['homeuri'] . 'db/useradmin.php';
 	$homeurl = $_SESSION['homeuri'] . 'index.php';
 	echo '
 	<a class="btn btn-success btn-xs" href="'.$lourl.'">LOGOUT</a>&nbsp;&nbsp;
-	<a class="btn btn-success btn-xs" href="'.$homeurl.'">Home Folder</a>&nbsp;&nbsp;
-	<a class="btn btn-primary btn-xs" href="'.$helppath.'" target="_blank">Help</a>&nbsp;&nbsp;';
-
-	echo '<a id="adm" class="btn btn-danger btn-xs" href="#">Admin</a>&nbsp;&nbsp;';	
+	<a class="btn btn-success btn-xs" href="'.$homeurl.'">Home Folder</a>&nbsp;&nbsp;';
 		
-// show if in Archive folder	
+// show if Archive folder only if Archive folder existss	
   if (is_dir($_SESSION['homepath'].'Archive'))
-    echo '<a class="admbtn btn btn-warning btn-xs" href="'.$archpath.'">Archive</a>&nbsp;&nbsp;';
+    echo '
+    <a class="btn btn-warning btn-xs" href="'.$archpath.'">Archive</a>&nbsp;&nbsp;';
 
-// show admbtn buttons    
 	echo '
+	<a id="adm" class="btn btn-danger btn-xs" href="#">Admin</a>&nbsp;&nbsp;	
+	<a class="btn btn-primary btn-xs" href="'.$helppath.'" target="_blank">Help</a>&nbsp;&nbsp;
 	<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=list">User Summary</a>&nbsp;&nbsp;	
 	<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$indexurl.'">Log Utility</a>&nbsp;&nbsp;
 	<a class="admbtn btn btn-danger btn-xs" target="_blank" href="'.$utilurl.'?action=form">User Admin</a>&nbsp;&nbsp;'; 
@@ -304,8 +319,8 @@ function lister($in) {				// input is the list of the current folder contents
 // output links to any external sources defined
   global $links;
   if (count($links)) {
-  	echo '<h3>On-line resources</h3>
-  <b>Online Links: (opens in a new window)</b><ul>';
+  	echo '
+  	<h3>On-line resources</h3><b>Online Links: (opens in a new window)</b><ul>';
     if (count($links)) {
       foreach ($links as $l) { echo $l . '<br>'; }
       }
@@ -322,9 +337,9 @@ function lister($in) {				// input is the list of the current folder contents
   </div>';
 
 // list all FOLDERS in current folder		
-	echo "<b><u>Folders:</u></b><br><ul>";
-	// echo "currdir: $currdir, root: $root, dname: $dname<br>";
-  echo '<div class="row"><div class="col-sm-3">';
+	echo '
+	<b><u>Folders:</u></b><br><ul>
+  <div class="row"><div class="col-sm-3">';
  	if (($currpath == $_SESSION['homepath']) OR ($dname == 'Archive')) {
 	  // echo "root OR archive<br>"; 
 	  }
@@ -338,13 +353,15 @@ function lister($in) {				// input is the list of the current folder contents
   		if (is_dir($f)) {
   			echo '<div class="row">';
   				$urlf = urlencode($f);			
-  				echo '<div class="admbtn col-sm-3">
+  				echo '
+  				<div class="admbtn col-sm-3">
     			<a href="index.php?move='.$urlf.'">Move/</a>
   				<a class="confirm" href="index.php?delete=dir&dname='.$urlf.'">Delete/</a>
   				<a href="#" onclick=\'return getfld("'.$f.'")\'>Rename</a></div>'; 
   			$dnurl = $_SESSION['curruri'] . "$f/index.php";
   			// echo "dnurl: $dnurl<br>";
-  			echo '<div class="col-sm-4"><a href="'.$dnurl.'">'.$f.'</a></div></div>'; 
+  			echo '
+  			<div class="col-sm-4"><a href="'.$dnurl.'">'.$f.'</a></div></div>'; 
   			}
   		}
     }
@@ -425,7 +442,8 @@ function sechk($dur) {
 	  session_unset();
   	session_destroy();
 	  logger($msg);
-		echo '<h2 style="color: red; ">Session has expired!</h2>
+		echo '
+		<h2 style="color: red; ">Session has expired!</h2>
 		<h3><a href="'.$lourl.'">Please login</a></h3>';
 		exit; 
 		}
@@ -458,7 +476,7 @@ function sechk($dur) {
 			session_unset();
     	session_destroy();
 			logger("Login NOT successful for $needle");
-			echo "<div class=\"ERR\"><h4 style=\"color: red; \">Invalid User ID.</h4></div>";
+			echo '<div class=\"ERR\"><h4 style=\"color: red; \">Invalid User ID.</h4></div>';
 			}
 		}
 	if (!isset($_SESSION['tk'])) {
