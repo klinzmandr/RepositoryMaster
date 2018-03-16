@@ -10,36 +10,36 @@ print <<<htmlScript
 $(document).ready( function() {
   if (!admode) { $(".admbtn").hide(); }
   $(".ERR").fadeOut(5000);
-  $(".confirm").click(function() {
-    var r=confirm("This action is irreversable.\\n\\n Confirm action by clicking OK: ");
-    return r;    // OK = true, Cancel = false
-  	});
+$(".confirm").click(function() {
+  var r=confirm("This action is irreversable.\\n\\n Confirm action by clicking OK: ");
+  return r;    // OK = true, Cancel = false
+	});
   	
 // admin req via AJAX
-  $("#adm").click(function() {
-    var val = "admOff";
-    if (!admode) {
-      var val = prompt("Please enter the Admin password.");
-      if (!val) return false;
+$("#adm").click(function() {
+var val = "admOff";
+if (!admode) {
+  var val = prompt("Please enter the Admin password.");
+  if (!val) return false;
+  }
+$.post("$jsonpath", { name: "admpw", pw: val },
+  function(data, status) {
+    if (data == "OKOff") {
+      // alert("OK - Data: " + data + ", Status: " + status);
+      $(".admbtn").hide();
+      $("#reload").submit();
+      } 
+    else if (data == "OK") {
+      // alert("OK - Data: " + data + ", Status: " + status);
+      $(".admbtn").show();
+      $("#reload").submit();
+      } 
+    else {
+      //alert("FAIL - Data: " + data + ", Status: " + status);
+      alert("Invalid password entered");
+      // $("#reload").submit();
       }
-    $.post("$jsonpath", { name: "admpw", pw: val },
-      function(data, status) {
-        if (data == "OKOff") {
-          // alert("OK - Data: " + data + ", Status: " + status);
-          $(".admbtn").hide();
-          $("#reload").submit();
-          } 
-        else if (data == "OK") {
-          // alert("OK - Data: " + data + ", Status: " + status);
-          $(".admbtn").show();
-          $("#reload").submit();
-          } 
-        else {
-          //alert("FAIL - Data: " + data + ", Status: " + status);
-          alert("Invalid password entered");
-          // $("#reload").submit();
-          }
-        });
+    });
   });  
 });
 </script>
