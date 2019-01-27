@@ -3,9 +3,6 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 session_start();
 date_default_timezone_set('America/Los_Angeles');
 
-// set duration of login session
-$tictoc = 30*60;
-
 // load current path and uri vars
 $requri = rtrim($_SERVER['REQUEST_URI'], '/');
 preg_match("/(.*)\/.*$/i", $requri, $matches);
@@ -16,7 +13,7 @@ $_SESSION['currpath'] = getcwd() . '/';
 $loggerpath = $_SESSION['homepath'] . 'db/logger.incl.php';
 if (!file_exists($loggerpath)) {
   echo '<h3 style="color: red; "><br>
-  Failed to initialize repository at its home folder.</h3>';
+  Invalid access of repository.</h3>';
   exit;
   }  	
 
@@ -25,7 +22,6 @@ if (isset($_REQUEST['dsp'])) {
   require_once $loggerpath;
   $viewerpath = $_SESSION['homepath'] . 'db/viewer.incl.php';	
   require_once $viewerpath;
-  $_SESSION['tk'] = time() + $tictoc;   // update session timer
   viewer();         // output of file to view MUST preceed ANY other output.
   }
 
@@ -53,30 +49,37 @@ $links[] = '<a href="https://apps.pacwilica.org/mbrquery" target="_blank">PWC Mb
 $links[] = '<a href="https://apps.pacwilica.org/charts" target="_blank">PWC Charts</a>';
 $links[] = '<a href="https://www.pacificwildlifecare.org/events/" target="_blank">PWC Event Calendar</a>';
 
-// logout or session reset requested
-if (isset($_REQUEST['logout'])) {
-	logger("Logged out");	
-	echo "<div class=\"ERR\"><h4 style=\"color: red; \">Logged out.</h4></div>";
-	$louri = $_SESSION['homeuri'] . 'index.php';
-	session_unset();
-	session_destroy();
-	echo '<h3><a href="'.$louri.'">Please login</a></h3>';
-	}
-
-sechk($tictoc);											// check and/or set session
-mover();                            // do file/dir move/copy/
-adder();														// do file/dir add/upload
-deller();														// do file/dir rename/delete
-
-$contents = scandir(".");						// scan the current directory
-foreach ($contents as $c) { 
-  if (!preg_match("/^db$|^\.|^index\..*|^Archive$|.*\.md$/i",$c)) {
-    $l[] = $c;                      // create list of dirs and files
-    } 
+// show login form
+if (!isset($_REQUEST['uid'])) {
+  if (!isset($_SESSION['id'])) {   // but only if there is no current session
+    require_once 'db/login.incl.php';
+    exit;
+    }
   }
-echo '<ul>';
-lister($l);			          						// and show them
+  
+if (!isset($_SESSION['id']) AND (isset($_REQUEST['uid']))) { 
+  $uid = $_REQUEST['uid'];
+  login($uid); }     
 
-echo '</ul></body></html>';
-exit(0);
+if (isset($_SESSION['id'])) {         // if valid user id
+  mover();                            // do file/dir move/copy/
+  adder();														// do file/dir add/upload
+  deller();														// do file/dir rename/delete
+  
+  $contents = scandir(".");						// scan the current directory
+  foreach ($contents as $c) { 
+    if (!preg_match("/^db$|^\.|^index\..*|^Archive$|.*\.md$/i",$c)) {
+      $l[] = $c;                      // create list of dirs and files
+      } 
+    }
+  echo '<ul>';
+  lister($l);	                      // and show them
+  echo '</ul></body></html>';
+  exit(0);
+  }
+unset($_SESSION['id']);	
+$louri = $_SESSION['homeuri'] . 'index.php';
+echo "	          						
+<a class=\"btn btn-primary\" href=\"$louri\">Login to repository manager</a>";
 ?>
+</body></html>

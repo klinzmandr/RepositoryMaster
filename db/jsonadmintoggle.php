@@ -12,7 +12,7 @@ $f = file_get_contents($fp);
 $pw = 'admpw:' . $_REQUEST['pw'];
 $user = $_SESSION['id'];
 if ($pw == "admpw:admOff") {
-  unset($_SESION['adm']);
+  unset($_SESSION['adm']);
   logger("Admin mode off: $user");
   echo "OKOff";
   }

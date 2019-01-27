@@ -2,14 +2,34 @@
 error_reporting(E_ERROR);
 //error_reporting(E_ERROR | E_WARNING | E_PARSE);
 $jsonpath = $_SESSION['homeuri'] . 'db/jsonadmintoggle.php';
-$admode      = isset($_SESSION['adm']) ? 1 : 0;
-          
-print <<<htmlScript
+$indexto = $_SESSION['homeuri'] . 'db/indexto.php';
+$admode   = isset($_SESSION['adm']) ? 1 : 0;
+?>          
+
 <script>
-  var admode = $admode;
-$(document).ready( function() {
+  var admode = <?=$admode?>;
+  var jsonpath = "<?=$jsonpath?>";
+  var indextopath = "<?=$indexto?>";
+  
+$(document).ready(function() {
+
+  $.sessionTimeout({
+        title: 'SESSION TIMEOUT ALERT',
+        message: '<h3>Your session is about to expire.</h3>',
+        keepAlive: false,
+        logoutUrl: indextopath,
+        redirUrl: indextopath,
+        warnAfter: 15*60*1000,
+        redirAfter: 20*60*1000,
+        countdownMessage: 'Time remaining:',
+        countdownSmart: true,
+        countdownBar: true,
+        showButtons: false
+    });
+
   if (!admode) { $(".admbtn").hide(); }
   $(".ERR").fadeOut(5000);
+  
 $(".confirm").click(function() {
   var r=confirm("This action is irreversable.\\n\\n Confirm action by clicking OK: ");
   return r;    // OK = true, Cancel = false
@@ -20,9 +40,9 @@ $("#adm").click(function() {
 var val = "admOff";
 if (!admode) {
   var val = prompt("Please enter the Admin password.");
-  if (!val) return false;
+  if (!val) { return false; }
   }
-$.post("$jsonpath", { name: "admpw", pw: val },
+$.post(jsonpath, { name: "admpw", pw: val },
   function(data, status) {
     if (data == "OKOff") {
       // alert("OK - Data: " + data + ", Status: " + status);
@@ -35,7 +55,7 @@ $.post("$jsonpath", { name: "admpw", pw: val },
       $("#reload").submit();
       } 
     else {
-      //alert("FAIL - Data: " + data + ", Status: " + status);
+      // alert("FAIL - Data: " + data + ", Status: " + status);
       alert("Invalid password entered");
       // $("#reload").submit();
       }
@@ -52,8 +72,7 @@ $.post("$jsonpath", { name: "admpw", pw: val },
 <input id="AP" type="hidden" name="apw" value="">
 </form>
 
-htmlScript;
-
+<?php
 // ============== mover() =====================
 function mover() {
   if (isset($_REQUEST['copy'])) {
@@ -294,7 +313,7 @@ function lister($in) {				// input is the list of the current folder contents
 	$dcnt = count($cwd) - 2;
 	$dname = $cwd[$dcnt];
 	$_SESSION['currdir'] = $dname;
-	$lourl = $_SESSION['homeuri'] . '?logout';
+	$lourl = $_SESSION['homeuri'] . 'db/indexto.php?lo=lo';
 	$helppath = $_SESSION['homeuri'] . 'db/repohelp.html';
   $archpath = $_SESSION['homeuri'] . 'Archive/index.php';
 	$indexurl = $_SESSION['homeuri'] . 'db/logutil.php';
@@ -428,61 +447,30 @@ logger("Listed folder");
 return;
 }			// end function 'lister'
 
-// =========== sechk() =======================================
-function sechk($dur) {
-	if (isset($_REQUEST['Login'])) {  
-		// echo "session id length = 0<br>";
-		unset($_SESSION['tk']);
-		unset($_SESSION['adm']);
-		}
-	$todnow = time();
-	if (isset($_SESSION['tk']) AND ($todnow >= $_SESSION['tk'])) {
-		$msg = "Session has expired for " . $SESSION['uid'];
-	  $lourl = $_SESSION['homeuri'] . 'index.php';
-	  session_unset();
-  	session_destroy();
-	  logger($msg);
-		echo '
-		<h2 style="color: red; ">Session has expired!</h2>
-		<h3><a href="'.$lourl.'">Please login</a></h3>';
-		exit; 
-		}
-	else {
-		if (isset($_SESSION['tk'])) {			
-			$_SESSION['tk'] = $todnow + $dur;    // extend timer by duration 
-			}
-		}
-
-// login request
+// =========== login() =======================================
+function login($needle) {
   $haystack = array();
-	if ($_REQUEST['submit'] == "Login") {
-	  unset($_SESSION['id']);
-		$needle = $_REQUEST['uid'];
-		$usrfile = 'db/userlist.txt'; 				
-		if (file_exists($usrfile)) { 
-		  $haystack = file($usrfile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); }
-		else { $haystack[] = $needle; }     // allow anyone if no userfile exists
- 
-  	if ((in_array($needle, $haystack)) OR (in_array("anyth1ng.goez", $haystack))) {
-  		$_SESSION['id'] = $needle; 
-  		logger("Login Successful: $needle");
-  		$_SESSION['tk'] = time() + $dur;		// session time in seconds
-  		$requri = rtrim($_SERVER['REQUEST_URI'], '/');
-  		preg_match("/(.*)\/.*$/i", $requri, $matches);
-  		$_SESSION['homeuri'] = $matches[1] . '/';   // set home uri for session
-  		$_SESSION['homepath'] = getcwd() . '/';	    // set home path for session
-  		}			
-		else { 
-			session_unset();
-    	session_destroy();
-			logger("Login NOT successful for $needle");
-			echo '<div class=\"ERR\"><h4 style=\"color: red; \">Invalid User ID.</h4></div>';
-			}
-		}
-	if (!isset($_SESSION['tk'])) {
-    require_once 'db/login.incl.php';
-		exit(0);
-		}
-	}
+  $usrfile = 'db/userlist.txt';
+  if (file_exists($usrfile)) { 
+    $haystack = file($usrfile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); }
+  else { $haystack[] = $needle; }     // allow anyone if no userfile exists
+  if ((in_array($needle, $haystack)) OR (in_array("anyth1ng.goez", $haystack))) {
+  	$_SESSION['id'] = $needle; 
+  	logger("Login Successful: $needle");
+  	$requri = rtrim($_SERVER['REQUEST_URI'], '/');
+  	preg_match("/(.*)\/.*$/i", $requri, $matches);
+  	$_SESSION['homeuri'] = $matches[1] . '/';   // set home uri for session
+  	$_SESSION['homepath'] = getcwd() . '/';	    // set home path for session
+  	return(true);
+  	}			
+  else { 
+  	session_unset();
+  	session_destroy();
+  	logger("Login NOT successful for $needle");
+  	echo '<div class=\"ERR\"><h4 style=\"color: red; \">Invalid User ID.</h4></div>';
+  	return(false);
+  	}
+  }
+
 
 ?>

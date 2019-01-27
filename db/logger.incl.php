@@ -10,7 +10,6 @@ function logger($status) {
 	if (file_exists($logpath) AND ($info > 0)) { 
     //echo "fileperm: $info";
 		$TOD = date("m/d/y;H:i:s");
-		if (isset($_SESSION['tk'])) { $sessexp = date("H:i:s", $_SESSION['tk']); }
 		$rcd =  "$TOD;$sessexp;".$_SESSION['id'].";$status;".$_SESSION['currdir']."\n";
 		file_put_contents($logpath, $rcd, FILE_APPEND);
 		}	
