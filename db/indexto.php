@@ -23,6 +23,8 @@ session_destroy();
 <title>Session Expired</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="10; URL='<?=$index?>' "/>
+
 <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 

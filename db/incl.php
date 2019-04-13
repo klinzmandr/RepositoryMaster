@@ -31,7 +31,7 @@ $(document).ready(function() {
   $(".ERR").fadeOut(5000);
   
 $(".confirm").click(function() {
-  var r=confirm("This action is irreversable.\\n\\n Confirm action by clicking OK: ");
+  var r=confirm("This action is irreversable.\n\n Confirm this action by clicking OK. ");
   return r;    // OK = true, Cancel = false
 	});
   	
@@ -357,7 +357,7 @@ function lister($in) {				// input is the list of the current folder contents
 
 // list all FOLDERS in current folder		
 	echo '
-	<b><u>Folders:</u></b><br><ul>
+	<b><u>Folders:</u></b><br>
   <div class="row"><div class="col-sm-3">';
  	if (($currpath == $_SESSION['homepath']) OR ($dname == 'Archive')) {
 	  // echo "root OR archive<br>"; 
@@ -387,35 +387,37 @@ function lister($in) {				// input is the list of the current folder contents
 
 // list all the FILES in the current folder
 	echo '
-  </ul><br><b><u>Files:</u></b><ul>
-	<div class="row">
-	<div class="admbtn col-sm-3"><b><u>Actions</u></b></div>
-	<div class="col-sm-5"><b><u>Name</u></b></div>
-	<div class="col-sm-4"><b><u>Date Created</u></b></div>
-	</div>'; 
+  <br><b><u>Files:</u></b>
+	<table class="sortable"><thead>
+	<tr><th class="admbtn" data-defaultsort="disabled">Actions</th>
+  <th>Name</th>
+  <th>Date Created</th>
+  </thead>
+  <tbody>';
 
 	if (count($in) > 0) {
   	foreach ($in as $f) {
   		if (is_file($f)) {
-  			$ft = date('M d,Y H:i:s', filectime($f));
+  			$ft = date('Y-m-d H:i:s', filectime($f));
 				$newf = urlencode($f);
+				$fnurl = $_SESSION['curruri'] . "index.php?dsp=$f";
+				//echo "fnurl: $fnurl<br>";
 				echo '
-  			<div class="row">
-				<div class="admbtn col-sm-3">
+				<tr><td class="admbtn">
 				<a href="index.php?move='.$newf.'">Move/</a>
 				<a href="index.php?copy='.$newf.'">Copy/</a>
 				<a class="confirm" href="index.php?delete=file&fname='.$newf.'">Delete/</a>
-				<a href="#" onclick=\'return getfld("'.$f.'")\'>Rename</a></div>';
-				$fnurl = $_SESSION['curruri'] . "index.php?dsp=$f";
-				//echo "fnurl: $fnurl<br>";
-  		  echo '
-  		  <div class="col-sm-5">
-  			<a href="'.$fnurl.'" target="_blank">'.$f.'</a></div>
-  			<div class="col-sm-4">'.$ft.'</div></div>'; 
+				<a href="#" onclick=\'return getfld("'.$f.'")\'>Rename</a>&nbsp;&nbsp;</td>';
+				
+        echo '
+        <td><a href="'.$fnurl.'" target="_blank">'.$f.'</a></td>
+        <td>'.$ft.'</td></tr>
+        ';  			
   			}
   		}		// end foreach for files
     }   // end if
-	echo "</ul><br>";
+	echo "</tbody></table><br>
+";
 	
 // form for admin load rename form and script
 // =========== rename js function and form =================
