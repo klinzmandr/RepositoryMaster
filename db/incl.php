@@ -217,7 +217,7 @@ function deller() {
 				}
 			logger("Delete Failed: folder $dirname not empty");
 			echo '
-			<div class="ERR"><h4 style="color: red; ">Folder $dirname is not empty!</h4></div>'; 
+			<div class="ERR"><h4 style="color: red; ">Folder '.$dirname.' is not empty!</h4></div>'; 
 			}
 		return;			 
 		}
