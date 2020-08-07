@@ -390,8 +390,8 @@ function lister($in) {				// input is the list of the current folder contents
   <br><b><u>Files:</u></b>
 	<table class="sortable"><thead>
 	<tr><th class="admbtn" data-defaultsort="disabled">Actions</th>
-  <th>Name</th>
-  <th>Date Created</th>
+  <th title="Click heading to sort">Name</th>
+  <th title="Click heading to sort">Date Created</th>
   </thead>
   <tbody>';
 
